@@ -1,0 +1,30 @@
+.page-header {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  line-height: 1;
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  + main {
+    section:first-child {
+      padding-top: 5rem;
+    }
+  }
+
+  @include bp(max-small) {
+    height: 4rem;
+
+    + main {
+      section:first-child {
+        padding-top: 4rem;
+      }
+    }
+  }
+}

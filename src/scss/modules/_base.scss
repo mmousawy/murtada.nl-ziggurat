@@ -1,0 +1,119 @@
+html {
+  min-height: 100vh;
+
+  &.no-scroll {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* 2 */
+}
+
+.page-section {
+  overflow: hidden;
+
+  &--inverted {
+    $gradientStop1: desaturate(darken(get('colors.primary'), 50%), 50%);
+    $gradientStop2: desaturate(darken(get('colors.primary'), 45%), 50%);
+    background: {
+      color: $gradientStop1;
+      image: url('inline:assets/images/feature-bg-left.svg?gradientStop1=#{$gradientStop1}&gradientStop2=#{$gradientStop2}');
+      position: -30rem 0;
+      repeat: no-repeat;
+      size: 100rem;
+    }
+
+    .content-row:last-child .wrap {
+      @include bp(min-small) {
+        padding-bottom: calc(3rem + 1vw);
+      }
+    }
+  }
+
+  &--home-about {
+    $gradientStop1: #F7F9FD;
+    $gradientStop2: #FFFFFF;
+    background: {
+      color: $gradientStop1;
+      image: url('inline:assets/images/feature-bg-right.svg?gradientStop1=#{$gradientStop1}&gradientStop2=#{$gradientStop2}');
+      position: 30% -30rem;
+      repeat: no-repeat;
+      size: 50rem;
+    }
+
+    .wrap:last-child {
+      @include bp(min-small) {
+        padding-bottom: calc(3rem + 1vw);
+      }
+    }
+  }
+
+  &--contact {
+    margin-top: auto;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    $color1: lighten(get('colors.primary'), 20%);
+    $color2: lighten(get('colors.primary'), 25%);
+    $color3: lighten(get('colors.primary'), 28%);
+    $color4: lighten(get('colors.primary'), 23%);
+    $color5: lighten(get('colors.primary'), 40%);
+    background: {
+      color: $color1;
+      image: url('inline:assets/images/contact-bg.svg?color1=#{$color1}&color2=#{$color2}&color3=#{$color3}&color4=#{$color4}&color5=#{$color5}');
+      position: 50%;
+      size: cover;
+    }
+  }
+}
+
+.wrap {
+  width: 100%;
+  max-width: get('sizes.page-width');
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.page-content-overlay {
+  position: fixed;
+  display: none;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4rem);
+  background: transparentize(get('colors.text.body'), .8);
+  opacity: 0;
+  pointer-events: none;
+  transition: {
+    property: transform, opacity;
+    duration: 500ms;
+  }
+  -webkit-backdrop-filter: blur(2px);
+
+  @include bp(max-small) {
+    display: block;
+  }
+
+  &.is-visible {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}

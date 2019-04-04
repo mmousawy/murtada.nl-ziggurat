@@ -1,0 +1,44 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="128px" height="128px" viewBox="0 0 128 128">
+<defs/>
+
+<g id="Layer_1">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g>
+<g>
+<path vector-effect="non-scaling-stroke" fill="#CCCCCC" stroke="none" d="
+M 0 0
+L 0 128 128 128 128 0 0 0 Z"/>
+</g>
+</g>
+</g>
+</g>
+
+<g id="Layer_2">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g>
+<path vector-effect="non-scaling-stroke" stroke="#999999" stroke-width="6" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="3" fill="none" d="
+M 0 0
+L 64 64 128 0
+M 128 128
+L 64 64 0 128"/>
+</g>
+</g>
+</g>
+
+<g id="Layer_3">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g>
+<path stroke="#999999" stroke-width="6" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="3" fill="none" d="
+M 125 0
+L 125 3 128 3
+M 3 0
+L 3 3 125 3 125 125 128 125
+M 0 3
+L 3 3 3 125 125 125 125 128
+M 3 128
+L 3 125 0 125"/>
+</g>
+</g>
+</g>
+</svg>

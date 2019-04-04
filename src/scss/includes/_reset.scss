@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+
+[hidden] {
+  display: none;
+}
+
+[data-invisible] {
+  visibility: hidden;
+}

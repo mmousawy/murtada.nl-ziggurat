@@ -1,0 +1,81 @@
+body {
+  font-family: get('fonts.body.family');
+  color: get('colors.text.body');
+}
+
+a:not([class]) {
+  color: get('colors.text.link');
+}
+
+h1,
+h2,
+h3 {
+  font-family: get('fonts.heading.family');
+  letter-spacing: -.025em;
+}
+
+h1 {
+  max-width: 80%;
+  margin: {
+    left: auto;
+    right: auto;
+    top: 1em;
+    bottom: 1em;
+  };
+  font-size: get('fonts.heading.size-h1');
+  text-align: center;
+}
+
+.page-title {
+  @include bp(max-small) {
+    max-width: 100%;
+    font-size: get('fonts.heading.size-h1') * .675;
+    text-align: center;
+  }
+}
+
+h2 {
+  max-width: 80%;
+  margin: {
+    left: auto;
+    right: auto;
+    top: 1em;
+    bottom: 1em;
+  };
+  font-size: get('fonts.heading.size-h2');
+  text-align: center;
+
+  @include bp(max-small) {
+    max-width: calc(100% - 2rem);
+    font-size: get('fonts.heading.size-h2') * .75;
+
+    &:first-child {
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+h3 {
+  font-size: get('fonts.heading.size-h3');
+
+  @include bp(max-small) {
+    font-size: get('fonts.heading.size-h3') * .75;
+  }
+}
+
+.page-section--inverted {
+  p {
+    color: desaturate(lighten(get('colors.primary'), 25%), 50%);
+  }
+
+  a:not(.button) {
+    color: lighten(get('colors.text.link'), 30%);
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: lighten(get('colors.text.link'), 45%);
+  }
+}

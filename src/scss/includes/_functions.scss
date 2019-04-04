@@ -1,0 +1,26 @@
+@function str-split($string, $delimiter) {
+  $split-arr: ();
+  $index : str-index($string, $delimiter);
+
+  @while $index != null {
+    $item: str-slice($string, 1, $index - 1);
+    $split-arr: append($split-arr, $item);
+    $string: str-slice($string, $index + 1);
+    $index : str-index($string, $delimiter);
+  }
+
+  $split-arr: append($split-arr, $string);
+
+  @return $split-arr;
+}
+
+@function get($path) {
+  $map: $config;
+  $keys: str-split($path, '.');
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}

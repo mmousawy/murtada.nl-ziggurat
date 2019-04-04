@@ -1,0 +1,71 @@
+.button {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: .6em 1.25em;
+  text-decoration: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .25rem;
+    background-color: get('colors.primary');
+    transition: {
+      property: transform, background-color, box-shadow;
+      duration: 150ms;
+      timing-function: ease-in-out;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: lighten(get('colors.primary'), 2%);
+      box-shadow: 0 .25rem 1.5rem transparentize(mix(get('colors.primary'), get('colors.text.body')), .8);
+    }
+  }
+
+  &:active {
+    &::before {
+      transform: scale(.95);
+      background-color: darken(get('colors.primary'), 5%);
+      box-shadow: none;
+    }
+  }
+
+  &--contact {
+    position: relative;
+    margin: 2.3rem 0;
+    font-size: get('fonts.heading.size-h3');
+    text-align: center;
+
+    @include bp(max-small) {
+      font-size: get('fonts.heading.size-h3') * .75;
+     margin: 1.5rem 0;
+    }
+
+    &::after {
+      content: '@murtada.nl';
+    }
+  }
+
+  &--more {
+    svg {
+      width: 1em;
+      height: 1.4em;
+      vertical-align: top;
+      fill: get('colors.white');
+      transform: translateX(35%);
+    }
+  }
+}

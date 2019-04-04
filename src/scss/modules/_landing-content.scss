@@ -1,0 +1,187 @@
+.landing-content {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: {
+    image: linear-gradient(140deg, get('colors.white'), transparentize(get('colors.white'), 1)), url('assets/images/duotone.jpg');
+    position: 100% 40%;
+    size: cover;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    transform: translateY(-4rem);
+
+    @include bp(max-small) {
+      margin-top: 5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .landing-content__title {
+    text-align: left;
+    margin-top: 0;
+    font-size: calc(2rem + 1vw);
+    font-weight: bold;
+    animation-delay: 500ms;
+    animation: {
+      name: slideIn;
+      duration: 400ms;
+      timing-function: cubic-bezier(.555, .205, .295, .975);
+      fill-mode: both;
+    }
+  }
+
+  .landing-content__text {
+    max-width: calc(10rem + 25vw);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: calc(1.25rem + 1vw);
+    color: get('colors.text.tagline');
+    animation: {
+      name: slideIn;
+      duration: 400ms;
+      timing-function: cubic-bezier(.555, .205, .295, .975);
+      fill-mode: both;
+      delay: 1000ms;
+    }
+  }
+
+  .scroll-icon-holder {
+    animation: {
+      name: fadeIn;
+      delay: 2400ms;
+      duration: 400ms;
+      fill-mode: both;
+    }
+  }
+
+  .scroll-icon {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    margin-left: -2rem;
+    fill: transparent;
+    stroke: lighten(get('colors.text.tagline'), 20%);
+
+    &--mobile {
+      width: 3rem;
+      height: 3rem;
+      margin-left: -1.5rem;
+      bottom: 1rem;
+      animation: {
+        name: swipe;
+        duration: 5000ms;
+        iteration-count: infinite;
+      }
+
+      @include bp(max-small) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      .scroll-wheel {
+        fill: lighten(get('colors.text.tagline'), 20%);
+        animation: {
+          name: scroll;
+          duration: 5000ms;
+          iteration-count: infinite;
+        }
+      }
+
+      @include bp(min-small) {
+        display: block;
+      }
+    }
+  }
+
+  @include bp(small-medium) {
+    background-position: 0 30%;
+  }
+
+  @include bp(max-small) {
+    background-position: 70% 30%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-50%);
+  }
+
+  80% {
+    transform: translateY(25%);
+  }
+
+  90% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-8%);
+  }
+
+  80% {
+    transform: translateY(8%);
+  }
+
+  90% {
+    transform: translateY(-8%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

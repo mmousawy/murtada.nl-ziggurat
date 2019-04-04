@@ -1,0 +1,256 @@
+.page-nav-label {
+  display: none;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 1.5rem;
+    height: .25rem;
+    margin: .125rem;
+    border-radius: .125rem;
+    background-color: get('colors.primary');
+    transition: {
+      property: transform, opacity;
+      duration: 200ms;
+    };
+  }
+
+  .page-nav-label__button:checked ~ span {
+    &:nth-child(2) {
+      transform: translateY(.5rem) rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: translateX(-.5rem);
+      opacity: 0;
+    }
+
+    &:nth-child(4) {
+      transform: translateY(-.5rem) rotate(-45deg);
+    }
+  }
+
+  @include bp(max-small) {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+
+.page-nav-label__button {
+  position: absolute;
+  visibility: hidden;
+}
+
+.page-nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+
+  ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .page-nav__item {
+    display: block;
+    margin: .5rem;
+    padding: .5rem;
+    border: {
+      top: 2px solid transparent;
+      bottom: 2px solid transparent;
+    };
+    text-decoration: none;
+    color: desaturate(get('colors.text.link'), 20%);
+    font-size: 1.125rem;
+
+    &--active {
+      border-bottom: 2px solid desaturate(lighten(get('colors.text.link'), 20%), 10%);
+    }
+
+    &--mobile {
+      display: none;
+
+      @include bp(max-small) {
+        display: block;
+      }
+    }
+
+    @include bp(max-small) {
+      font-size: 1.25rem;
+    }
+  }
+
+  + .button {
+    margin-left: auto;
+
+    @include bp(max-small) {
+      display: none;
+    }
+  }
+
+  @include bp(max-small) {
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background: get('colors.white');
+    transform: translate(0);
+    opacity: 0;
+    transform: scale(.9);
+    pointer-events: none;
+
+    &.is-animated {
+      transition: {
+        property: transform, opacity;
+        duration: 200ms;
+        timing-function: cubic-bezier(.555, .205, .295, .975);
+      };
+    }
+
+    &.is-open {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+
+      li {
+        animation-name: slideInItem;
+      }
+    }
+
+    .page-nav__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: {
+        image: linear-gradient(140deg, lighten(get('colors.primary'), 25%), get('colors.white') 40%);
+        size: 100%;
+        position: 100% 100%;
+      };
+      animation: {
+        duration: 600ms;
+        delay: 200ms;
+        fill-mode: both;
+      };
+    }
+
+    ul {
+      position: relative;
+      z-index: 2;
+      flex-direction: column;
+      height: auto;
+      margin: auto;
+    }
+
+    li {
+      margin: 1rem;
+      animation: {
+        duration: 200ms;
+        fill-mode: both;
+        timing-function: cubic-bezier(.555, .205, .295, .975);
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: 200 + $i * 75 + ms;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideInBackground {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideInItem {
+  0% {
+    transform: translateY(-.35rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-nav__background {
+  @include bp(min-small) {
+    display: none;
+  }
+}
+
+.nav-bg-item {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+
+  &__inside {
+    fill:  none;
+    stroke: lighten(get('colors.primary'), 25%);
+    stroke-width: 4;
+    transform-origin: 50%;
+    animation: {
+      timing-function: linear;
+      iteration-count: infinite;
+    };
+  }
+
+  @for $i from 1 through 10 {
+    .nav-bg-item__inside--#{$i} {
+      @if random(2) == 1 {
+        animation-name: rotateItem;
+      } @else {
+        animation-name: rotateItemReversed;
+      }
+      animation-duration: random(5000) + 5000ms;
+    }
+  }
+}
+
+@keyframes rotateItem {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateItemReversed {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}

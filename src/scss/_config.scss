@@ -1,0 +1,31 @@
+$config: (
+  fonts: (
+    heading: (
+      family: ('Sailec', Helvetica, Arial, sans-serif),
+      size-h1: 2.5rem,
+      size-h2: 2rem,
+      size-h3: 1.5rem
+    ),
+    body: (
+      family: ('Sailec', Helvetica, Arial, sans-serif),
+      size: 1rem
+    )
+  ),
+  sizes: (
+    page-width: 60rem,
+    content-width: 48.5rem
+  ),
+  colors: (
+    'white': #ffffff,
+    'black': #000000,
+    primary: #7586e3,
+    text: (
+      body: #2f3850,
+      tagline: #415484,
+      link: #3d5fb6
+    ),
+    border: (
+      light: #d9dfec
+    )
+  )
+);

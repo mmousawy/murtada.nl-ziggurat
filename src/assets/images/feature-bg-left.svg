@@ -1,0 +1,13 @@
+<svg width="1214px" height="832px" viewBox="0 0 1214 832" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="37.3158134%" y1="54.3011494%" x2="20.3430833%" y2="68.8308127%" id="linearGradient-1">
+            <stop stop-color="$gradientStop1" offset="0%"></stop>
+            <stop stop-color="$gradientStop2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index-V2" fill="url(#linearGradient-1)">
+            <path d="M-82,-171 L1092,-171 L1092,628 L18,628 C-37.228475,628 -82,583.228475 -82,528 L-82,-171 Z" id="Rectangle-8" transform="translate(505.000000, 228.500000) rotate(-30.000000) translate(-505.000000, -228.500000) "></path>
+        </g>
+    </g>
+</svg>
