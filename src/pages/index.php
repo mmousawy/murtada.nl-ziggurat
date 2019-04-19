@@ -67,7 +67,7 @@
     <div class="content-row__text">
       <h3>{$props['title']}</h3>
       <p>{$props['summary']}</p>
-      <p><a href="#">Read more about {$props['title']}</a>.</p>
+      <p><a href="{$project['slug-path']}">Read more about {$props['title']}</a>.</p>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-require '../../lib/Ziggurat.php';
+require '../../../lib/Ziggurat.php';
 
 $options = [
   'base_dir' => '.',
