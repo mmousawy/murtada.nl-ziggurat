@@ -6,7 +6,7 @@ $options = [
   'base_dir' => '.',
   'pages_dir' => './pages',
   'template' => './template',
-  'enable_cache' => true,
+  // 'enable_cache' => true,
   'minify_html' => true
 ];
 

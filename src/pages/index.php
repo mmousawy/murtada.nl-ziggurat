@@ -49,36 +49,33 @@
   <div class="wrap">
     <h2>Projects I've worked on</h2>
   </div>
-  <div class="content-row">
-    <div class="wrap">
-      <div class="picture-wrapper align-left align-left--outside">
-        <picture class="lazy">
-          <source data-srcset="assets/images/work/psydata-512px.jpg 512w, assets/images/work/psydata-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/work/psydata-1024px.jpg" alt="Man sitting at desk looking at screen with the PsyData app open in the browser.">
-        </picture>
-      </div>
-      <div class="content-row__text">
-        <h3>PsyData</h3>
-        <p>Automation in the mental health research field has been an ongoing process at GGZ inGeest. With PsyData I was placing the needs of the users first and developed an innovative data storage and management platform for data managers and researchers.</p>
-        <p><a href="#">Read more about PsyData</a>.</p>
-      </div>
+  <?php
+
+  foreach ($Ziggurat->list('work', true, 2) as $project) {
+    $props = $project['properties'];
+
+    echo
+<<<HTML
+<div class="content-row">
+  <div class="wrap">
+    <div class="picture-wrapper {$props['cover-class']}">
+      <picture class="lazy">
+        <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
+        <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
+      </picture>
+    </div>
+    <div class="content-row__text">
+      <h3>{$props['title']}</h3>
+      <p>{$props['summary']}</p>
+      <p><a href="#">Read more about {$props['title']}</a>.</p>
     </div>
   </div>
-  <div class="content-row">
-    <div class="wrap">
-      <div class="content-row__text">
-        <h3>BIONIC</h3>
-        <p>Working with surveys is a tedious job. During the development of BIONIC, I've created an easy-to-use markup language for designing surveys. Even for distribution, data aggregation and simple analytics you're all set with this system.</p>
-        <p><a href="#">Read more about BIONIC</a>.</p>
-      </div>
-      <div class="picture-wrapper align-right align-right--outside align-right--small">
-        <picture class="lazy">
-          <source data-srcset="assets/images/work/bionic-512px.jpg 512w, assets/images/work/bionic-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/work/bionic-1024px.jpg" alt="Hand holding iPhone with the BIONIC landing page visible on screen.">
-        </picture>
-      </div>
-    </div>
-  </div>
+</div>
+HTML;
+
+  }
+
+  ?>
   <div class="content-row content-row--end">
     <div class="wrap">
       <div class="content-row__transparent content-row__transparent--centered">
