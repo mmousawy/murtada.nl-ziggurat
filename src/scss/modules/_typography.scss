@@ -32,6 +32,11 @@ h1 {
     font-size: get('fonts.heading.size-h1') * .675;
     text-align: center;
   }
+
+  &--align-left {
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 h2 {

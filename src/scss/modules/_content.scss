@@ -37,6 +37,11 @@
   }
 }
 
+.content-row .wrap--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
 .content-row__text,
 .content-row__transparent {
   h2:first-child {
@@ -142,10 +147,15 @@
     }
   }
 
-  img, source {
+  img,
+  source {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  &--highlight {
+    margin-bottom: 3rem;
   }
 }
 
@@ -203,5 +213,14 @@ img {
       left: -1rem;
       right: 0;
     }
+  }
+}
+
+.highlight-text {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+
+  @include bp(max-small) {
+     font-size: 1.25rem;
   }
 }

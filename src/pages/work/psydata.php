@@ -14,4 +14,27 @@
   <div class="wrap">
     <h1 class="page-title">PsyData</h1>
   </div>
+
+  <div class="content-row">
+    <div class="wrap wrap--vertical">
+      <p class="highlight-text">Making data management more fun and engaging by applying modern flows with micro interactions and allowing users to connect with each other.</p>
+      <div class="picture-wrapper picture-wrapper--highlight">
+        <picture class="lazy">
+          <source data-srcset="assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
+          <img data-src="assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-1024px.jpg" alt="<?= $Ziggurat->resolvedPage['cover-alt']; ?>">
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-row">
+    <div class="wrap">
+      <div class="content-row__text">
+        <h3>The problem</h3>
+      </div>
+      <div class="content-row__text">
+        <p></p>
+      </div>
+    </div>
+  </div>
 </section>
