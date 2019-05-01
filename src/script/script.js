@@ -6,6 +6,7 @@
   const nav = document.querySelector('.page-nav');
   const navBackground = document.querySelector('.page-nav__background');
   const contentOverlay = document.querySelector('.page-content-overlay');
+  const gallery = document.querySelector('.gallery__pane');
   const backgroundItems = [];
   const email = ['info', 'murtada.nl'].join('@');
 
@@ -76,6 +77,10 @@
 
   // Handle the resize event
   function resizeHandler() {
+    if (gallery) {
+      gallery.scrollPos = 1;
+    }
+
     // Close the menu when in large media query
     if (window.innerWidth > 800) {
       nav.classList.remove('is-animated');
@@ -88,6 +93,10 @@
       }
     } else {
       nav.classList.add('is-animated');
+      if (gallery) {
+        gallery.classList.add('snap');
+        gallery.scrollLeft += 1;
+      }
     }
 
     headerRect = header.getBoundingClientRect();
@@ -337,6 +346,33 @@
       });
     }
   });
+
+  if (gallery) {
+    const galleryPictures = document.querySelectorAll('.gallery__picture');
+
+    gallery.addEventListener('scroll', function(event) {
+      const pos = this.scrollLeft + window.innerWidth * .5;
+
+      let activePicture;
+
+      for (let i = galleryPictures.length - 1; i > -1; i--) {
+        const picture = galleryPictures[i];
+
+        if (pos > picture.offsetLeft) {
+          const otherPicture = this.querySelector('.active');
+          activePicture = picture;
+
+          if (otherPicture && activePicture !== otherPicture) {
+            otherPicture.classList.remove('active');
+          }
+
+          break;
+        }
+      }
+
+      activePicture.classList.add('active');
+    });
+  }
 
   resizeHandler();
   headerFrame();

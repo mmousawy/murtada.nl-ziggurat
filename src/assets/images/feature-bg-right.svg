@@ -2,7 +2,7 @@
     <defs>
         <linearGradient x1="37.3158134%" y1="54.3011494%" x2="8.10342877%" y2="67.709146%" id="linearGradient-1">
             <stop stop-color="$gradientStop1" offset="0%"></stop>
-            <stop stop-color="$gradientStop2" offset="100%"></stop>
+            <stop stop-color="$gradientStop2" offset="50%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

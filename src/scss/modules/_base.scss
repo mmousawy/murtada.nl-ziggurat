@@ -20,18 +20,23 @@ main {
   flex: 1 0 auto; /* 2 */
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .page-section {
   overflow: hidden;
 
   &--inverted {
     $gradientStop1: desaturate(darken(get('colors.primary'), 50%), 50%);
-    $gradientStop2: desaturate(darken(get('colors.primary'), 45%), 50%);
+    $gradientStop2: desaturate(darken(get('colors.primary'), 48%), 50%);
     background: {
       color: $gradientStop1;
       image: url('inline:assets/images/feature-bg-left.svg?gradientStop1=#{$gradientStop1}&gradientStop2=#{$gradientStop2}');
-      position: -30rem 0;
+      position: 0 120%;
       repeat: no-repeat;
-      size: 100rem;
+      size: 100%;
     }
 
     .content-row:last-child .wrap {
@@ -42,14 +47,19 @@ main {
   }
 
   &--home-about {
-    $gradientStop1: #F7F9FD;
-    $gradientStop2: #FFFFFF;
-    background: {
-      color: $gradientStop1;
-      image: url('inline:assets/images/feature-bg-right.svg?gradientStop1=#{$gradientStop1}&gradientStop2=#{$gradientStop2}');
-      position: 30% -30rem;
-      repeat: no-repeat;
-      size: 50rem;
+
+    background-color: #F7F9FD;
+
+    @include bp(min-small) {
+      $fill1: #fff;
+      $fill2: darken(#F7F9FD, 5%);
+
+      background: {
+        image: url('inline:assets/images/bg-about.svg?fill1=#{$fill1}&fill2=#{$fill2}');
+        repeat: no-repeat;
+        position: 100% 50%;
+        size: cover;
+      }
     }
 
     .wrap:last-child {

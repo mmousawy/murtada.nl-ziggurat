@@ -4,7 +4,7 @@
 #zigg:slug        = `mindway`
 #zigg:parent      = `work`
 #zigg:cover-image = ``
-#zigg:cover-class = `align-left align-left--outside align-left--small`
+#zigg:cover-class = ``
 #zigg:cover-alt   = `Mindway logo with a backdrop of a blue coloured landscape.`
 #zigg:date        = `2018-06-01`
 #zigg:summary     = `Mindway is a complete identity rebrand and website overhaul of the eHealth@Mind brand and website. The new website offers relevant information in a clear and user-friendly way about their treatments, psychological complaints and disorders, relevant scientific developments in psychiatry and more.`

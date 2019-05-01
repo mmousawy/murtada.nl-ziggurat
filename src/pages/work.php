@@ -16,14 +16,24 @@
 
   <?php
 
+  $index = 0;
+
   foreach ($Ziggurat->list('work', true) as $project) {
     $props = $project['properties'];
+
+    $class = ($index === 0)
+              ? 'picture-wrapper--large'
+              : 'picture-wrapper--small';
+
+    $class .= ($index % 2 === 0)
+              ? ' align-left align-left--outside'
+              : ' align-right align-right--outside';
 
     echo
 <<<HTML
 <div class="content-row">
   <div class="wrap">
-    <div class="picture-wrapper {$props['cover-class']}">
+    <div class="picture-wrapper {$class}">
       <picture class="lazy">
         <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
         <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
@@ -38,23 +48,10 @@
 </div>
 HTML;
 
+    $index++;
   }
 
   ?>
 </section>
 
-<section id="contact" class="page-section page-section--contact">
-  <div class="wrap">
-    <h2>Did I spark your interest?</h2>
-    <h3>Let's work together! Drop me a line at:</h3>
-    <div class="content-row__transparent content-row__transparent--centered">
-      <a href="" class="button button--contact">
-        info
-      </a>
-      <a href="" class="copy-to-clipboard copy-to-clipboard--right copy-to-clipboard--email tooltip-right">
-        <img src="assets/images/_copy-to-clipboard.svg">
-        Copy
-      </a>
-    </div>
-  </div>
-</section>
+<?= file_get_contents('template/cta.php'); ?>
