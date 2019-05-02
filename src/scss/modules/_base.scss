@@ -100,6 +100,34 @@ img {
   max-width: get('sizes.page-width');
   margin: 0 auto;
   padding: 1rem;
+
+  &--blog {
+    max-width: 45.75rem;
+    font-size: 1.315rem;
+    line-height: 1.58em;
+
+    &:last-child {
+      margin-bottom: 2rem;
+
+      @include bp(max-small) {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      + p {
+        margin-top: 1.38em;
+      }
+    }
+
+    @include bp(max-small) {
+      font-size: 1.125rem;
+    }
+  }
 }
 
 .page-content-overlay {

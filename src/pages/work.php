@@ -40,7 +40,7 @@
       </picture>
     </div>
     <div class="content-row__text">
-      <h3>{$props['title']}</h3>
+      <h2>{$props['title']}</h2>
       <p>{$props['summary']}</p>
       <p><a href="{$project['slug-path']}">Read more about {$props['title']}</a>.</p>
     </div>

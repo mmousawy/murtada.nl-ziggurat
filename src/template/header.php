@@ -48,7 +48,7 @@
         <ul>
           <li><a href="about" class="page-nav__item<?= (in_array('about', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">About</a></li>
           <li><a href="work" class="page-nav__item<?= (in_array('work', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Work</a></li>
-          <!-- <li><a href="blog" class="page-nav__item<?= (in_array('blog', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Blog</a></li> -->
+          <li><a href="blog" class="page-nav__item<?= (in_array('blog', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Blog</a></li>
           <li><a href="<?= $Ziggurat->resolvedPage['slug-path'] ?>#contact" class="page-nav__item page-nav__item--mobile page-nav__item--hire-me">Hire me</a></li>
         </ul>
       </nav>
