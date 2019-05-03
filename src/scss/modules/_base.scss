@@ -26,8 +26,6 @@ img {
 }
 
 .page-section {
-  overflow: hidden;
-
   &--inverted {
     $gradientStop1: desaturate(darken(get('colors.primary'), 50%), 50%);
     $gradientStop2: desaturate(darken(get('colors.primary'), 48%), 50%);
@@ -102,9 +100,27 @@ img {
   padding: 1rem;
 
   &--blog {
-    max-width: 45.75rem;
+    max-width: 47.75rem;
     font-size: 1.315rem;
     line-height: 1.58em;
+    padding: 2rem;
+
+    &:first-child {
+      position: relative;
+      z-index: 2;
+      margin-top: -5rem;
+      padding-bottom: 2.5rem;
+      background: get('colors.white');
+      border-radius: .25rem;
+
+      + .wrap {
+        padding-top: 0;
+      }
+
+      @include bp(max-small) {
+        padding-bottom: 1.6875rem;
+      }
+    }
 
     &:last-child {
       margin-bottom: 2rem;
@@ -112,6 +128,14 @@ img {
       @include bp(max-small) {
         margin-bottom: 0;
       }
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    time {
+      margin: 0;
     }
 
     p {
@@ -124,14 +148,20 @@ img {
       }
     }
 
+    + .wrap {
+      padding-top: 0;
+    }
+
     @include bp(max-small) {
       font-size: 1.125rem;
+      padding: 1rem;
     }
   }
 }
 
 .page-content-overlay {
   position: fixed;
+  z-index: 3;
   display: none;
   top: 4rem;
   left: 0;
@@ -144,7 +174,6 @@ img {
     property: transform, opacity;
     duration: 500ms;
   }
-  -webkit-backdrop-filter: blur(2px);
 
   @include bp(max-small) {
     display: block;

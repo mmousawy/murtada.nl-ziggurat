@@ -5,7 +5,7 @@
 #zigg:type        = `markdown`
 #zigg:template    = `./template/blog-post.php`
 #zigg:parent      = `blog`
-#zigg:cover-image = ``
+#zigg:cover-image = `_usability-testing{$size}.png`
 #zigg:date        = `2019-05-01`
 #zigg:summary     = `Having your own group of personally interested people to test your work, how nice would that be? I'll tell you about how I found those rare unicorns, and how I kept them happy.`
 ?>

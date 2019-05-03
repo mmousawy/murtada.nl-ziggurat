@@ -23,6 +23,11 @@
 
     $prettyDate = date('F jS, Y', strtotime($props['date']));
     $coverImage = isset($props['cover-image']) ? $props['cover-image'] : '';
+
+    if (strpos($coverImage, '{$size}')) {
+      $coverImage = explode('{$size}', $coverImage);
+    }
+
     $coverAlt = isset($props['cover-alt']) ? $props['cover-alt'] : '';
 
     $class = ($index === 0)
@@ -40,8 +45,8 @@
     <div class="picture-wrapper {$class}">
       <a href="{$blog['slug-path']}">
         <picture class="lazy">
-          <source data-srcset="assets/images/blog/{$coverImage}-512px.jpg 512w, assets/images/blog/{$coverImage}-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/blog/{$coverImage}-1024px.jpg" alt="{$coverAlt}">
+          <source data-srcset="assets/images/blog/{$coverImage[0]}-512px{$coverImage[1]} 512w, assets/images/blog/{$coverImage[0]}-1024px{$coverImage[1]} 1024w" type="image/jpeg">
+          <img data-src="assets/images/blog/{$coverImage[0]}-1024px{$coverImage[1]}" alt="{$coverAlt}">
         </picture>
       </a>
     </div>
