@@ -8,15 +8,25 @@ if (strpos($coverImage, '{$size}')) {
   $coverImage = explode('{$size}', $coverImage);
 }
 
-$coverImageFile = imagecreatefrompng("assets/images/blog/_usability-testing-512px.png");
-$coverColor = imagecolorat($coverImageFile, 1, 1);
-$rgb = imagecolorsforindex($coverImageFile, $coverColor);
+$imageUrl = "assets/images/blog/{$coverImage[0]}-512px{$coverImage[1]}";
+
+if (function_exists('imagecreatefrompng')) {
+  $coverImageFile = imagecreatefrompng($imageUrl);
+  $coverColor = imagecolorat($coverImageFile, 1, 1);
+  $rgb = imagecolorsforindex($coverImageFile, $coverColor);
+} else if (class_exists('Imagick')) {
+  $coverImageFile = new Imagick($imageUrl);
+  $coverColor = $coverImageFile->getImagePixelColor(1, 1);
+  $rgb = $coverColor->getColor();
+}
+
+$rgb = array_values($rgb);
 
 $coverAlt = isset($Ziggurat->resolvedPage['cover-alt']) ? $Ziggurat->resolvedPage['cover-alt'] : '';
 
 ?>
 <?= <<<HTML
-<div class="blog-header" style="background-color: rgb(${rgb['red']}, ${rgb['green']}, ${rgb['blue']})">
+<div class="blog-header" style="background-color: rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})">
   <div class="picture-wrapper">
   <picture class="lazy">
     <source data-srcset="assets/images/blog/{$coverImage[0]}-512px{$coverImage[1]} 512w, assets/images/blog/{$coverImage[0]}-1024px{$coverImage[1]} 1024w, assets/images/blog/{$coverImage[0]}-1920px{$coverImage[1]} 1920w" type="image/jpeg">
