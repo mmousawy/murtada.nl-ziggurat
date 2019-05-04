@@ -5,9 +5,9 @@
 #zigg:type        = `markdown`
 #zigg:template    = `./template/blog-post.php`
 #zigg:parent      = `blog`
-#zigg:cover-image = `_usability-testing{$size}.png`
+#zigg:cover-image = `blog/_usability-testing{$size}.png`
 #zigg:date        = `2019-05-01`
-#zigg:summary     = `Having your own group of personally interested people to test your work, how nice would that be? I'll tell you about how I found those rare unicorns, and how I kept them happy.`
+#zigg:description = `Having your own group of personally interested people to test your work, how nice would that be? I'll tell you about how I found those rare unicorns, and how I kept them happy.`
 ?>
 
 Code development is a funny thing. On one hand you're working with machines; cold non-emotional interfaces. On the other hand you're interacting with humans: their input will be the main direction for your technical design, interaction design and how you write your code.
@@ -22,7 +22,7 @@ This way, you actually trigger their interest and get their consent. If their re
 
 There are a few more steps to motivate them to be responsive testers:
 1. **Set up accounts for your testers.**<br>
-Not only will you make them feel included, you lower the bar for them to test your software. If possible, allow them to sign in with a magic link to make it even easier for them.
+Not only will you make them feel included, you lower the bar for them to test your software. If possible, allow them to sign in with a magic link to make it even easier for them.<br>
 If you do this from the first prototype version, you will give them a feeling of ownership and control over the development and they'll more likely want you to hear their voice and opinions.
 
 1. **Always include them in (big) updates of your product.**<br>

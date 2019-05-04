@@ -3,11 +3,13 @@
 #zigg:page-title  = ``
 #zigg:slug        = `psydata`
 #zigg:parent      = `work`
-#zigg:cover-image = ``
+#zigg:cover-image = `work/psydata{$size}.jpg`
 #zigg:cover-class = ``
 #zigg:cover-alt   = `Man sitting at desk looking at screen with the PsyData app open in the browser.`
 #zigg:date        = `2019-02-01`
-#zigg:summary     = `Automation in the mental health research field has been an ongoing process at GGZ inGeest. With PsyData I was placing the needs of the users first and developed an innovative data storage and management platform for data managers and researchers.`
+#zigg:description = `Automation in the mental health research field has been an ongoing process at GGZ inGeest. With PsyData I was placing the needs of the users first and developed an innovative data storage and management platform for data managers and researchers.`
+
+$props = $Ziggurat->resolvedPage['properties'];
 ?>
 
 <section class="page-section">
@@ -20,8 +22,8 @@
       <p class="highlight-text">Making data management more fun and engaging by applying modern flows with micro interactions and allowing users to connect with each other.</p>
       <div class="picture-wrapper picture-wrapper--highlight">
         <picture class="lazy">
-          <source data-srcset="assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-1024px.jpg" alt="<?= $Ziggurat->resolvedPage['cover-alt']; ?>">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
+          <img data-src="assets/images/work/<?= $props['slug']; ?>-1024px.jpg" alt="<?= $props['cover-alt']; ?>">
         </picture>
       </div>
     </div>

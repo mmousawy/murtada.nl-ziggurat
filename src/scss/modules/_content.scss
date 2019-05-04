@@ -141,7 +141,17 @@
   display: block;
   float: left;
   width: 100%;
-  // background: desaturate(lighten(get('colors.primary'), 20%), 40%);
+
+  a {
+    display: block;
+
+    &:hover,
+    &:focus {
+      > * {
+        opacity: .7;
+      }
+    }
+  }
 
   .content-row__text & {
     padding: 2vw 0 calc(2vw + 1em);

@@ -3,9 +3,10 @@
 #zigg:page-title  = `Work`
 #zigg:slug        = `work`
 #zigg:parent      = ``
-#zigg:cover-image = ``
+#zigg:cover-image = `_cover-work{$size}.png`
 #zigg:date        = ``
-#zigg:summary     = ``
+#zigg:description = `Portfolio of featured projects I've worked on. Download my CV and more.`
+#zigg:priority    = `0.6`
 ?>
 
 <section class="page-section">
@@ -34,14 +35,16 @@
 <div class="content-row">
   <div class="wrap">
     <div class="picture-wrapper {$class}">
-      <picture class="lazy">
-        <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
-        <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
-      </picture>
+      <a href="{$project['slug-path']}">
+        <picture class="lazy">
+          <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
+          <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
+        </picture>
+      </a>
     </div>
     <div class="content-row__text">
-      <h2>{$props['title']}</h2>
-      <p>{$props['summary']}</p>
+      <h2><a href="{$project['slug-path']}">{$props['title']}</a></h2>
+      <p>{$props['description']}</p>
       <p><a href="{$project['slug-path']}">Read more about {$props['title']}</a>.</p>
     </div>
   </div>

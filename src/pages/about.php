@@ -3,9 +3,10 @@
 #zigg:page-title  = `About`
 #zigg:slug        = `about`
 #zigg:parent      = ``
-#zigg:cover-image = ``
+#zigg:cover-image = `_cover-about{$size}.png`
 #zigg:date        = ``
-#zigg:summary     = ``
+#zigg:description = `Read more about me and my personal and professional background.`
+#zigg:priority    = `0.5`
 ?>
 
 <section class="page-section">

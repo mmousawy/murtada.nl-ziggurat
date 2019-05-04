@@ -3,9 +3,10 @@
 #zigg:page-title  = `Blog`
 #zigg:slug        = `blog`
 #zigg:parent      = ``
-#zigg:cover-image = ``
+#zigg:cover-image = `_cover-blog{$size}.png`
 #zigg:date        = ``
-#zigg:summary     = ``
+#zigg:description = `Read the things I've written: from development tricks to workplace tips.`
+#zigg:priority    = `0.7`
 ?>
 
 <section class="page-section">
@@ -22,11 +23,16 @@
     $props = $blog['properties'];
 
     $prettyDate = date('F jS, Y', strtotime($props['date']));
-    $coverImage = isset($props['cover-image']) ? $props['cover-image'] : '';
 
-    if (strpos($coverImage, '{$size}')) {
-      $coverImage = explode('{$size}', $coverImage);
+    $coverImage = $props['cover-image'];
+
+    $coverImageString = [];
+
+    foreach($coverImage as $image) {
+      array_push($coverImageString, "{$image['url']} {$image['size']}w");
     }
+
+    $coverImageString = implode(',', $coverImageString);
 
     $coverAlt = isset($props['cover-alt']) ? $props['cover-alt'] : '';
 
@@ -45,15 +51,15 @@
     <div class="picture-wrapper {$class}">
       <a href="{$blog['slug-path']}">
         <picture class="lazy">
-          <source data-srcset="assets/images/blog/{$coverImage[0]}-512px{$coverImage[1]} 512w, assets/images/blog/{$coverImage[0]}-1024px{$coverImage[1]} 1024w" type="image/jpeg">
-          <img data-src="assets/images/blog/{$coverImage[0]}-1024px{$coverImage[1]}" alt="{$coverAlt}">
+          <source data-srcset="{$coverImageString}" type="image/png">
+          <img data-src="{$coverImage['medium']['url']}" alt="{$coverAlt}">
         </picture>
       </a>
     </div>
     <div class="content-row__text">
       <h2><a href="{$blog['slug-path']}">{$props['title']}</a></h2>
       <time datetime="{$props['date']} 12:00">{$prettyDate}</time>
-      <p>{$props['summary']}</p>
+      <p>{$props['description']}</p>
       <p><a href="{$blog['slug-path']}">Read more</a>.</p>
     </div>
   </div>

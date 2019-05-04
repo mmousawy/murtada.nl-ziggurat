@@ -1,12 +1,16 @@
+<?php
+  $props = $Ziggurat->resolvedPage['properties'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.">
+  <meta name="description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><?= !empty($Ziggurat->resolvedPage['properties']['page-title']) ? $Ziggurat->resolvedPage['properties']['page-title'] . ' | ' : '' ?>Murtada webdesign bureau</title>
+  <title><?= !empty($props['page-title']) ? $props['page-title'] . ' | ' : '' ?>Murtada webdesign bureau</title>
   <base href="/">
+  <link rel="sitemap" href="/sitemap.xml" />
   <link rel="shortcut icon" href="favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -24,6 +28,12 @@
   <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <link rel="yandex-tableau-widget" href="favicons/yandex-browser-manifest.json">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<?= !empty($props['page-title']) ? $props['page-title'] : '' ?>">
+  <meta property="og:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
+  <meta property="og:url" content="https://murtada.nl/<?= $Ziggurat->resolvedPage['slug-path'] === 'index' ? '' : $Ziggurat->resolvedPage['slug-path'] ?>">
+  <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['medium']['url']) ? $props['cover-image']['medium']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['medium']['url'] ?>">
+  <meta property="og:site_name" content="Murtada webdesign bureau">
   <link rel="stylesheet" href="style.css">
   <link rel="preload" href="assets/fonts/sailec-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="assets/fonts/sailec-medium.woff2" as="font" crossorigin="anonymous">

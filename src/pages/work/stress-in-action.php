@@ -3,11 +3,13 @@
 #zigg:page-title  = ``
 #zigg:slug        = `stress-in-action`
 #zigg:parent      = `work`
-#zigg:cover-image = ``
+#zigg:cover-image = `work/stress-in-action{$size}.jpg`
 #zigg:cover-class = ``
 #zigg:cover-alt   = `Stress in Action logo on a glowing yellow background.`
 #zigg:date        = `2018-12-01`
-#zigg:summary     = `Stress in Action uses innovative technological and scientific methods to approach modern day stress. The project deserved a website that could convey its message and can appeal to a big audience, from investors to scientists.`
+#zigg:description = `Stress in Action uses innovative technological and scientific methods to approach modern day stress. The project deserved a website that could convey its message and can appeal to a big audience, from investors to scientists.`
+
+$props = $Ziggurat->resolvedPage['properties'];
 ?>
 
 <section class="page-section">
@@ -19,8 +21,8 @@
       <p class="highlight-text">Eye-catching and informative: how I've made an information-dense website fun and interesting to read.</p>
       <div class="picture-wrapper picture-wrapper--highlight">
         <picture class="lazy">
-          <source data-srcset="assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/work/<?= $Ziggurat->resolvedPage['slug']; ?>-1024px.jpg" alt="<?= $Ziggurat->resolvedPage['cover-alt']; ?>">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
+          <img data-src="assets/images/work/<?= $props['slug']; ?>-1024px.jpg" alt="<?= $props['cover-alt']; ?>">
         </picture>
       </div>
     </div>

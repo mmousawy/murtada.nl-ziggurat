@@ -6,13 +6,13 @@ $options = [
   'base_dir' => '.',
   'pages_dir' => './pages',
   'template' => './template',
-  // 'enable_cache' => true,
+  'enable_cache' => true,
   'minify_html' => true
 ];
 
 $Ziggurat = new \MMousawy\Ziggurat($options);
 
-$Ziggurat->index();
+// $Ziggurat->index();
 
 $Ziggurat->resolve($_SERVER['REQUEST_URI']);
 
