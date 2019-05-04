@@ -32,7 +32,7 @@
   <meta property="og:title" content="<?= !empty($props['page-title']) ? $props['page-title'] : '' ?>">
   <meta property="og:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
   <meta property="og:url" content="https://murtada.nl/<?= $Ziggurat->resolvedPage['slug-path'] === 'index' ? '' : $Ziggurat->resolvedPage['slug-path'] ?>">
-  <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['medium']['url']) ? $props['cover-image']['medium']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['medium']['url'] ?>">
+  <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
   <meta property="og:site_name" content="Murtada webdesign bureau">
   <link rel="stylesheet" href="style.css">
   <link rel="preload" href="assets/fonts/sailec-regular.woff2" as="font" crossorigin="anonymous">
