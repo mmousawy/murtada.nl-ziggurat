@@ -1,0 +1,32 @@
+/* PROJECT */
+
+  Site Name:   Murtada webdesign bureau
+  Site URL:    https://murtada.nl
+  Created:     2019-05-01
+  Standards:   HTML5, CSS3, ES6
+  Software:    ZIGGURAT
+  Plugins:     Parsedown, Zoom.js
+  Web Design:  Murtada al Mousawy
+
+/* AUTHOR */
+
+  Name:        Murtada al Mousawy
+  Nickname:    MMousawy
+  Title:       Full-stack web developer
+  Location:    The Netherlands
+  Site:        https://murtada.nl
+  Site:        https://about.me/mmousawy
+  Blog:        https://murtada.nl/blog
+  Contact:     https://murtada.nl/email
+
+/* SOCIAL */
+
+  About.me:    https://about.me/mmousawy
+  Linkedin:    https://linkedin.com/in/mmousawy
+  Twitter:     https://twitter.com/mmousawy
+  Facebook:    https://www.facebook.com/murtada.almousawy
+  Instagram:   https://www.instagram.com/visualdoubts/
+
+/* META */
+
+  Built with: ZIGGURAT (Node, Gulp, PHP, HTML, CSS, JavaScript)
