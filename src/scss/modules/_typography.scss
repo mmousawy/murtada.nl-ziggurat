@@ -3,7 +3,7 @@ body {
   color: get('colors.text.body');
 }
 
-a:not([class]) {
+a:not([class])[href] {
   color: get('colors.text.link');
 }
 
@@ -62,7 +62,7 @@ h2 {
     }
   }
 
-  a {
+  a[href] {
     text-decoration: none;
     color: get('colors.text.body');
 

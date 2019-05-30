@@ -1,0 +1,62 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="1280px" height="720px" viewBox="0 0 1280 720">
+<defs>
+<linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="1197.05" y1="279.35" x2="1197.05" y2="-182.95" spreadMethod="pad">
+<stop  offset="0%" stop-color="#D2939D"/>
+
+<stop  offset="100%" stop-color="#FFFFFF"/>
+</linearGradient>
+
+<linearGradient id="Gradient_2" gradientUnits="userSpaceOnUse" x1="21.400000000000006" y1="754.3125" x2="152.4" y2="981.1875" spreadMethod="pad">
+<stop  offset="0%" stop-color="#B75162"/>
+
+<stop  offset="100%" stop-color="#FFFFFF"/>
+</linearGradient>
+</defs>
+
+<g id="Layer_1"/>
+
+<g id="Layer_2">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g>
+<g>
+<path fill="#FF6C78" stroke="none" d="
+M -14.15 529.45
+L -14.15 774.95 198.5 652.2 -14.15 529.45 Z"/>
+
+<path fill="url(#Gradient_1)" stroke="none" d="
+M 996.3 -183.55
+L 996.3 279.95 1397.8 48.2 996.3 -183.55 Z"/>
+
+<path fill="#B75162" stroke="none" d="
+M 636.85 487.4
+L 636.85 629.15 759.6 558.3 636.85 487.4 Z"/>
+</g>
+</g>
+</g>
+</g>
+
+<g id="Layer_3">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g>
+<g>
+<path fill="#FF6C78" stroke="none" d="
+M 1357.85 903.6
+L 1357.85 71.15 636.85 487.4 1357.85 903.6 Z"/>
+</g>
+</g>
+</g>
+</g>
+
+<g id="Layer_4">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g>
+<g>
+<path fill="url(#Gradient_2)" stroke="none" d="
+M -14.15 1020.45
+L 198.5 1020.45 198.5 652.2 -14.15 774.95 -14.15 1020.45 Z"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

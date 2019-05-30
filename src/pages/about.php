@@ -10,7 +10,6 @@
 ?>
 
 <section class="page-section">
-  <a name="about" class="section-link"></a>
   <div class="wrap">
     <h1 class="page-title">Murtada al Mousawy, full-stack web developer based in Delft.</h1>
   </div>
