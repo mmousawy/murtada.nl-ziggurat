@@ -6,7 +6,7 @@
 #zigg:cover-image = `_cover-index{$size}.png`
 #zigg:date        = ``
 #zigg:description = `Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.`
-#zigg:priority    = `0.8`
+#zigg:priority    = `1.0`
 ?>
 
 <section class="landing-content">

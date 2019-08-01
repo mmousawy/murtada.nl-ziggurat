@@ -1,0 +1,3 @@
+[submodule "src/lib/SimplePhpGa"]
+	path = src/lib/SimplePhpGa
+	url = https://github.com/mmousawy/simple-php-ga.git
