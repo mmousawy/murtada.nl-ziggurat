@@ -1,6 +1,6 @@
 <?php
 #zigg:title       = `Stress in Action`
-#zigg:page-title  = ``
+#zigg:page-title  = `Stress in Action`
 #zigg:slug        = `stress-in-action`
 #zigg:parent      = `work`
 #zigg:cover-image = `work/stress-in-action{$size}.jpg`
@@ -8,6 +8,7 @@
 #zigg:cover-alt   = `Stress in Action logo on a glowing yellow background.`
 #zigg:date        = `2018-12-01`
 #zigg:description = `Stress in Action uses innovative technological and scientific methods to approach modern day stress. The project deserved a website that could convey its message and can appeal to a big audience, from investors to scientists.`
+#zigg:priority    = `0.5`
 
 $props = $Ziggurat->resolvedPage['properties'];
 ?>

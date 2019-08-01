@@ -6,9 +6,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
+  <meta name="description" content="<?= !empty($props['description']) ? $props['description'] : ' Murtada al Mousawy, freelance full-stack web developer and web designer Rotterdam & Den Haag area.' ?>">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><?= !empty($props['page-title']) ? $props['page-title'] . ' | ' : '' ?>Murtada webdesign bureau</title>
+  <title><?= !empty($props['page-title']) ? $props['page-title'] . ' | ' : '' ?>Murtada al Mousawy<?= empty($props['page-title']) ? ' | Freelance Full-stack Developer Rotterdam & Den Haag' : '' ?></title>
+  <meta name="geo.region" content="NL-ZH">
+  <meta name="geo.placename" content="Rotterdam">
+  <meta name="geo.position" content="51.9228958;4.4631727">
   <base href="/">
   <link rel="sitemap" href="/sitemap.xml" />
   <link rel="shortcut icon" href="favicons/favicon.ico">

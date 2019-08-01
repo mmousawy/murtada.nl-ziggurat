@@ -11,7 +11,7 @@
 
 <section class="page-section">
   <div class="wrap">
-    <h1 class="page-title">Murtada al Mousawy, full-stack web developer based in Delft.</h1>
+    <h1 class="page-title">Murtada al Mousawy, full-stack web developer based around the Rotterdam & Den Haag area.</h1>
   </div>
   <div class="content-row">
     <div class="wrap">
@@ -24,11 +24,10 @@
       <div class="content-row__text">
         <h2>Why I love my job</h2>
         <p>
-          Technology is an inseparable part of daily life. How to (make) use (of) technology has been studied and worked out for many cases.
-          Combining design and technology is tricky and there should always be an added value. When a design is implemented correctly, it will be transparent for the user and a reason they'll come back to the same technology again and again.
+          Technology is an inseparable part of daily life. How to make use of technology has been studied and worked out for many cases. Still, effectively combining design and technology is tricky and should always be an added value. When a design is implemented correctly, it will be transparent for the user and one of the reasons they'll come back to use the same product again and again.
         </p>
         <p>
-          I proudly inspire myself by designers, photographers and artists who have paved the path before me. My secret is that I always try to give my work a little twist!
+          I proudly inspire myself by designers, photographers and artists who have paved the path before me. My secret is that I always try to give my work a personal twist on what's already done before!
         </p>
       </div>
     </div>
