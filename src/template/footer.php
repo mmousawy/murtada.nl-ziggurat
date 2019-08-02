@@ -14,6 +14,8 @@
   <div class="page-content-overlay"></div>
   <script src="script.min.js" defer></script>
   <script src="script/lib/zoom.min.js" defer></script>
+  <script src="script/lib/flickity.min.js"></script>
+  <script src="script/lib/flickity.fullscreen.js"></script>
   <img class="shape" src="assets/images/_shape-1.svg" hidden>
   <img class="shape" src="assets/images/_shape-2.svg" hidden>
   <img class="shape" src="assets/images/_shape-3.svg" hidden>

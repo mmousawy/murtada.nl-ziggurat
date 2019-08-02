@@ -98,27 +98,27 @@ $props = $Ziggurat->resolvedPage['properties'];
       <div class="gallery__pane">
         <picture class="gallery__picture">
           <source srcset="assets/images/work/stress-in-action/_sia_1-512px.png 512w, assets/images/work/stress-in-action/_sia_1-1024px.png 1024w, assets/images/work/stress-in-action/_sia_1-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_1-1024px.png" alt="stress-in-action screenshot" data-action="zoom">
+          <img src="assets/images/work/stress-in-action/_sia_1-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/stress-in-action/_sia_2-512px.png 512w, assets/images/work/stress-in-action/_sia_2-1024px.png 1024w, assets/images/work/stress-in-action/_sia_2-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_2-1024px.png" alt="stress-in-action screenshot" data-action="zoom">
+          <img src="assets/images/work/stress-in-action/_sia_2-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/stress-in-action/_sia_3-512px.png 512w, assets/images/work/stress-in-action/_sia_3-1024px.png 1024w, assets/images/work/stress-in-action/_sia_3-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_3-1024px.png" alt="stress-in-action screenshot" data-action="zoom">
+          <img src="assets/images/work/stress-in-action/_sia_3-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/stress-in-action/_sia_4-512px.png 512w, assets/images/work/stress-in-action/_sia_4-1024px.png 1024w, assets/images/work/stress-in-action/_sia_4-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_4-1024px.png" alt="stress-in-action screenshot" data-action="zoom">
+          <img src="assets/images/work/stress-in-action/_sia_4-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/stress-in-action/_sia_5-512px.png 512w, assets/images/work/stress-in-action/_sia_5-1024px.png 1024w, assets/images/work/stress-in-action/_sia_5-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_5-1024px.png" alt="stress-in-action screenshot" data-action="zoom">
+          <img src="assets/images/work/stress-in-action/_sia_5-1024px.png" alt="stress-in-action screenshot">
         </picture>
       </div>
     </div>

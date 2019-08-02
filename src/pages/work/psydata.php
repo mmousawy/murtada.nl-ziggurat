@@ -100,27 +100,27 @@ $props = $Ziggurat->resolvedPage['properties'];
       <div class="gallery__pane">
         <picture class="gallery__picture">
           <source srcset="assets/images/work/psydata/_psydata_1-512px.png 512w, assets/images/work/psydata/_psydata_1-1024px.png 1024w, assets/images/work/psydata/_psydata_1-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_1-1024px.png" alt="PsyData screenshot" data-action="zoom">
+          <img src="assets/images/work/psydata/_psydata_1-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/psydata/_psydata_2-512px.png 512w, assets/images/work/psydata/_psydata_2-1024px.png 1024w, assets/images/work/psydata/_psydata_2-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_2-1024px.png" alt="PsyData screenshot" data-action="zoom">
+          <img src="assets/images/work/psydata/_psydata_2-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/psydata/_psydata_3-512px.png 512w, assets/images/work/psydata/_psydata_3-1024px.png 1024w, assets/images/work/psydata/_psydata_3-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_3-1024px.png" alt="PsyData screenshot" data-action="zoom">
+          <img src="assets/images/work/psydata/_psydata_3-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/psydata/_psydata_4-512px.png 512w, assets/images/work/psydata/_psydata_4-1024px.png 1024w, assets/images/work/psydata/_psydata_4-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_4-1024px.png" alt="PsyData screenshot" data-action="zoom">
+          <img src="assets/images/work/psydata/_psydata_4-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
           <source srcset="assets/images/work/psydata/_psydata_5-512px.png 512w, assets/images/work/psydata/_psydata_5-1024px.png 1024w, assets/images/work/psydata/_psydata_5-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_5-1024px.png" alt="PsyData screenshot" data-action="zoom">
+          <img src="assets/images/work/psydata/_psydata_5-1024px.png" alt="PsyData screenshot">
         </picture>
       </div>
     </div>
