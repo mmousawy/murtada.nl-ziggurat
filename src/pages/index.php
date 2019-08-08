@@ -24,7 +24,7 @@
 <section class="page-section page-section--home-about">
   <a name="about" class="section-link"></a>
   <div class="wrap">
-    <h2>Hi, I'm Murtada al Mousawy, a full-stack web developer based in the Netherlands.</h2>
+    <h2>Hi, I'm Murtada al Mousawy, full-stack web&nbsp;developer based around the Rotterdam&nbsp;&&nbsp;Den&nbsp;Haag area.</h2>
   </div>
   <div class="content-row">
     <div class="wrap">
