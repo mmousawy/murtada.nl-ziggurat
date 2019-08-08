@@ -76,6 +76,10 @@ h2 {
 h3 {
   font-size: get('fonts.heading.size-h3');
 
+  .wrap--blog & {
+    margin: 2em 0 1em;
+  }
+
   @include bp(max-small) {
     font-size: get('fonts.heading.size-h3') * .75;
   }
@@ -135,4 +139,24 @@ ol {
   @include bp(max-small) {
     padding-left: 1.5em;
   }
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  background-color: transparentize(get('colors.primary'), .9);
+  padding: 0 .2em;
+  border-radius: .2em;
+  white-space: nowrap;
+  color: #b51e8b;
+  font-size: 1.25rem;
+
+  @include bp(max-small) {
+    font-size: 1.0625rem;
+  }
+}
+
+.arrow {
+  font-weight: 200;
+  color: darken(get('colors.primary'), 25%);
+  margin: 0 .25em;
 }

@@ -153,6 +153,7 @@
     }
   }
 
+  .wrap--blog &,
   .content-row__text & {
     padding: 2vw 0 calc(2vw + 1em);
   }
@@ -163,6 +164,10 @@
 
   &--large {
     max-width: 66%;
+  }
+
+  video {
+    max-width: 100%;
   }
 
   picture {
