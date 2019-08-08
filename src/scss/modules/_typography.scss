@@ -5,6 +5,22 @@ body {
 
 a:not([class])[href] {
   color: get('colors.text.link');
+  $linkColor: get('colors.text.link');
+
+  &[href*='http']:not([href^='murtada.nl']) {
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background: {
+        image: url('inline:assets/images/icon-launch.svg?linkColor=#{$linkColor}');
+        position: 50%;
+        repeat: no-repeat;
+        size: .875em;
+      }
+    }
+  }
 }
 
 h1,

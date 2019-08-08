@@ -138,7 +138,7 @@ You'll get hit in the face with an enormous amount of data, so knowing how to re
 ### Layers tool
 Whenever you're optimizing for the compositing step, it is a good idea to check the Layers tool. Open the command palette and search for "Layers" or go to Customize and control DevTools menu (⋮) <span class="arrow">›</span> More tools <span class="arrow">›</span> Layers.
 
-You can read all about how to use these tools and how to analyze the data here: [Performance Analysis Reference](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
+You can read all about how to use these tools and how to analyze the data here: [Performance Analysis Reference](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference).
 
 
 
