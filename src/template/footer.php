@@ -19,5 +19,12 @@
   <img class="shape" src="assets/images/_shape-1.svg" hidden>
   <img class="shape" src="assets/images/_shape-2.svg" hidden>
   <img class="shape" src="assets/images/_shape-3.svg" hidden>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-16469031-3');
+  </script>
 </body>
 </html>

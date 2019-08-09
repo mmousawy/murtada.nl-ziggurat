@@ -14,6 +14,10 @@
 
     path {
       fill: get('colors.primary');
+
+      .is-inverted & {
+        fill: get('colors.white');
+      }
     }
   }
 
@@ -29,6 +33,10 @@
   color: get('colors.primary');
   margin-top: -.125em;
   margin-left: .35em;
+
+  .is-inverted & {
+    color: get('colors.white');
+  }
 
   @include bp(max-small) {
     font-size: get('fonts.heading.size-h2') * .75;

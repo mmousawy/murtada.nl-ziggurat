@@ -1,0 +1,84 @@
+$invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+
+.product-features {
+  position: relative;
+  background: linear-gradient(-30deg, lighten(get('colors.darkBackground'), 5%), get('colors.darkBackground'));
+
+  > * {
+    z-index: 2;
+  }
+}
+
+.features {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 80rem;
+  margin: 4rem auto 5rem;
+  padding: 0 2rem;
+
+  @include bp(max-small) {
+    flex-wrap: wrap;
+    margin: 2rem auto 5rem;
+  }
+}
+
+.feature {
+  width: 30%;
+  padding: .5rem;
+
+  @include bp(max-small) {
+    width: 100%;
+
+    + .feature {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.feature__icon {
+  display: inline-block;
+  margin-right: .5em;
+  vertical-align: top;
+
+  svg {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    path {
+      fill: $invertedColor;
+    }
+
+    @include bp(max-small) {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+}
+
+.feature__title {
+  display: flex;
+  font-size: 1.75rem;
+  margin: 0;
+
+  .is-inverted & {
+    color: $invertedColor;
+  }
+
+  @include bp(max-small) {
+    font-size: 1.25rem;
+  }
+}
+
+.feature__content {
+  font-size: 1.25rem;
+
+  .is-inverted & {
+    color: $invertedColor;
+  }
+
+  @include bp(max-small) {
+    font-size: 1.125rem;
+    margin-top: .5em;
+  }
+}

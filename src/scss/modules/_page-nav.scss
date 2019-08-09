@@ -91,6 +91,16 @@
       }
     }
 
+    @include bp(min-small) {
+      .is-inverted & {
+        color: get('colors.white');
+
+        &--active {
+          border-bottom: 2px solid get('colors.white');
+        }
+      }
+    }
+
     @include bp(max-small) {
       font-size: 1.25rem;
     }
@@ -180,6 +190,10 @@
   }
 }
 
+.is-inverted .page-nav-label span {
+  background-color: get('colors.white');
+}
+
 @keyframes slideInBackground {
   0% {
     transform: translate(-50%, -50%);
@@ -253,5 +267,13 @@
 
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+.button--hire-me {
+  .is-inverted & {
+    &::before {
+      background-color: lighten(get('colors.darkBackground'), 25%);
+    }
   }
 }

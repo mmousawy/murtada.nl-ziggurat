@@ -1,3 +1,5 @@
+$invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
+
 .page-footer {
   flex-shrink: 0;
   margin-top: auto;
@@ -11,6 +13,8 @@
     max-width: 80%;
     margin: 0;
     text-align: center;
+    color: $invertedColor;
+    opacity: .7;
   }
 }
 
@@ -48,16 +52,28 @@
   opacity: .75;
   transition: opacity 200ms;
 
-  &[data-icon="github"] {
+  &[data-icon='github'] {
     background-image: url('inline:assets/images/_icon-github.svg?fill=#{$icon-color}');
+
+    .is-inverted & {
+      background-image: url('inline:assets/images/_icon-github.svg?fill=#{$invertedColor}');
+    }
   }
 
-  &[data-icon="linkedin"] {
+  &[data-icon='linkedin'] {
     background-image: url('inline:assets/images/_icon-linkedin.svg?fill=#{$icon-color}');
+
+    .is-inverted & {
+      background-image: url('inline:assets/images/_icon-linkedin.svg?fill=#{$invertedColor}');
+    }
   }
 
-  &[data-icon="twitter"] {
+  &[data-icon='twitter'] {
     background-image: url('inline:assets/images/_icon-twitter.svg?fill=#{$icon-color}');
+
+    .is-inverted & {
+      background-image: url('inline:assets/images/_icon-twitter.svg?fill=#{$invertedColor}');
+    }
   }
 
   &:hover,

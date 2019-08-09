@@ -1,5 +1,13 @@
 <?php
   $props = $Ziggurat->resolvedPage['properties'];
+
+  $ctaUrl = isset($props['cta-url'])
+              ? $props['cta-url']
+              : $Ziggurat->resolvedPage['slug-path'] . '#contact';
+
+  $ctaText = isset($props['cta-text'])
+              ? $props['cta-text']
+              : 'Hire me';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +50,7 @@
   <link rel="preload" href="assets/fonts/sailec-medium.woff2" as="font" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="<?= isset($props['class']) ? $props['class'] : '' ?>">
   <header class="page-header">
     <div class="wrap">
       <a href="/" class="page-branding">
@@ -62,11 +70,12 @@
         <ul>
           <li><a href="about" class="page-nav__item<?= (in_array('about', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">About</a></li>
           <li><a href="work" class="page-nav__item<?= (in_array('work', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Work</a></li>
+          <li><a href="products" class="page-nav__item<?= (in_array('products', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Products</a></li>
           <li><a href="blog" class="page-nav__item<?= (in_array('blog', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Blog</a></li>
-          <li><a href="<?= $Ziggurat->resolvedPage['slug-path'] ?>#contact" class="page-nav__item page-nav__item--mobile page-nav__item--hire-me">Hire me</a></li>
+          <li><a href="<?= $ctaUrl ?>" class="page-nav__item page-nav__item--mobile page-nav__item--hire-me"><?= $ctaText ?></a></li>
         </ul>
       </nav>
-      <a href="<?= $Ziggurat->resolvedPage['slug-path'] ?>#contact" class="button button--hire-me">Hire me</a>
+      <a href="<?= $ctaUrl ?>" class="button button--hire-me"><?= $ctaText ?></a>
     </div>
   </header>
   <main class="page-content">

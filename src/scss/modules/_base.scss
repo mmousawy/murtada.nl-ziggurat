@@ -12,6 +12,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: 100vh;
+
+  &.is-inverted {
+    background-color: #00223c;
+  }
 }
 
 main {
@@ -35,7 +39,7 @@ img {
       position: 0 120%;
       repeat: no-repeat;
       size: 100%;
-    }
+    };
 
     .content-row:last-child .wrap {
       @include bp(min-small) {
@@ -89,6 +93,22 @@ img {
       image: url('inline:assets/images/contact-bg.svg?color1=#{$color1}&color2=#{$color2}&color3=#{$color3}&color4=#{$color4}&color5=#{$color5}');
       position: 50%;
       size: cover;
+    }
+  }
+
+  &--products {
+    background: {
+      image: url('assets/images/products/products-bg.svg');
+      size: cover;
+      position: 75% 50%;
+    };
+
+    h1 + h2 {
+      max-width: 30rem;
+    }
+
+    @include bp(max-small) {
+      // background-position:
     }
   }
 }

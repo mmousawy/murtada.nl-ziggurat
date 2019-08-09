@@ -2,6 +2,7 @@
   'use strict';
 
   const navButton = document.querySelector('.page-nav-label__button');
+  const body = document.querySelector('body');
   const header = document.querySelector('.page-header');
   const nav = document.querySelector('.page-nav');
   const navBackground = document.querySelector('.page-nav__background');
@@ -173,6 +174,12 @@
     header.style.transform = `translateY(${headerPos}px)`;
     header.style.boxShadow = `0 0 ${blurSize * opacity}px rgba(47,54,91,${.3 * opacity})`;
     header.style.backgroundColor = `rgba(255,255,255,${Math.min(minOpacity + opacity, 1)})`;
+
+    if (body.classList.contains('is-inverted')) {
+      header.style.backgroundColor = `rgba(0,48,86,${Math.min(minOpacity + opacity, 1)})`;
+    } else {
+      header.style.backgroundColor = `rgba(255,255,255,${Math.min(minOpacity + opacity, 1)})`;
+    }
   }
 
   // Navigation background items

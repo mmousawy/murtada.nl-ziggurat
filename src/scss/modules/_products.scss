@@ -1,0 +1,294 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 50rem;
+  margin: 0 auto 3rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  max-width: calc(50% - 2rem);
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  background: get('colors.white');
+  box-shadow: 0 .25rem .5rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .9),
+              0 1rem 5rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .98);
+  animation: slideIn 300ms;
+  animation-fill-mode: backwards;
+  transition: {
+    property: transform, box-shadow;
+    duration: 400ms;
+  };
+
+  picture {
+    margin-bottom: .5rem;
+    max-width: 8rem;
+    filter: drop-shadow(0 .25rem .3rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .8));
+  }
+
+  h2 {
+    color: get('colors.text.link');
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin: 0;
+    max-width: 18rem;
+    text-align: center;
+    color: get('colors.text.body');
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 1rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .85),
+              0 5rem 8rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .95);
+  }
+
+  @for $index from 1 to 10 {
+    &:nth-child(#{$index}) {
+      animation-delay: $index * 50ms;
+    }
+  }
+
+  @include bp(max-small) {
+    max-width: 100%;
+    margin: 1rem 2rem;
+  }
+}
+
+.product-header {
+  position: relative;
+  display: flex;
+  background-color: get('colors.darkBackground');
+  background: {
+    image: radial-gradient(circle at center, lighten(get('colors.darkBackground'), 10%), get('colors.darkBackground'));
+    size: 100%;
+  };
+  overflow: hidden;
+
+  > * {
+    z-index: 2;
+  }
+
+  @include bp(max-small) {
+    flex-direction: column;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 46%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-44deg);
+    background: get('colors.darkBackground');
+    z-index: 1;
+
+    @include bp(max-small) {
+      flex-direction: column;
+      left: 0;
+      top: calc(50%);
+      width: 100%;
+      transform: skewY(-12deg);
+    }
+  }
+}
+
+.product-header__left {
+  display: flex;
+  width: 50%;
+  padding: 6rem 3rem 10rem;
+
+  .picture-wrapper {
+    position: relative;
+    max-width: 90%;
+    margin: auto 0 auto auto;
+    box-shadow: 0 1rem 2rem transparentize(get('colors.black'), .7);
+
+    picture img {
+      border-radius: .5em;
+      overflow: hidden;
+    }
+
+    @include bp(max-small) {
+      max-width: 100%;
+    }
+  }
+
+  .stork__icon-folder {
+    position: absolute;
+    top: 30%;
+    left: -7%;
+    width: 15%;
+    filter: drop-shadow(0 .25rem .3rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .8));
+    opacity: .8;
+
+    img {
+      position: relative;
+    }
+  }
+
+  .stork__icon-grabbing {
+    position: absolute;
+    top: 38%;
+    left: -3%;
+    width: 6%;
+    filter: drop-shadow(0 2px .1rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .6));
+
+    img {
+      position: relative;
+    }
+  }
+
+  @include bp(max-small) {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+.product-header__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 6rem 2rem 10rem 3rem;
+  color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+
+  h1.page-title,
+  h2 {
+    margin: 0;
+    text-align: left;
+    max-width: 28rem;
+  }
+
+  h2 {
+    @include bp(max-small) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  h1.page-title {
+    font-size: 5rem;
+    margin: 0 0 .35em;
+
+    svg {
+      display: inline-block;
+      width: auto;
+      height: 1.2em;
+      vertical-align: top;
+
+      path {
+        fill: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+      }
+    }
+
+    &::after {
+      content: '.';
+    }
+
+    @include bp(max-small) {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+  @include bp(max-small) {
+    align-items: center;
+    width: 100%;
+    padding: 2rem 2rem 3rem;
+  }
+}
+
+.product-signup {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  width: 100%;
+  margin: -3rem auto 3rem;
+  padding: 2rem 4rem 2.25rem;
+  border-radius: .5rem;
+  background-color: desaturate(lighten(get('colors.darkBackground'), 17%), 10%);
+  background: {
+    image: url('assets/images/products/stork/signup-bg.svg');
+    size: cover;
+    position: 50%;
+  };
+  box-shadow: 0 1rem 2rem transparentize(get('colors.black'), .8);
+
+  h2 {
+    text-align: left;
+    margin: 0 0 1.5rem;
+    color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+    margin: 0 0 2rem;
+
+    @include bp(max-small) {
+      font-size: 1.25rem;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    appearance: none;
+    width: 100%;
+    max-width: 20rem;
+    padding: .8rem 1rem;
+    border: 0;
+    border-radius: .25rem;
+    background: transparentize(get('colors.darkBackground'), .35);
+    color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+    font-size: 1.5rem;
+
+    @include bp(max-small) {
+      font-size: 1.25rem;
+    }
+  }
+
+  $buttonColor: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+
+  .signup-button {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    border: .125rem solid $buttonColor;
+    border-radius: 50%;
+    background: {
+      image: url('inline:assets/images/_icon-arrow-right.svg?color=#{$buttonColor}');
+      position: 50%;
+      repeat: no-repeat;
+      size: 66%;
+    };
+    cursor: pointer;
+
+    @include bp(max-small) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  @include bp(max-small) {
+    width: calc(100% - 3rem);
+    margin: -3rem auto 1rem;
+    padding: 1.5rem 2rem 2rem;
+  }
+}
