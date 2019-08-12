@@ -122,9 +122,10 @@ $bodyColor: get('colors.text.body');
   animation: dragDrop 3000ms infinite;
 
   @include bp(max-small) {
+    top: 3rem;
+    left: -20vw;
     width: 15vw;
     height: 15vw;
-    left: -20vw;
   }
 }
 
@@ -192,7 +193,7 @@ $bodyColor: get('colors.text.body');
 @keyframes dragDropIcon {
   50% {
     transform: none;
-    opacity: 1;
+    opacity: .7;
   }
 
   55% {

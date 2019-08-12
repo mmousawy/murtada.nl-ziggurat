@@ -87,7 +87,7 @@
   display: flex;
   background-color: get('colors.darkBackground');
   background: {
-    image: radial-gradient(circle at center, lighten(get('colors.darkBackground'), 10%), get('colors.darkBackground'));
+    image: radial-gradient(circle at center, lighten(get('colors.darkBackground'), 12%), get('colors.darkBackground'));
     size: 100%;
   };
   overflow: hidden;

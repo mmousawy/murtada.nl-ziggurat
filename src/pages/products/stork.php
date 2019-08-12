@@ -1,13 +1,13 @@
 <?php
 #zigg:title       = `Stork`
-#zigg:page-title  = `Stork - Secure file uploads and mana&shygement in WordPress, made easy`
+#zigg:page-title  = `Stork - Secure file upload and mana&shy;gement in WordPress, made easy`
 #zigg:slug        = `stork`
 #zigg:parent      = `products`
 #zigg:logo        = `assets/images/products/stork/stork-logo.svg`
 #zigg:cover-image = `_cover-stork{$size}.png`
 #zigg:cover-alt   = `Stork logo`
 #zigg:date        = ``
-#zigg:description = `Secure file uploads and mana&shygement in WordPress, made easy.`
+#zigg:description = `Secure file upload and mana&shy;gement in WordPress, made easy.`
 #zigg:priority    = `0.8`
 #zigg:class       = `is-inverted`
 #zigg:cta-text    = `Purchase Stork`
