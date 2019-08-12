@@ -316,18 +316,34 @@
     var lazyImages = [].slice.call(document.querySelectorAll('picture.lazy'));
 
     if ('IntersectionObserver' in window) {
+
       let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            [].slice.call(entry.target.querySelectorAll('source[data-srcset], img[data-src]')).forEach(pictureSource => {
-              !pictureSource.src && pictureSource.dataset.src && (pictureSource.src = pictureSource.dataset.src) && delete pictureSource.dataset.src;
-              !pictureSource.srcset && pictureSource.dataset.srcset && (pictureSource.srcset = pictureSource.dataset.srcset) && delete pictureSource.dataset.srcset;
-            });
-            lazyImageObserver.unobserve(entry.target);
+            entry.target.querySelectorAll('source[data-srcset], img[data-src]').forEach(pictureSource => {
+              const loadImg = new Image;
 
-            setTimeout(() => {
-              entry.target.classList.remove('lazy');
-            }, 100);
+              const isSrcSet = typeof pictureSource.dataset.srcset !== 'undefined';
+
+              loadImg.onload = () => {
+
+                if (isSrcSet) {
+                  pictureSource.srcset = loadImg.srcset;
+                } else {
+                  pictureSource.src = loadImg.src;
+                }
+
+                entry.target.classList.remove('lazy');
+              }
+
+              if (isSrcSet) {
+                loadImg.srcset = pictureSource.dataset.srcset;
+              } else {
+                loadImg.src = pictureSource.dataset.src;
+              }
+            });
+
+            lazyImageObserver.unobserve(entry.target);
           }
         });
       });
@@ -335,6 +351,7 @@
       lazyImages.forEach(function(lazyImage) {
         lazyImageObserver.observe(lazyImage);
       });
+
     } else {
       lazyImages.forEach(function(lazyImage) {
         [].slice.call(lazyImage.querySelectorAll('source[data-srcset], img[data-src]')).forEach(pictureSource => {
