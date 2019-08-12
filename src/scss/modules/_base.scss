@@ -97,6 +97,7 @@ img {
   }
 
   &--products {
+    flex-grow: 1;
     background: {
       image: url('assets/images/products/products-bg.svg');
       size: cover;

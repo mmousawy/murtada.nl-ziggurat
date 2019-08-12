@@ -8,12 +8,12 @@
 
 .product {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
-  align-items: center;
+  align-items: flex-start;
   max-width: calc(50% - 2rem);
   margin: 0 auto 2rem;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: .5rem;
   text-decoration: none;
   background: get('colors.white');
@@ -27,21 +27,9 @@
   };
 
   picture {
-    margin-bottom: .5rem;
-    max-width: 8rem;
-    filter: drop-shadow(0 .25rem .3rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .8));
-  }
-
-  h2 {
-    color: get('colors.text.link');
-  }
-
-  p {
-    font-size: 1.125rem;
-    margin: 0;
-    max-width: 18rem;
-    text-align: center;
-    color: get('colors.text.body');
+    margin-right: 1em;
+    max-width: 6rem;
+    flex-shrink: 0;
   }
 
   &:hover {
@@ -59,6 +47,38 @@
   @include bp(max-small) {
     max-width: 100%;
     margin: 1rem 2rem;
+  }
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    max-width: 100%;
+    margin: .25em 0 1rem;
+    font-size: 1.75rem;
+    color: get('colors.text.link');
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin: 0;
+    text-align: center;
+    color: get('colors.text.body');
+  }
+
+  h2,
+  p {
+    width: 100%;
+    text-align: left;
+  }
+
+  .product--disabled & {
+    h2,
+    p {
+      color: lighten(get('colors.text.body'), 30%);
+    }
   }
 }
 
@@ -109,7 +129,7 @@
 
   .picture-wrapper {
     position: relative;
-    max-width: 90%;
+    max-width: 80%;
     margin: auto 0 auto auto;
     box-shadow: 0 1rem 2rem transparentize(get('colors.black'), .7);
 
@@ -120,31 +140,6 @@
 
     @include bp(max-small) {
       max-width: 100%;
-    }
-  }
-
-  .stork__icon-folder {
-    position: absolute;
-    top: 30%;
-    left: -7%;
-    width: 15%;
-    filter: drop-shadow(0 .25rem .3rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .8));
-    opacity: .8;
-
-    img {
-      position: relative;
-    }
-  }
-
-  .stork__icon-grabbing {
-    position: absolute;
-    top: 38%;
-    left: -3%;
-    width: 6%;
-    filter: drop-shadow(0 2px .1rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .6));
-
-    img {
-      position: relative;
     }
   }
 
@@ -216,7 +211,7 @@
   max-width: 40rem;
   width: 100%;
   margin: -3rem auto 3rem;
-  padding: 2rem 4rem 2.25rem;
+  padding: 2rem 4rem 2.5rem;
   border-radius: .5rem;
   background-color: desaturate(lighten(get('colors.darkBackground'), 17%), 10%);
   background: {
@@ -235,7 +230,11 @@
   p {
     font-size: 1.5rem;
     color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
-    margin: 0 0 2rem;
+    margin: 0 0 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include bp(max-small) {
       font-size: 1.25rem;
@@ -243,20 +242,32 @@
   }
 
   form {
-    display: flex;
-    align-items: center;
+
+    fieldset {
+      width: 100%;
+      appearance: none;
+      border: 0;
+      margin: 0;
+      padding: 0;
+
+      .fieldset-flex {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 
   input {
     appearance: none;
     width: 100%;
     max-width: 20rem;
-    padding: .8rem 1rem;
+    padding: .5em .625em;
     border: 0;
     border-radius: .25rem;
     background: transparentize(get('colors.darkBackground'), .35);
     color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
     font-size: 1.5rem;
+    font-family: inherit;
 
     @include bp(max-small) {
       font-size: 1.25rem;
@@ -269,7 +280,7 @@
     flex-shrink: 0;
     width: 3rem;
     height: 3rem;
-    margin-left: 1rem;
+    margin-left: 1em;
     border: .125rem solid $buttonColor;
     border-radius: 50%;
     background: {
@@ -289,6 +300,6 @@
   @include bp(max-small) {
     width: calc(100% - 3rem);
     margin: -3rem auto 1rem;
-    padding: 1.5rem 2rem 2rem;
+    padding: 1rem 1.5rem 1.5rem;
   }
 }

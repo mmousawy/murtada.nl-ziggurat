@@ -1,0 +1,232 @@
+$foreGroundColor: #0073AA;
+$bodyColor: get('colors.text.body');
+
+.stork-animation {
+  font-size: calc(.5rem + .5vw);
+  font-family: sans-serif;
+}
+
+.stork-animation__table {
+  background: get('colors.white');
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.stork-animation__table-head {
+  display: flex;
+  background-color: get('colors.white');
+  color: $foreGroundColor;
+
+  &:first-child {
+    border-bottom: .125em solid desaturate(lighten($foreGroundColor, 55%), 80%);
+  }
+
+  &:last-child {
+    border-top: .125em solid desaturate(lighten($foreGroundColor, 55%), 80%);
+  }
+}
+
+.stork-animation__table-body {
+  height: 3em;
+  display: flex;
+  background-color: get('colors.white');
+
+  &.is-animated {
+    animation: scaleIn 300ms both;
+  }
+
+  &.is-deleted {
+    animation: scaleOut 300ms both;
+  }
+
+  &.is-alt {
+    background-color: desaturate(lighten($foreGroundColor, 62%), 80%);
+  }
+}
+
+.stork-animation__table-td {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: .75em;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &--checkbox {
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  &--filesize {
+    width: 15em;
+  }
+
+  &--owner {
+    width: 12em;
+  }
+
+  &--date {
+    width: 24em;
+  }
+}
+
+.stork-animation__table-checkbox {
+  border: .125em solid desaturate(lighten($foreGroundColor, 45%), 80%);
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: .125em;
+  flex-shrink: 0;
+}
+
+.stork__file-icon {
+  flex-shrink: 0;
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: .5em;
+  background-size: 1.25em;
+
+  &[data-type='zip'] {
+    background-image: url('inline:assets/images/_dashicons-archive.svg?color=#{$bodyColor}');
+  }
+
+  &[data-type='dir'] {
+    background-image: url('inline:assets/images/_dashicons-category.svg?color=#{$foreGroundColor}');
+
+    + .stork__file-name {
+      color: $foreGroundColor;
+    }
+  }
+
+  &[data-type='img'] {
+    background-image: url('inline:assets/images/_dashicons-img.svg?color=#{$bodyColor}');
+  }
+
+  &[data-type='doc'] {
+    background-image: url('inline:assets/images/_dashicons-doc.svg?color=#{$bodyColor}');
+  }
+}
+
+.stork-animation__table-content {
+  max-height: 12em;
+  overflow: hidden;
+}
+
+.stork__drag-drop {
+  position: absolute;
+  top: 5rem;
+  left: -22vw;
+  width: 5vw;
+  height: 5vw;
+  animation: dragDrop 3000ms infinite;
+
+  @include bp(max-small) {
+    width: 15vw;
+    height: 15vw;
+    left: -20vw;
+  }
+}
+
+.stork__icon {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  animation: dragDropIcon 3000ms infinite;
+
+  &[data-type='dir'] {
+    background-image: url('assets/images/products/stork/_icon-dir-512px.png');
+  }
+
+  &[data-type='zip'] {
+    background-image: url('assets/images/products/stork/_icon-zip-512px.png');
+  }
+
+  &[data-type='img'] {
+    background-image: url('assets/images/products/stork/_icon-img-512px.png');
+  }
+
+  &[data-type='doc'] {
+    background-image: url('assets/images/products/stork/_icon-doc-512px.png');
+  }
+}
+
+.stork__icon-hand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px .1rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 40%), .7));
+  animation: dragDropHand 3000ms steps(1, end) infinite;
+  background-image: url('inline:assets/images/products/stork/_icon-hand-grabbing.svg');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@keyframes dragDrop {
+  0% {
+    transform: rotate(0deg) translateX(-5vw) translateY(-10vw) rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg) translateY(-35vw) rotate(-90deg);
+  }
+
+  60% {
+    transform: rotate(90deg) translateY(-35vw) rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(120deg) translateX(50%) rotate(-120deg);
+  }
+}
+
+@keyframes dragDropHand {
+  50% {
+    background-image: url('inline:assets/images/products/stork/_icon-hand-open.svg');
+  }
+}
+
+@keyframes dragDropIcon {
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+
+  55% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    height: 0;
+    transform: scale(.9);
+    opacity: 0;
+    background-color: $foreGroundColor;
+  }
+
+  100% {
+    height: 3em;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.9);
+    opacity: 0;
+  }
+}

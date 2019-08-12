@@ -8,7 +8,7 @@ $options = [
   'pages_dir' => './pages',
   'template' => './template',
   // 'enable_cache' => true,
-  // 'minify_html' => true
+  'minify_html' => true
 ];
 
 $Ziggurat = new \MMousawy\Ziggurat($options);

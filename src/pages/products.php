@@ -36,8 +36,10 @@
     <picture>
       <img src="{$props['logo']}" alt="{$props['cover-alt']}">
     </picture>
-    <h2>{$props['title']}</h2>
-    <p>{$props['description']}</p>
+    <div class="product__content">
+      <h2>{$props['title']}</h2>
+      <p>{$props['description']}</p>
+    </div>
   </a>
 HTML;
 
@@ -45,5 +47,14 @@ HTML;
   }
 
   ?>
+  <a class="product product--disabled">
+    <picture>
+      <img src="assets/images/products/coming-soon.svg" alt="Coming soon rocket icon">
+    </picture>
+    <div class="product__content">
+      <h2>Coming soon</h2>
+      <p>More software is being worked on right now!</p>
+    </div>
+  </a>
 </div>
 </section>

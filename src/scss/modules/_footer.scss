@@ -13,8 +13,13 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
     max-width: 80%;
     margin: 0;
     text-align: center;
-    color: $invertedColor;
     opacity: .7;
+  }
+
+  .is-inverted & {
+    p {
+      color: $invertedColor;
+    }
   }
 }
 

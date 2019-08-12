@@ -124,7 +124,7 @@ time {
 }
 
 blockquote {
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: italic;
   color: lighten(get('colors.text.body'), 20%);
   font-size: 1.5em;
@@ -175,4 +175,21 @@ code {
   font-weight: 200;
   color: darken(get('colors.primary'), 25%);
   margin: 0 .25em;
+}
+
+main p.defaultscript {
+  max-width: 60%;
+  margin: 1em 0 0;
+  padding-left: 2em;
+  background: {
+    image: url('inline:assets/images/_icon-info.svg?color=#fff');
+    size: 1.5em;
+    repeat: no-repeat;
+  }
+  font-size: 1em;
+  opacity: .6;
+
+  @include bp(max-small) {
+    max-width: 100%;
+  }
 }

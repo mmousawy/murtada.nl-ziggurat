@@ -362,4 +362,213 @@
   resizeHandler();
   headerFrame();
   header.style.position = 'fixed';
+
+  if (document.querySelector('.stork-animation')) {
+    const storkAnimationContent = document.querySelector('.stork-animation__table-content');
+    const storkDragDrop = document.querySelector('.stork__drag-drop');
+    const storkDragDropIcon = storkDragDrop.querySelector('.stork__icon');
+    const rowTemplate = document.querySelector('#stork-animation__row-template');
+    const storkForm = document.querySelector('#purchase form');
+    const storkFormFieldset = storkForm.querySelector('fieldset');
+    const storkFormPre = document.querySelector('.pre-signup');
+    const storkFormPost = document.querySelector('.post-signup');
+
+    const storkAnimations = {
+      files: [
+        {
+          type: 'img',
+          name: 'design-doc-01.sketch'
+        },
+        {
+          type: 'img',
+          name: 'logo_cursief.svg'
+        },
+        {
+          type: 'img',
+          name: 'catdog.jpg'
+        },
+        {
+          type: 'doc',
+          name: 'assignment-museum.doc'
+        },
+        {
+          type: 'doc',
+          name: 'coffee_varieties.pdf'
+        },
+        {
+          type: 'doc',
+          name: 'Web Components.pdf'
+        },
+        {
+          type: 'zip',
+          name: 'Archive 3.zip'
+        },
+        {
+          type: 'zip',
+          name: 'beautiful landscape.zip'
+        },
+        {
+          type: 'zip',
+          name: 'LoadsaFiles.zip'
+        },
+        {
+          type: 'dir',
+          name: 'assets'
+        },
+        {
+          type: 'dir',
+          name: 'pictures'
+        },
+        {
+          type: 'dir',
+          name: 'Project files'
+        },
+
+      ],
+      filesizes: [
+        'B',
+        'KB',
+        'MB'
+      ],
+      owners: [
+        'Murtada',
+        'Kaleigh',
+        'Gideon',
+        'Tamara',
+        'Alice',
+        'Johan',
+        'Tamara'
+      ],
+    };
+
+    // Create a new element from the row template
+    let rowCount = 0;
+
+    function createRow(fileNr, isAnimated) {
+      rowCount++;
+
+      const rowFrag = document.importNode(rowTemplate.content, true);
+
+      // We will lose the reference of the appended element when appending with the
+      // fragment, so we make a copy
+      const rowElement = rowFrag.children[0];
+
+      rowElement.elements = {
+        icon: rowElement.querySelector('.stork-animation__table-td--filename .stork__file-icon'),
+        filename: rowElement.querySelector('.stork-animation__table-td--filename .stork__file-name'),
+        filesize: rowElement.querySelector('.stork-animation__table-td--filesize'),
+        owner: rowElement.querySelector('.stork-animation__table-td--owner'),
+        date: rowElement.querySelector('.stork-animation__table-td--date')
+      };
+
+      const fileSizeUnit = storkAnimations.filesizes[Math.floor(Math.random() * storkAnimations.filesizes.length)];
+
+      const getRandomFileSize = {
+        'MB': () => 1 + Math.round((Math.random() * 50) * 100) / 100,
+        'KB': () => 1 + Math.round((Math.random() * 1000) * 100) / 100,
+        'B': () => Math.round(Math.random() * 1000)
+      };
+
+      const fileSize = getRandomFileSize[fileSizeUnit]();
+
+      rowElement.elements.icon.dataset.type = storkAnimations.files[fileNr].type;
+      rowElement.elements.filename.innerHTML = storkAnimations.files[fileNr].name;
+      rowElement.elements.filesize.innerHTML =  fileSize + ' ' + fileSizeUnit;
+      rowElement.elements.owner.innerHTML = storkAnimations.owners[Math.floor(Math.random() * storkAnimations.owners.length)];
+
+      if (rowCount % 2 === 0) {
+        rowElement.classList.add('is-alt');
+      }
+
+      if (isAnimated) {
+        rowElement.classList.add('is-animated');
+        setTimeout(() => {
+          storkAnimationContent.querySelector('.stork-animation__table-body:last-of-type').remove();
+        }, 500);
+      }
+
+      const dateOptions = { hour: '2-digit', minute: '2-digit' };
+      const now = new Date();
+      let lastWeek = new Date();
+      lastWeek.setDate(lastWeek.getDate() - 7);
+
+      rowElement.elements.date.innerHTML = (randomDate(lastWeek, now, 8.5, 18)).toLocaleDateString('nl-NL', dateOptions);
+
+      storkAnimationContent.prepend(rowElement);
+    }
+
+    for (let i = 0; i < 4; i++) {
+      const fileNr = Math.floor(Math.random() * storkAnimations.files.length);
+      createRow(fileNr);
+    }
+
+    const fileNr = Math.floor(Math.random() * storkAnimations.files.length);
+
+    storkDragDropIcon.dataset.type = storkAnimations.files[fileNr].type;
+
+    setTimeout(() => {
+      createRow(fileNr, true);
+    }, 1500);
+
+    storkDragDrop.addEventListener('animationiteration', (event) => {
+      if (event.animationName === 'dragDrop') {
+        const fileNr = Math.floor(Math.random() * storkAnimations.files.length);
+
+        storkDragDropIcon.dataset.type = storkAnimations.files[fileNr].type;
+
+        setTimeout(() => {
+          createRow(fileNr, true);
+        }, 1500);
+      }
+    });
+
+    storkForm.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const signupEmail = event.target.querySelector('input[name="product_signup_email"]').value;
+
+      sendMail(signupEmail);
+    });
+
+    function sendMail(emailAddress) {
+      const request = new XMLHttpRequest();
+
+      request.open('POST', '/stork-signup', true);
+      request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+      request.responseType = 'json';
+
+      storkFormFieldset.setAttribute('disabled', true);
+
+      request.send(JSON.stringify({
+        email: emailAddress
+      }));
+
+      request.onload = () => {
+        storkFormFieldset.removeAttribute('disabled');
+
+        if (request.status === 200) {
+          const response = request.response;
+
+          if (response.success === true) {
+            storkFormPre.setAttribute('hidden', true);
+            storkFormPost.removeAttribute('hidden');
+
+            return;
+          }
+        }
+
+        console.log(request);
+
+        // Should not reach this if successful
+        alert('Something went wrong! Please try again.')
+      };
+    }
+  }
+
+  function randomDate(start, end, startHour, endHour) {
+    var date = new Date(+start + Math.random() * (end - start));
+    var hour = startHour + Math.random() * (endHour - startHour) | 0;
+    date.setHours(hour);
+    return date;
+  }
 })();

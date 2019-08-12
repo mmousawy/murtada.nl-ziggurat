@@ -16,16 +16,43 @@
 <section class="product-header">
   <div class="product-header__left">
     <div class="picture-wrapper align-left align-left--outside">
-      <picture class="lazy">
-        <source srcset="assets/images/products/stork/_cover-stork-512px.png 512w, assets/images/products/stork/_cover-stork-1024px.png 1024w" type="image/jpeg">
-        <img data-src="assets/images/products/stork/_cover-stork-1024px.png" alt="Stork screenshot">
-      </picture>
-      <div class="stork__icon-folder"><img src="assets/images/products/stork/_icon-folder-1024px.png" alt="Folder icon"></div>
-      <div class="stork__icon-grabbing"><img src="assets/images/products/stork/icon-grabbing.svg" alt="Grabbing hand cursor"></div>
+      <div class="stork-animation">
+        <div class="stork-animation__table">
+          <div class="stork-animation__table-head">
+            <div class="stork-animation__table-td stork-animation__table-td--checkbox"><div class="stork-animation__table-checkbox"></div></div>
+            <div class="stork-animation__table-td stork-animation__table-td--filename">File name</div>
+            <div class="stork-animation__table-td stork-animation__table-td--filesize">File size</div>
+            <div class="stork-animation__table-td stork-animation__table-td--owner">Owner</div>
+            <div class="stork-animation__table-td stork-animation__table-td--date">Date</div>
+          </div>
+          <div class="stork-animation__table-content">
+            <template id="stork-animation__row-template">
+              <div class="stork-animation__table-body">
+                <div class="stork-animation__table-td stork-animation__table-td--checkbox"><div class="stork-animation__table-checkbox"></div></div>
+                <div class="stork-animation__table-td stork-animation__table-td--filename"><div class="stork__file-icon"></div><div class="stork__file-name"></div></div>
+                <div class="stork-animation__table-td stork-animation__table-td--filesize"></div>
+                <div class="stork-animation__table-td stork-animation__table-td--owner"></div>
+                <div class="stork-animation__table-td stork-animation__table-td--date"></div>
+              </div>
+            </template>
+          </div>
+          <div class="stork-animation__table-head">
+            <div class="stork-animation__table-td stork-animation__table-td--checkbox"><div class="stork-animation__table-checkbox"></div></div>
+            <div class="stork-animation__table-td stork-animation__table-td--filename">File name</div>
+            <div class="stork-animation__table-td stork-animation__table-td--filesize">File size</div>
+            <div class="stork-animation__table-td stork-animation__table-td--owner">Owner</div>
+            <div class="stork-animation__table-td stork-animation__table-td--date">Date</div>
+          </div>
+        </div>
+      </div>
+      <div class="stork__drag-drop">
+        <div class="stork__icon"></div>
+        <div class="stork__icon-hand stork__icon-hand--grabbing"></div>
+      </div>
     </div>
   </div>
   <div class="product-header__right">
-      <h1 class="page-title"><img src="assets/images/products/stork/_stork-logo-outline-thick.svg"> Stork</h1>
+    <h1 class="page-title"><img src="assets/images/products/stork/_stork-logo-outline-thick.svg"> Stork</h1>
     <h2>Secure file uploads and management in WordPress, made easy.</h2>
   </div>
 </section>
@@ -38,7 +65,7 @@
         </div>
         <span>Drag &amp; drop everything</span>
       </h3>
-      <p class="feature__content">Uploading files has never been this easy: drag & drop everything, even whole folders with sub-folders!</p>
+      <p class="feature__content">Uploading files has never been this easy: drag & drop to your heart's content, even folders containing sub-folders!</p>
     </div>
     <div class="feature">
       <h3 class="feature__title">
@@ -47,7 +74,7 @@
         </div>
         <span>Built-in security</span>
       </h3>
-      <p class="feature__content">Uploads are never stored as-is on the server. Files are only available for those who have permission.</p>
+      <p class="feature__content">Uploads are never stored as-is on the server. Files are only available for those who have permission and access rights can be adjusted.</p>
     </div>
     <div class="feature">
       <h3 class="feature__title">
@@ -56,15 +83,26 @@
         </div>
         <span>Extensibility</span>
       </h3>
-      <p class="feature__content">All parts of Stork written following the WordPress API and are easily extensible and hook-able by developers.</p>
+      <p class="feature__content">All parts of Stork are written following the WordPress API and are easily extensible and hook-able by developers.</p>
     </div>
   </div>
 </section>
 <section id="purchase" class="product-signup">
+  <div class="pre-signup">
   <h2>Interested?</h2>
-  <p>Drop your e-mail and I'll let you know when Stork is available!</p>
-  <form action="">
-    <input type="email">
-    <button class="signup-button"></button>
-  </form>
+    <p>Drop your e-mail and you'll be the first to hear when Stork is available!</p>
+    <form>
+      <fieldset>
+        <div class="fieldset-flex">
+          <input type="email" name="product_signup_email" required>
+          <button type="submit" class="signup-button"></button>
+        </div>
+      </fieldset>
+    </form>
+    <p class="defaultscript">We will only contact you when there is an update about Stork.</p>
+  </div>
+  <div class="post-signup" hidden>
+    <h2>Thank you for your interest!</h2>
+    <p>We'll let you know when there's exciting news about Stork. ✨</p>
+  </div>
 </section>
