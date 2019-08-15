@@ -87,10 +87,46 @@
     </div>
   </div>
 </section>
-<section id="purchase" class="product-signup">
+<section class="page-section page-section--product-gallery">
+  <div class="content-row content-row--product">
+    <div class="wrap">
+      <div class="picture-wrapper picture-wrapper--small align-left align-left--outside">
+        <picture class="lazy">
+          <source data-srcset="assets/images/products/stork/_stork-screenshot-01-512px.png 512w, assets/images/products/stork/_stork-screenshot-01-1024px.png 1024w" type="image/png">
+          <img data-src="assets/images/products/stork/_stork-screenshot-01-1024px.png" alt="Stork screenshot 1">
+        </picture>
+      </div>
+      <div class="content-row__text">
+        <h2>Add Stork to pages</h2>
+        <p>Select your root folder and adjust the options per page to enable Stork on the front. Allow visitors to upload files in a specific folder.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-row content-row--product">
+    <div class="wrap">
+      <div class="picture-wrapper picture-wrapper--small align-right align-right--outside">
+        <picture class="lazy lazy--low">
+          <source data-srcset="assets/images/products/stork/_stork-screenshot-02-512px.png 512w, assets/images/products/stork/_stork-screenshot-02-1024px.png 1024w" type="image/png">
+          <img data-src="assets/images/products/stork/_stork-screenshot-02-1024px.png" alt="Stork screenshot 1">
+        </picture>
+      </div>
+      <div class="content-row__text">
+        <h2>Mobile-friendly overviews</h2>
+        <p>File overviews are mobile-friendly out of the box. All interactivity is optimized for both mouse and touch devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="purchase" class="page-section page-section--product-checkout">
+  <h1>Get Stork</h1>
+  <p>Order Stork online and receive installation instructions and the license in your inbox.</p>
+  <button class="button button--arrow-right" id="buy-stork">Buy Stork now</button>
+</section>
+<section id="newsletter-form" class="product-signup">
   <div class="pre-signup">
-  <h2>Interested?</h2>
-    <p>Drop your e-mail and you'll be the first to hear when Stork is available!</p>
+  <h2>Subscribe to our newsletter</h2>
+    <p>Drop your e-mail and you'll be the first to hear when there are updates for Stork!</p>
     <form>
       <fieldset>
         <div class="fieldset-flex">
@@ -99,7 +135,7 @@
         </div>
       </fieldset>
     </form>
-    <p class="defaultscript">We will only contact you when there is an update about Stork.</p>
+    <p class="defaultscript">We will only contact you when there is news about our products or services.</p>
   </div>
   <div class="post-signup" hidden>
     <h2>Thank you for your interest!</h2>

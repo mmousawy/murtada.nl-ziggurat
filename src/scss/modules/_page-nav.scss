@@ -273,7 +273,7 @@
 .button--hire-me {
   .is-inverted & {
     &::before {
-      background-color: lighten(get('colors.darkBackground'), 25%);
+      background-color: #f43662;
     }
   }
 }

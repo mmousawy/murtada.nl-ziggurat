@@ -14,12 +14,12 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 10%);
   display: flex;
   justify-content: space-between;
   max-width: 80rem;
-  margin: 4rem auto 5rem;
+  margin: 4rem auto 7rem;
   padding: 0 2rem;
 
   @include bp(max-small) {
     flex-wrap: wrap;
-    margin: 2rem auto 5rem;
+    margin: 2rem auto 4rem;
   }
 }
 
@@ -71,6 +71,7 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 10%);
 }
 
 .feature__content {
+  margin-bottom: 0;
   font-size: 1.25rem;
 
   .is-inverted & {

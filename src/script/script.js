@@ -385,10 +385,6 @@
     const storkDragDrop = document.querySelector('.stork__drag-drop');
     const storkDragDropIcon = storkDragDrop.querySelector('.stork__icon');
     const rowTemplate = document.querySelector('#stork-animation__row-template');
-    const storkForm = document.querySelector('#purchase form');
-    const storkFormFieldset = storkForm.querySelector('fieldset');
-    const storkFormPre = document.querySelector('.pre-signup');
-    const storkFormPost = document.querySelector('.post-signup');
 
     const storkAnimations = {
       files: [
@@ -538,48 +534,6 @@
         }, 1500);
       }
     });
-
-    storkForm.addEventListener('submit', event => {
-      event.preventDefault();
-
-      const signupEmail = event.target.querySelector('input[name="product_signup_email"]').value;
-
-      sendMail(signupEmail);
-    });
-
-    function sendMail(emailAddress) {
-      const request = new XMLHttpRequest();
-
-      request.open('POST', '/stork-signup', true);
-      request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      request.responseType = 'json';
-
-      storkFormFieldset.setAttribute('disabled', true);
-
-      request.send(JSON.stringify({
-        email: emailAddress
-      }));
-
-      request.onload = () => {
-        storkFormFieldset.removeAttribute('disabled');
-
-        if (request.status === 200) {
-          const response = request.response;
-
-          if (response.success === true) {
-            storkFormPre.setAttribute('hidden', true);
-            storkFormPost.removeAttribute('hidden');
-
-            return;
-          }
-        }
-
-        console.log(request);
-
-        // Should not reach this if successful
-        alert('Something went wrong! Please try again.')
-      };
-    }
   }
 
   function randomDate(start, end, startHour, endHour) {
@@ -588,4 +542,82 @@
     date.setHours(hour);
     return date;
   }
+
+  const newsletterForm = document.querySelector('#newsletter-form');
+
+  if (!newsletterForm) {
+    return;
+  }
+
+  const newsletterFormFieldset = newsletterForm.querySelector('fieldset');
+  const newsletterFormPre = newsletterForm.querySelector('.pre-signup');
+  const newsletterFormPost = newsletterForm.querySelector('.post-signup');
+
+  newsletterForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const signupEmail = event.target.querySelector('input[name="product_signup_email"]').value;
+
+    sendMail(signupEmail);
+  });
+
+  function sendMail(emailAddress) {
+    const request = new XMLHttpRequest();
+
+    request.open('POST', '/newsletter-signup', true);
+    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    request.responseType = 'json';
+
+    newsletterFormFieldset.setAttribute('disabled', true);
+
+    request.send(JSON.stringify({
+      email: emailAddress
+    }));
+
+    request.onload = () => {
+      newsletterFormFieldset.removeAttribute('disabled');
+
+      if (request.status === 200) {
+        const response = request.response;
+
+        if (response.success === true) {
+          newsletterFormPre.setAttribute('hidden', true);
+          newsletterFormPost.removeAttribute('hidden');
+
+          return;
+        }
+      }
+
+      console.log(request);
+
+      // Should not reach this if successful
+      alert('Something went wrong! Please try again.')
+    };
+  }
+
+  document.querySelector("#buy-stork").addEventListener('click', () => {
+    const request = new XMLHttpRequest();
+
+    request.open('GET', '/products/stork/checkout', true);
+    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    request.responseType = 'json';
+
+    newsletterFormFieldset.setAttribute('disabled', true);
+
+    request.send();
+
+    request.onload = () => {
+      if (request.status === 200) {
+        const response = request.response;
+
+        if (response.success === true && response.data.status === 'open') {
+          document.location.href = response.data._links.checkout.href;
+          return;
+        }
+      }
+
+      // Should not reach this if successful
+      alert('Something went wrong! Please try again.')
+    };
+  });
 })();

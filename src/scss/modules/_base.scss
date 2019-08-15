@@ -112,6 +112,92 @@ img {
       // background-position:
     }
   }
+
+  &--product-purchase,
+  &--product-checkout {
+    padding-bottom: 6rem;
+    background-color: get('colors.darkBackground');
+    background: {
+      image: radial-gradient(circle at bottom, lighten(get('colors.darkBackground'), 12%), get('colors.darkBackground') 50rem);
+      size: 100%;
+    };
+
+    h1 {
+      max-width: 40rem;
+      color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+      font-size: 3rem;
+
+      @include bp(max-small) {
+        font-size: 2.5rem;
+        text-align: left;
+      }
+    }
+
+    h3 {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    p {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    @include bp(max-small) {
+      padding-bottom: 5rem;
+    }
+  }
+
+  &--product-checkout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 4rem 1rem 8rem;
+    background: {
+      image: url('assets/images/products/stork/checkout-bg2.svg'),
+        linear-gradient(30deg, lighten(get('colors.darkBackground'), 7%), get('colors.darkBackground'));
+      size: cover;
+      position: 50%;
+      repeat: no-repeat;
+    };
+
+    h1 {
+      margin: 0 auto .75em;
+    }
+
+    p {
+      max-width: 30rem;
+      margin-bottom: 1.25em;
+      color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+      font-size: 1.5rem;
+
+      @include bp(max-small) {
+        text-align: center;
+      }
+    }
+
+    .button {
+      font-size: 1.5rem;
+      display: inline-block;
+      margin: 1rem auto 0;
+
+      &::before {
+        background-color: #f43662;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        &::before {
+          background-color: desaturate(darken(#f43662, 10%), 20%);
+        }
+      }
+    }
+
+    @include bp(max-small) {
+      margin-top: 1rem;
+    }
+  }
 }
 
 .wrap {

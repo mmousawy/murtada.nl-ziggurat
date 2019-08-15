@@ -303,3 +303,103 @@
     padding: 1rem 1.5rem 1.5rem;
   }
 }
+
+.content-row--product {
+  h2,
+  p {
+    color: mix(get('colors.darkBackground'), get('colors.white'), 10%);
+  }
+
+  @for $index from 1 to 10 {
+    &:nth-child(#{$index}) {
+      picture {
+        transition-delay: $index * 250ms;
+      }
+    }
+  }
+}
+
+.page-section--product-gallery {
+  margin-top: -3rem;
+  overflow: hidden;
+  padding-bottom: 5rem;
+
+  .content-row__text {
+    z-index: 3;
+    position: relative;
+  }
+
+  .picture-wrapper {
+    &::before {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      bottom: -5rem;
+      left: -25%;
+      display: block;
+      width: 150%;
+      height: 7.5rem;
+      background: radial-gradient(at 50% -50%, lighten(get('colors.darkBackground'), 15%), get('colors.darkBackground') 70%) no-repeat;
+      transform-origin: 50% 0;
+      transform: rotate(10deg);
+    }
+
+    &::after {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      bottom: calc(2.5rem - .5rem);
+      left: -25%;
+      display: block;
+      width: 150%;
+      height: .5rem;
+      background: radial-gradient(at 50% -50%, lighten(get('colors.darkBackground'), 30%), transparentize(#0079d5, 1) 70%) no-repeat;
+      transform-origin: 50% 0;
+      transform: rotate(10deg);
+    }
+
+    &.align-right {
+      &::before,
+      &::after {
+        transform: rotate(-10deg);
+      }
+
+      picture {
+        &::after {
+          transform: skewY(-10deg);
+        }
+      }
+    }
+  }
+
+  picture {
+    transition-duration: 1000ms;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+
+    &::after {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 10rem;
+      transform: skewY(10deg);
+      @include scrimGradient(darken(get('colors.text.body'), 10%), 'to top');
+    }
+  }
+
+  @include bp(max-small) {
+    margin: -2rem 0 0;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.content-row--product {
+  .wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

@@ -22,30 +22,30 @@ if (!empty($_POST['email'])) {
   $adminBody = <<<TXT
 Hi Murtada,
 
-Someone just signed up for the Stork newsletter with e-mail address:
+Someone just signed up for the newsletter with e-mail address:
   {$_POST['email']}
 
 Beep boop,
-Murtada bot
+Murtada.nl bot
 TXT;
 
 
   $userBody = <<<TXT
 Hi there,
 
-Thanks for showing interest in Stork!
+Thanks for showing interest in our products!
 
-We'll let you know when there's an update about Stork.
+We'll let you know when there is news and when there are updates.
 If you're not interested anymore, reply to this e-mail with a quick "not interested" as the body.
 
 Sincerely,
-The Stork team
+Murtada webdesign bureau
 TXT;
 
   // To admin
   if (mail(
     'info@murtada.nl',
-    'New Stork signup',
+    'Newsletter signup',
     $adminBody,
     $emailHeaders
   )) {
@@ -53,7 +53,7 @@ TXT;
     // To user
     if (mail(
       $_POST['email'],
-      'Confirmation: signup for Stork news',
+      'Confirmation: signup for newsletter',
       $userBody,
       $emailHeaders
     )) {
