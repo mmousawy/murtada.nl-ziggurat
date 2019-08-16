@@ -92,13 +92,17 @@ INSERT INTO
   (
     id,
     order_id,
-    status
+    status,
+    name,
+    email
   )
 VALUES
   (
     :id,
     :order_id,
-    :status
+    :status,
+    :name,
+    :email
   );
 }
 SQL;
@@ -107,6 +111,8 @@ SQL;
   $st->bindValue(':id', $data['id']);
   $st->bindValue(':status', $data['status']);
   $st->bindValue(':order_id', $currentPaymentOrderId);
+  $st->bindValue(':name', $_POST['name']);
+  $st->bindValue(':email', $_POST['email']);
 
 } else {
 

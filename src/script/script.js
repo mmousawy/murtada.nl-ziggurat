@@ -447,6 +447,8 @@
         'Murtada',
         'Kaleigh',
         'Gideon',
+        'Akira',
+        'Nora',
         'Tamara',
         'Alice',
         'Johan',
@@ -595,20 +597,18 @@
     };
   }
 
-  document.querySelector("#buy-stork").addEventListener('click', () => {
+  document.querySelector("#purchase-stork").addEventListener('submit', event => {
     const request = new XMLHttpRequest();
 
-    request.open('GET', '/products/stork/checkout', true);
-    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-    request.responseType = 'json';
+    request.open('POST', '/products/stork/checkout', true);
 
     newsletterFormFieldset.setAttribute('disabled', true);
 
-    request.send();
+    request.send(new FormData(event.target));
 
     request.onload = () => {
       if (request.status === 200) {
-        const response = request.response;
+        const response = JSON.parse(request.response);
 
         if (response.success === true && response.data.status === 'open') {
           document.location.href = response.data._links.checkout.href;
@@ -619,5 +619,7 @@
       // Should not reach this if successful
       alert('Something went wrong! Please try again.')
     };
+
+    event.preventDefault();
   });
 })();

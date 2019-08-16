@@ -403,3 +403,33 @@
     padding-bottom: 0;
   }
 }
+
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    display: block;
+    width: 100%;
+    padding: .5em;
+    border: none;
+    font-family: inherit;
+    font-size: 1.25rem;
+    background: desaturate(lighten(get('colors.darkBackground'), 15%), 15%);
+    color: mix(get('colors.darkBackground'), get('colors.white'), 20%);
+  }
+
+  label {
+    display: block;
+    color: mix(get('colors.darkBackground'), get('colors.white'), 30%);
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+}
+
+.form-row {
+  max-width: 30rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}

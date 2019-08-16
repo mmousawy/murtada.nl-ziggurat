@@ -119,9 +119,21 @@
   </div>
 </section>
 <section id="purchase" class="page-section page-section--product-checkout">
-  <h1>Get Stork</h1>
-  <p>Order Stork online and receive installation instructions and the license in your inbox.</p>
-  <button class="button button--arrow-right" id="buy-stork">Buy Stork now</button>
+  <div class="wrap">
+    <h1>Get Stork</h1>
+    <p>Order Stork online and receive installation instructions and the license in your inbox.</p>
+    <form class="purchase-form" id="purchase-stork">
+      <div class="form-row">
+        <label for="purchase-name">Name</label>
+        <input type="text" id="purchase-name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="purchase-email">E-mail</label>
+        <input type="email" id="purchase-email" name="email" required>
+      </div>
+      <button class="button button--arrow-right">Buy Stork now</button>
+    </form>
+  </div>
 </section>
 <section id="newsletter-form" class="product-signup">
   <div class="pre-signup">

@@ -6,7 +6,14 @@ $schema = <<<SQL
 CREATE TABLE IF NOT EXISTS payments (
   id text PRIMARY KEY NOT NULL,
   order_id text NOT NULL,
+  name text NOT NULL,
+  email text NOT NULL,
   status text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS newsletter (
+  id integer PRIMARY KEY AUTOINCREMENT,
+  email text NOT NULL
 );
 SQL;
 
