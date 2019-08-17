@@ -20,8 +20,16 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
     }
   }
 
+  a:not([class]) {
+    color: lighten(get('colors.text.body'), 30%);
+  }
+
   .is-inverted & {
     p {
+      color: $invertedColor;
+    }
+
+    a:not([class]) {
       color: $invertedColor;
     }
   }
