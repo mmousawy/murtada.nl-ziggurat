@@ -8,6 +8,7 @@
           <a href="https://twitter.com/mmousawy" class="social-media__item" data-icon="twitter">Visit Murtada's Twitter profile (@mmousawy)</a>
         </div>
         <p>Copyright 2019 Murtada al Mousawy - All rights reserved.</p>
+        <p><a href="/terms-conditions">Terms &amp; Conditions</a></p>
       </div>
     </div>
   </footer>
