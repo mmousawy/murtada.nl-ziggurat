@@ -89,8 +89,10 @@
 
     <h2><a name="intellectual-property">8. Intellectueel eigendom</a></h2>
     <ol>
+      <li>Rapporten of documenten die in verband met advies- of onderzoekswerkzaamheden voor de opdrachtgever door de opdrachtnemer worden verstrekt, vallen onder het kader van de Auteurswet 1912 (Nederland).</li>
       <li>Alle door opdrachtnemer voor opdrachtgever ontwikkelde modellen, werken en/of uitvindingen zijn en blijven eigendom van opdrachtnemer. Daaronder wordt tevens verstaan alle rechten van intellectueel eigendom waaronder begrepen, doch niet daartoe beperkt auteursrechten, modelrechten en/of octrooirechten.</li>
       <li>Alle door de opdrachtnemer ten behoeve van opdrachtgever verstrekte stukken, zoals rapporten, computer programma’s, systeemontwerpen, werkwijzen, adviezen en contracten, zijn te gebruiken door opdrachtgever en zijn te vermenigvuldigen door opdrachtgever ten behoeve van eigen gebruik in de eigen organisatie. Door opdrachtnemer verstrekte stukken mogen niet door opdrachtgever zonder voorafgaande schriftelijke toestemming van opdrachtnemer openbaar worden gemaakt, verveelvuldigd worden dan wel geëxploiteerd worden of ter kennis van derden worden gebracht, tenzij uit de aard van de verstrekte stukken anders voortvloeit.</li>
+      <li>De opdrachtnemer behoudt zich het recht voor de op basis van de opdracht verkregen resultaten in te zetten voor eigen gebruik of voor derden, zolang het belang van de opdrachtgever niet in het geding is.</li>
     </ol>
 
     <h2><a name="pricing">9. Tarieven</a></h2>
