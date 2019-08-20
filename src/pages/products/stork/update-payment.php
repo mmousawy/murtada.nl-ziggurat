@@ -116,8 +116,6 @@ SQL;
 
 } else {
 
-  error_log('>>> NOW UPDATING: ' . $currentPaymentId);
-
   $query = <<<SQL
 UPDATE
   payments
