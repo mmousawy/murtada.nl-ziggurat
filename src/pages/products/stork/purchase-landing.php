@@ -13,6 +13,13 @@
 #zigg:cta-text    = `More products`
 #zigg:cta-url     = `products`
 
+require_once './lib/PHPMailer/SMTP.php';
+require_once './lib/PHPMailer/Exception.php';
+require_once './lib/PHPMailer/PHPMailer.php';
+require_once './lib/License.php';
+
+$smtpData = json_decode(file_get_contents('../smtp-data.json'), true);
+
 $db = new SQLite3('../murtada_nl.db');
 
 // Get order id
@@ -20,6 +27,7 @@ $query = <<<SQL
 SELECT
   id,
   order_id,
+  email,
   status
 FROM
   `payments`
@@ -35,10 +43,92 @@ $results = $st->execute();
 
 $row = $results->fetchArray();
 
-if ($row['status'] !== 'paid') {
-  header('Location: https://murtada.nl/products/stork#purchase');
+function getDirContents($path) {
+  $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+
+  $files = array();
+  foreach ($rii as $file)
+    if (!$file->isDir())
+      $files[] = $file->getPathname();
+
+  return $files;
 }
 
+if ($row['status'] !== 'paid') {
+  header('Location: https://murtada.nl/products/stork#purchase');
+} else if ($row['status'] === 'paid') {
+  // Generate license for product
+  $license = new MMousawy\License();
+
+  $keys = $license->generate($row['email'], date('Y-m-d', strtotime('+1 year')));
+
+  // Setup download
+  $zip = new ZipArchive;
+  $files = getDirContents('../product-files/stork');
+
+  $fileId = 'stork_' . base64_encode(uniqid('', true));
+
+  $downloadsFolder = $_SERVER['DOCUMENT_ROOT'] . '/../product-downloads/';
+
+  if (!is_dir($downloadsFolder)) {
+    mkdir($downloadsFolder);
+  }
+
+  $attachmentFileName = $downloadsFolder . $fileId . '.zip';
+
+  if ($zip->open($attachmentFileName, ZipArchive::CREATE) === TRUE) {
+    foreach($files as $file) {
+      $zip->addFile($file, str_replace('../product-files/', '', $file));
+    }
+
+    $zip->addFromString('stork/stork.php', str_replace('%__PRIVATE_LICENSE__%', $keys['private'], file_get_contents('../product-files/stork/stork.php')));
+
+    $zip->close();
+  }
+
+  $bodyText = <<<TXT
+Hello,
+
+Thanks for purchasing a copy of Stork! Your license key is:
+
+{$keys['public']}
+
+Download Stork here:
+https://murtada.nl/products/stork/download?id={$fileId}
+
+Installing Stork:
+Upload the Stork zip file to your plugins folder, or add the plugin through WordPress admin (Plugins > Add New > Upload Plugin).
+
+Entering the license details:
+Once Stork is activated in WordPress, enter the license key in the Stork settings page (Settings > Stork settings).
+
+Regards,
+The Stork team
+TXT;
+
+  // Send email
+  $mail = new PHPMailer\PHPMailer\PHPMailer();
+  $mail->IsSMTP();
+  $mail->SMTPAuth = true;
+  $mail->SMTPSecure = 'ssl';
+
+  $mail->Host = $smtpData['host'];
+  $mail->Port = $smtpData['port'];
+  $mail->Username = $smtpData['username'];
+  $mail->Password = $smtpData['password'];
+
+  $mail->SetFrom('no-reply@murtada.nl', 'Stork');
+  $mail->Subject = 'Your Stork license';
+  $mail->Body = $bodyText;
+  $mail->AddAddress($row['email']);
+
+  // Sadly, we cannot attach file due to mail client restrictions with JS files in zip files
+  // $mail->addAttachment($attachmentFileName, 'stork.zip');
+
+  if (!$mail->Send()) {
+    die($mail->ErrorInfo);
+  }
+}
 ?>
 <section class="page-section page-section--product-purchase">
   <div class="wrap">
