@@ -86,12 +86,14 @@ if ($row['status'] !== 'paid') {
     $zip->close();
   }
 
+  $licenseKey = wordwrap($keys['public'], 65, PHP_EOL);
+
   $bodyText = <<<TXT
 Hello,
 
 Thanks for purchasing a copy of Stork! Your license key is:
 
-{$keys['public']}
+{$licenseKey}
 
 Download Stork here:
 https://murtada.nl/products/stork/download?id={$fileId}
