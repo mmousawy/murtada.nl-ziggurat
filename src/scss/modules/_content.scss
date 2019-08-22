@@ -172,6 +172,17 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
     max-width: 66%;
   }
 
+  &--outside {
+    @include bp(min-medium) {
+      width: 150%;
+      margin-left: -25%;
+
+      .picture-wrapper__caption {
+        margin-left: calc(25% - 2rem);
+      }
+    }
+  }
+
   video {
     max-width: 100%;
   }
@@ -497,4 +508,18 @@ $gallery-padding: 3vw;
   + .content-row--product {
     margin-top: 2.5rem;
   }
+}
+
+pre {
+  padding: 0 .5em;
+  background-color: transparentize(get('colors.primary'), .9);
+  overflow-x: auto;
+}
+
+pre code {
+  display: block;
+  white-space: pre;
+  font-size: .875em;
+  background: transparent;
+  color: mix(get('colors.text.link'), get('colors.text.body'));
 }

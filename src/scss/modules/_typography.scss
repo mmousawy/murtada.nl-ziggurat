@@ -159,16 +159,11 @@ ol {
 
 code {
   font-family: 'Roboto Mono', monospace;
-  background-color: transparentize(get('colors.primary'), .9);
+  background-color: transparentize(get('colors.primary'), .91);
   padding: 0 .2em;
-  border-radius: .2em;
   white-space: nowrap;
-  color: #b51e8b;
-  font-size: 1.25rem;
-
-  @include bp(max-small) {
-    font-size: 1.0625rem;
-  }
+  color: #DD4A68;
+  font-size: .875em;
 }
 
 .arrow {

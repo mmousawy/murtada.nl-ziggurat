@@ -60,7 +60,7 @@
       <h2><a href="{$blog['slug-path']}">{$props['title']}</a></h2>
       <time datetime="{$props['date']} 12:00">{$prettyDate}</time>
       <p>{$props['description']}</p>
-      <p><a href="{$blog['slug-path']}">Read more</a>.</p>
+      <p><a href="{$blog['slug-path']}">Read more &rarr;</a></p>
     </div>
   </div>
 </div>

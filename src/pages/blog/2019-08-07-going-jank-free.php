@@ -44,7 +44,7 @@ JavaScript and CSS files are assets that allow you to manipulate the DOM. When w
 <figure class="picture-wrapper">
   <picture class="lazy">
     <source data-srcset="assets/images/blog/_pixel-pipeline-512px.png 512w, assets/images/blog/_pixel-pipeline-1024px.png 1024w" type="image/png">
-    <img data-src="assets/images/blog/_pixel-pipeline-1024px.png" alt="Use case diagram for the PsyData project" data-action="zoom" alt="Schema of the pixel pipeline">
+    <img data-src="assets/images/blog/_pixel-pipeline-1024px.png" data-action="zoom" alt="Schema of the pixel pipeline">
   </picture>
   <figcaption class="picture-wrapper__caption">Schema of the browser's pixel pipeline.</figcaption>
 </figure>
