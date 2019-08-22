@@ -58,9 +58,25 @@
 
   window.addEventListener('resize', resizeHandler);
 
-  window.addEventListener('scroll', () => {
-    requestAnimationFrame(scrollHandler);
-  });
+  window.addEventListener('scroll', throttleScroll, { passive: true });
+
+  let debounceTimer;
+  let debounceTimeOut = 150;
+  let throttleTimeOut = 100;
+  let prev = 0;
+
+  function throttleScroll() {
+    requestAnimationFrame(now => {
+      if (now - prev > throttleTimeOut) {
+        scrollHandler();
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(scrollHandler, debounceTimeOut);
+
+        prev = now;
+      }
+    });
+  }
 
   [].slice.call(document.querySelectorAll('.page-header a')).forEach(navItem => {
     navItem.addEventListener('focus', (event) => {
@@ -107,25 +123,35 @@
   }
 
   // Handle the scroll event
-  function scrollHandler(now) {
+  function scrollHandler() {
     scrollY = Math.max(0, window.scrollY ? window.scrollY : document.documentElement.scrollTop);
 
     const scrollDelta = prevScrollY - scrollY;
 
-    headerPos += scrollDelta;
-    headerPos = Math.max(-headerHeight, Math.min(0, headerPos));
-
-    prevScrollY = scrollY;
-
-    if (now - previousTime > 10) {
-      headerFrame();
+    if (scrollDelta < 0) {
+      // Scrolling down
+      if (scrollY > headerHeight * 1.5) {
+        header.classList.add('is-hidden');
+      }
+    } else if (scrollDelta > 0) {
+      // Scrolling up
+      if (scrollY > headerHeight * 1.5) {
+        if (!header.classList.contains('is-stuck')) {
+          header.classList.add('is-stuck');
+        }
+        header.classList.remove('is-hidden');
+      } else {
+        if (scrollY == 0) {
+          header.classList.remove('is-stuck');
+        }
+      }
     }
 
-    previousTime = now;
+    prevScrollY = scrollY;
   }
 
   // Position and animate header
-  function headerFrame() {
+  function headerFrame(pageLoad) {
     let minOpacity = 0;
 
     if (menuIsOpen) {
@@ -377,8 +403,7 @@
   }
 
   resizeHandler();
-  headerFrame();
-  header.style.position = 'fixed';
+  scrollHandler();
 
   if (document.querySelector('.stork-animation')) {
     const storkAnimationContent = document.querySelector('.stork-animation__table-content');

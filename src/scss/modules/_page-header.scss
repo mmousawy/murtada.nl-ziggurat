@@ -5,6 +5,29 @@
   width: 100%;
   height: 5rem;
   line-height: 1;
+  transition: {
+    property: transform, box-shadow, background-color;
+    duration: 300ms;
+  };
+
+  &.is-stuck {
+    position: fixed;
+    background-color: get('colors.white');
+
+    &:not(.is-hidden) {
+      box-shadow: 0 0 2rem rgba(47,54,91, .3);
+    }
+  }
+
+  .is-inverted & {
+    &.is-stuck {
+      background: get('colors.darkBackground');
+    }
+  }
+
+  &.is-hidden {
+    transform: translateY(-80px);
+  }
 
   .wrap {
     display: flex;
