@@ -24,9 +24,12 @@ a:not([class])[href] {
 }
 
 a.readmore {
+  display: inline-block;
   color: get('colors.text.link');
   $linkColor: get('colors.text.link');
   text-decoration: none;
+  height: 1.5em;
+  padding-right: .25em;
 
   &::after {
     content: '';
@@ -38,6 +41,7 @@ a.readmore {
       image: url('inline:assets/images/_icon-arrow-right.svg?color=#{$linkColor}');
       position: 50% 62.5%;
       repeat: no-repeat;
+      size: 100%;
     };
     vertical-align: top;
     transition: transform 300ms;

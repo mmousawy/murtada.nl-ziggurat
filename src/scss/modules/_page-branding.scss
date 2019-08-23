@@ -2,6 +2,12 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  height: 3rem;
+  overflow: hidden;
+
+  @include bp(max-small) {
+    height: 2rem;
+  }
 }
 
 .page-branding__logomark {
@@ -33,6 +39,8 @@
   color: get('colors.primary');
   margin-top: -.125em;
   margin-left: .35em;
+  height: 3rem;
+  line-height: 3rem;
 
   .is-inverted & {
     color: get('colors.white');
@@ -40,5 +48,7 @@
 
   @include bp(max-small) {
     font-size: get('fonts.heading.size-h2') * .75;
+    height: 2rem;
+    line-height: 2rem;
   }
 }

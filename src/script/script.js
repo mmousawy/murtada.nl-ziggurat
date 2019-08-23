@@ -34,6 +34,7 @@
       nav.style.transitionDelay = '100ms';
       contentOverlay.style.transitionDelay = '0ms';
       nav.classList.add('is-open');
+      header.classList.add('is-stuck');
       navBackground.style.animationName = 'slideInBackground';
       contentOverlay.classList.add('is-visible');
       document.documentElement.classList.add('no-scroll');
@@ -45,6 +46,10 @@
       contentOverlay.classList.remove('is-visible');
       document.documentElement.classList.remove('no-scroll');
       menuIsOpen = false;
+
+      if (scrollY === 0) {
+        header.classList.remove('is-stuck');
+      }
 
       setTimeout(() => {
         navBackground.style.animationName = 'none';
