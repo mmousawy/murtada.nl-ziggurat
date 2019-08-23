@@ -21,32 +21,27 @@ In the old days, whenever you needed to wait for the result of an asynchronous o
 There is no 'wrong' choice here. Most language features are tools, made for specific cases to solve specific problems. Using the right tool for the right job is a good idea though. Of the old fashioned methods, my preference goes to events and event handling.
 
 ### Event demo
-<p class="codepen" data-height="290" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="aboBwLx" style="height: 290px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/aboBwLx/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="290" scrolling="no" title="AJAX (XHR) request with delay" data-src="//codepen.io/doubtingreality/embed/aboBwLx/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/aboBwLx/'>AJAX (XHR) request with delay</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 The good thing about events in JavaScript is that you can listen to them and call a function to handle the event. Since we're dealing with asynchronous operations, the events API is a great native solution to the problem of not knowing when to call a handler. Listening to an event binds a function to the event and it gets automatically called when the event dispatches from the source.<br>
 There are a ton of built-in events throughout the JavaScript language which is implemented for the browser. From HTML elements like buttons, inputs and images to XMLHttpRequests: they all have plug and play events you can listen for to handle the specific response. Listening to an event can be done after invoking the the request, which makes it great for code you're not able to access.
 
-
-
 ### Callback demo
-<p class="codepen" data-height="290" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="ZEzByNP" style="height: 290px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/ZEzByNP/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="265" scrolling="no" title="Example JS callback" data-src="//codepen.io/doubtingreality/embed/ZEzByNP/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/ZEzByNP/'>Example JS callback</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 For this demo I'm simulating a delayed response, executing a `callback` when the operation is finished. the A callback is nothing more than a function that gets passed to another function with the purpose of being called by that other function. Writing an API that accepts a callback function as a parameter is really easy, so you'll find this solution in a lot of third-party libraries, plugins and APIs. The downside is that _you_ are going to have to invoke the original function with the callback as a parameter, which in some cases is impossible, since you're not always able to change the original code.
 
 ### Timeout demo
-<p class="codepen" data-height="310" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="ExYNvmV" style="height: 310px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/ExYNvmV/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="310" scrolling="no" title="Example JS setTimeout callback" data-src="//codepen.io/doubtingreality/embed/ExYNvmV/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/ExYNvmV/'>Example JS setTimeout callback</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 Here's another demo with a simulated delayed response, this time using `setTimeout` to know when the operation is finished. When you're really in a pinch, the API doesn't provide an event or callback parameter, you could always use a timeout to check the value of the response. When the value changes, run some code to handle the response. Super slow and has a lot of extra delay since we have to set an interval.
 
@@ -96,11 +91,10 @@ examplePromise
 
 Like the first demo above, I'm going to request an external JSON data point with XHR. This time _promisifying_ the request function so it becomes _thenable_. We can handle the success and failure states outside of the event handlers, making the overall code more concise.
 
-<p class="codepen" data-height="310" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="eYOBaQE" style="height: 310px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/eYOBaQE/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="310" scrolling="no" title="XHR with Promise" data-src="//codepen.io/doubtingreality/embed/eYOBaQE/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/eYOBaQE/'>XHR with Promise</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
 ### Chaining promises
@@ -132,11 +126,10 @@ loadAsset('script.js')
 
 Chaining is a powerful feature of promises. We can use this to load in assets one by one. Here's an example:
 
-<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="dybOxRN" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/dybOxRN/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="600" scrolling="no" title="Promisified image loading" data-src="//codepen.io/doubtingreality/embed/dybOxRN/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/dybOxRN/'>Promisified image loading</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 <link href="assets/prism.css" rel="stylesheet" />
 <script src="script/lib/prism.js"></script>
@@ -188,11 +181,10 @@ __Note that `await` only works in `async` functions__.
 
 Here's a demo of using async and await in an actual case:
 
-<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="yLBgYxj" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/yLBgYxj/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="600" scrolling="no" title="Fetch random user with async &amp; await" data-src="//codepen.io/doubtingreality/embed/yLBgYxj/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/yLBgYxj/'>Fetch random user with async &amp; await</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
 ## Final thoughts

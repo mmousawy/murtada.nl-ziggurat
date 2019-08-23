@@ -523,3 +523,17 @@ pre code {
   background: transparent;
   color: mix(get('colors.text.link'), get('colors.text.body'));
 }
+
+iframe {
+  $color: lighten(get('colors.text.link'), 25%);
+
+  position: relative;
+  width: 100%;
+  background: {
+    color: lighten(get('colors.primary'), 28%);
+    image: url('inline:assets/images/_logo-codepen.svg?color=#{$color}');
+    size: 40%;
+    position: 50%;
+    repeat: no-repeat;
+  };
+}

@@ -86,11 +86,10 @@ Still, if you really insist on writing your own, here's some things to consider.
 ### Leveraging CSS solutions
 It might be most efficient if your animation can be set up in CSS and played by switching to a different class with JavaScript.
 
-<p class="codepen" data-height="268" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="WVdYXw" style="height: 268px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animation example">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/WVdYXw/">
-  Animation example</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="270" scrolling="no" title="Animation example" data-src="//codepen.io/doubtingreality/embed/WVdYXw/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/WVdYXw/'>Animation example</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 In the example above, the element with the letter "A" inside is being animated by CSS. The only thing clicking on the button does is toggle a class on the element.
 
@@ -99,11 +98,10 @@ When working with animations in JS, it's best to use [`requestAnimationFrame()`]
 When a browser tab is inactive, rAF will pause the animation by blocking requestAnimationFrame callbacks which will **preserve animation state**.
 
 rAF is non-deterministic, which means that we don't know when exactly it will get called. That's why we are forced to use time to keep track of the animation progress. If we'd purely use rAF, the animation could last 1 second (60 FPS), or 2 seconds (30 FPS) or more, depending on the refresh rate of your browser and the system work load.
-<p class="codepen" data-height="290" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="vodaab" style="height: 290px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS vs JS animation requestAnimationFrame">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/vodaab/">
-  CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="290" scrolling="no" title="CSS vs JS animation requestAnimationFrame" data-src="//codepen.io/doubtingreality/embed/vodaab/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/vodaab/'>CSS vs JS animation requestAnimationFrame</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 An example with element "A" being animated by CSS and element "B" being animated by JS with `requestAnimationFrame`.
 
@@ -111,11 +109,10 @@ An example with element "A" being animated by CSS and element "B" being animated
 
 The `scroll` or `mouseMove` events are a little tricky to get performant. Having the events call a function for each time they're triggered is a surefire way to drain your system's resources.<br>
 What we need to do is **throttle** and **debounce** the callback of the event.
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="doubtingreality" data-slug-hash="ZgrMXR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll event throttle and debounce">
-  <span>See the Pen <a href="https://codepen.io/doubtingreality/pen/ZgrMXR/">
-  Scroll event throttle and debounce</a> by Murtada al Mousawy (<a href="https://codepen.io/doubtingreality">@doubtingreality</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<iframe height="265" scrolling="no" title="Scroll event throttle and debounce" data-src="//codepen.io/doubtingreality/embed/ZgrMXR/?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" class="lazy">
+  See the Pen <a href='https://codepen.io/doubtingreality/pen/ZgrMXR/'>Scroll event throttle and debounce</a> by Murtada al Mousawy
+  (<a href='https://codepen.io/doubtingreality'>@doubtingreality</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 By implementing throttling and debouncing in the event handler, we reduce the amount of times the callback is fired. Any animation that relies on the callback is now much less resource-heavy.
 
@@ -147,6 +144,3 @@ You can read all about how to use these tools and how to analyze the data here: 
 Smooth animations on the web are not a given. When you see a smoothly animated website, you know that there's a lot of time and effort put into the details. When a device has a refresh rate of 60 Hz, the browser will aim for 60 frames per second rendering. The developer has influence on some crucial steps in the pixel pipeline and can optimize the time the browser takes to render each frame. Being aware of the pixel pipeline gives you a clearer way to make UX and UI choices around optimization.
 
 As a front-end developer you're always striving to create something beautiful and eye-catching but it should not distract the user from reaching their their own goals on the website. Janky animations are something you want to avoid not only because they can be jarring and confusing for the user, they also lower the experience quality of your product.
-
-
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>

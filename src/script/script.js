@@ -278,53 +278,55 @@
 
    // Lazy loading
    document.addEventListener('DOMContentLoaded', function() {
-    var lazyImages = [].slice.call(document.querySelectorAll('picture.lazy'));
+    var lazyElements = [].slice.call(document.querySelectorAll('picture.lazy, iframe.lazy'));
 
     if ('IntersectionObserver' in window) {
-
-      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      let lazyElementObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            entry.target.querySelectorAll('source[data-srcset], img[data-src]').forEach(pictureSource => {
-              const loadImg = new Image;
+            if (entry.target.nodeName === 'PICTURE') {
+              entry.target.querySelectorAll('source[data-srcset], img[data-src]').forEach(lazyElementSource => {
+                const loadImg = new Image();
 
-              const isSrcSet = typeof pictureSource.dataset.srcset !== 'undefined';
+                const isSrcSet = typeof lazyElementSource.dataset.srcset !== 'undefined';
 
-              loadImg.onload = () => {
+                loadImg.onload = () => {
+                  if (isSrcSet) {
+                    lazyElementSource.srcset = loadImg.srcset;
+                  } else {
+                    lazyElementSource.src = loadImg.src;
+                  }
 
-                if (isSrcSet) {
-                  pictureSource.srcset = loadImg.srcset;
-                } else {
-                  pictureSource.src = loadImg.src;
+                  entry.target.classList.remove('lazy');
                 }
 
-                entry.target.classList.remove('lazy');
-              }
+                if (isSrcSet) {
+                  loadImg.srcset = lazyElementSource.dataset.srcset;
+                } else {
+                  loadImg.src = lazyElementSource.dataset.src;
+                }
+              });
+            } else if (entry.target.nodeName === 'IFRAME') {
+              entry.target.src = entry.target.dataset.src;
+            }
 
-              if (isSrcSet) {
-                loadImg.srcset = pictureSource.dataset.srcset;
-              } else {
-                loadImg.src = pictureSource.dataset.src;
-              }
-            });
-
-            lazyImageObserver.unobserve(entry.target);
+            lazyElementObserver.unobserve(entry.target);
           }
         });
       });
 
-      lazyImages.forEach(function(lazyImage) {
-        lazyImageObserver.observe(lazyImage);
+      lazyElements.forEach(function(lazyElement) {
+        lazyElementObserver.observe(lazyElement);
       });
 
     } else {
-      lazyImages.forEach(function(lazyImage) {
-        [].slice.call(lazyImage.querySelectorAll('source[data-srcset], img[data-src]')).forEach(pictureSource => {
-          pictureSource.dataset.src && (pictureSource.src = pictureSource.dataset.src);
-          pictureSource.dataset.srcset && (pictureSource.srcset = pictureSource.dataset.srcset);
-          delete pictureSource.dataset;
+      lazyElements.forEach(function(lazyElement) {
+        [].slice.call(lazyElement.querySelectorAll('source[data-srcset], img[data-src]')).forEach(elementSource => {
+          elementSource.dataset.src && (elementSource.src = elementSource.dataset.src);
+          elementSource.dataset.srcset && (elementSource.srcset = elementSource.dataset.srcset);
+          delete elementSource.dataset;
         });
-        lazyImage.classList.remove('lazy');
+        lazyElement.classList.remove('lazy');
       });
     }
   });
