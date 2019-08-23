@@ -125,23 +125,24 @@
 
     const scrollDelta = prevScrollY - scrollY;
 
-    if (scrollDelta < 0) {
+    if (scrollDelta < -15) {
       // Scrolling down
       if (scrollY > headerHeight * 1.5) {
         header.classList.add('is-hidden');
       }
-    } else if (scrollDelta > 0) {
+    } else if (scrollDelta > 15) {
       // Scrolling up
       if (scrollY > headerHeight * 1.5) {
         if (!header.classList.contains('is-stuck')) {
           header.classList.add('is-stuck');
         }
         header.classList.remove('is-hidden');
-      } else {
-        if (scrollY == 0) {
-          header.classList.remove('is-stuck');
-        }
       }
+    }
+
+    if (scrollY < 1) {
+      header.classList.remove('is-stuck');
+      header.classList.remove('is-hidden');
     }
 
     prevScrollY = scrollY;
