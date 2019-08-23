@@ -38,7 +38,6 @@
       contentOverlay.classList.add('is-visible');
       document.documentElement.classList.add('no-scroll');
       menuIsOpen = true;
-      requestAnimationFrame(headerFrame);
     } else {
       nav.style.transitionDelay = '0ms';
       contentOverlay.style.transitionDelay = '100ms';
@@ -46,7 +45,6 @@
       contentOverlay.classList.remove('is-visible');
       document.documentElement.classList.remove('no-scroll');
       menuIsOpen = false;
-      requestAnimationFrame(headerFrame);
 
       setTimeout(() => {
         navBackground.style.animationName = 'none';
@@ -80,8 +78,7 @@
 
   [].slice.call(document.querySelectorAll('.page-header a')).forEach(navItem => {
     navItem.addEventListener('focus', (event) => {
-      headerPos = 0;
-      headerFrame();
+      header.classList.remove('is-hidden');
     });
   });
 
@@ -148,64 +145,6 @@
     }
 
     prevScrollY = scrollY;
-  }
-
-  // Position and animate header
-  function headerFrame(pageLoad) {
-    let minOpacity = 0;
-
-    if (menuIsOpen) {
-      // Menu is open
-      targetOpacity = 1;
-
-      if (headerPos < -.1) {
-        headerPos -= headerPos * .2;
-      } else {
-        headerPos = 0;
-      }
-
-      // Animate to fully solid
-      if (opacity < targetOpacity - .1) {
-        opacity += (targetOpacity - opacity) * .1;
-        requestAnimationFrame(headerFrame);
-      } else {
-        opacity = targetOpacity;
-        headerPos = 0;
-      }
-    } else {
-      // Menu is closed
-      if (scrollY < headerHeight) {
-        blurSize = (scrollY + headerPos) * .5;
-      } else {
-        blurSize = (headerHeight + headerPos) * .5;
-      }
-
-      opacity = blurSize * 1 / (headerHeight * .5);
-
-      // Animate to current opacity
-      if (targetOpacity > opacity + .1) {
-        targetOpacity += (opacity - targetOpacity) * .1;
-        opacity = targetOpacity;
-        requestAnimationFrame(headerFrame);
-      } else {
-        targetOpacity = 0;
-      }
-    }
-
-    // Always have a solid background when lower than the top of the page
-    if (scrollY > headerHeight - headerPos) {
-      minOpacity = 1;
-    }
-
-    header.style.transform = `translateY(${headerPos}px)`;
-    header.style.boxShadow = `0 0 ${blurSize * opacity}px rgba(47,54,91,${.3 * opacity})`;
-    header.style.backgroundColor = `rgba(255,255,255,${Math.min(minOpacity + opacity, 1)})`;
-
-    if (body.classList.contains('is-inverted')) {
-      header.style.backgroundColor = `rgba(0,48,86,${Math.min(minOpacity + opacity, 1)})`;
-    } else {
-      header.style.backgroundColor = `rgba(255,255,255,${Math.min(minOpacity + opacity, 1)})`;
-    }
   }
 
   // Navigation background items
