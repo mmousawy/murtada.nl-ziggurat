@@ -14,11 +14,41 @@ a:not([class])[href] {
       width: 1em;
       height: 1em;
       background: {
-        image: url('inline:assets/images/icon-launch.svg?linkColor=#{$linkColor}');
+        image: url('inline:assets/images/_icon-launch.svg?linkColor=#{$linkColor}');
         position: 50%;
         repeat: no-repeat;
         size: .875em;
       }
+    }
+  }
+}
+
+a.readmore {
+  color: get('colors.text.link');
+  $linkColor: get('colors.text.link');
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1.5em;
+    margin-left: .375em;
+    background: {
+      image: url('inline:assets/images/_icon-arrow-right.svg?color=#{$linkColor}');
+      position: 50% 62.5%;
+      repeat: no-repeat;
+    };
+    vertical-align: top;
+    transition: transform 300ms;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+
+    &::after {
+      transform: translateX(.25em);
     }
   }
 }
