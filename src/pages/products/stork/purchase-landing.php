@@ -1,4 +1,5 @@
 <?php
+#zigg:ignore
 #zigg:title       = `Stork purchased`
 #zigg:page-title  = `Stork purchased`
 #zigg:slug        = `purchase-landing`
