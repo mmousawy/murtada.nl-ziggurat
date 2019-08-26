@@ -80,7 +80,7 @@
     <div class="content-row__text">
       <h2><a href="{$project['slug-path']}">{$props['title']}</a></h2>
       <p>{$props['description']}</p>
-      <p><a href="{$project['slug-path']}">Read more about {$props['title']}</a>.</p>
+      <p><a href="{$project['slug-path']}" class="readmore readmore--inverted">Read more</a></p>
     </div>
   </div>
 </div>

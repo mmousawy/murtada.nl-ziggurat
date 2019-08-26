@@ -55,6 +55,16 @@ a.readmore {
       transform: translateX(.25em);
     }
   }
+
+  &--inverted {
+    $invertedColor: lighten(get('colors.text.link'), 30%);
+
+    &::after {
+      background: {
+        image: url('inline:assets/images/_icon-arrow-right.svg?color=#{$invertedColor}');
+      }
+    }
+  }
 }
 
 h1,
