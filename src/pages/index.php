@@ -5,7 +5,7 @@
 #zigg:parent      = ``
 #zigg:cover-image = `_cover-index{$size}.png`
 #zigg:date        = ``
-#zigg:description = `Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.`
+#zigg:description = `Murtada al Mousawy, full-stack web developer, Rotterdam & Den Haag area. Web design, development and consultation.`
 #zigg:priority    = `1.0`
 ?>
 
