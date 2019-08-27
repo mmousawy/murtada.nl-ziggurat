@@ -109,7 +109,8 @@ $bodyColor: get('colors.text.body');
 }
 
 .stork-animation__table-content {
-  max-height: 12em;
+  background: get('colors.white');
+  height: 12em;
   overflow: hidden;
 }
 
