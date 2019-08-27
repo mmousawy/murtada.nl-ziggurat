@@ -35,4 +35,4 @@ $Ziggurat->index();
 
 $Ziggurat->resolve($_SERVER['REQUEST_URI']);
 
-echo $Ziggurat->render();
+echo $Ziggurat->render($Ziggurat->resolvedPage);
