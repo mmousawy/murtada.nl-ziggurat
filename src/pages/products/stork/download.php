@@ -1,7 +1,7 @@
 <?php
 #zigg:ignore
 #zigg:slug        = `download`
-#zigg:parent      = `stork`
+#zigg:parent      = `products/stork`
 
 $id = $_GET['id'];
 

@@ -3,7 +3,7 @@
 #zigg:title       = `Stork purchased`
 #zigg:page-title  = `Stork purchased`
 #zigg:slug        = `purchase-landing`
-#zigg:parent      = `stork`
+#zigg:parent      = `products/stork`
 #zigg:logo        = `assets/images/products/stork/stork-logo.svg`
 #zigg:cover-image = `_cover-stork{$size}.png`
 #zigg:cover-alt   = `Stork logo`

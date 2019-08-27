@@ -70,7 +70,7 @@
 <div class="content-row">
   <div class="wrap">
     <div class="picture-wrapper {$class}">
-      <a href="{$project['slug-path']}">
+      <a href="{$project['slug_path']}">
         <picture class="lazy">
           <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
           <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
@@ -78,9 +78,9 @@
       </a>
     </div>
     <div class="content-row__text">
-      <h2><a href="{$project['slug-path']}">{$props['title']}</a></h2>
+      <h2><a href="{$project['slug_path']}">{$props['title']}</a></h2>
       <p>{$props['description']}</p>
-      <p><a href="{$project['slug-path']}" class="readmore readmore--inverted">Read more</a></p>
+      <p><a href="{$project['slug_path']}" class="readmore readmore--inverted">Read more</a></p>
     </div>
   </div>
 </div>

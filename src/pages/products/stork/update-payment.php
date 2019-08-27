@@ -1,7 +1,7 @@
 <?php
 #zigg:ignore
 #zigg:slug        = `update-payment`
-#zigg:parent      = `stork`
+#zigg:parent      = `products/stork`
 
 $db = new SQLite3('../murtada_nl.db');
 

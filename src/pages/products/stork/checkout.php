@@ -1,7 +1,7 @@
 <?php
 #zigg:ignore
 #zigg:slug        = `checkout`
-#zigg:parent      = `stork`
+#zigg:parent      = `products/stork`
 
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');

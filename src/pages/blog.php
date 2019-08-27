@@ -49,7 +49,7 @@
 <div class="content-row">
   <div class="wrap">
     <div class="picture-wrapper {$class}">
-      <a href="{$post['slug-path']}">
+      <a href="{$post['slug_path']}">
         <picture class="lazy">
           <source data-srcset="{$coverImageString}" type="image/png">
           <img data-src="{$coverImage['medium']['url']}" alt="{$coverAlt}">
@@ -57,10 +57,10 @@
       </a>
     </div>
     <div class="content-row__text">
-      <h2><a href="{$post['slug-path']}">{$props['title']}</a></h2>
+      <h2><a href="{$post['slug_path']}">{$props['title']}</a></h2>
       <time datetime="{$props['date']} 12:00">{$prettyDate}</time>
       <p>{$props['description']}</p>
-      <p><a href="{$post['slug-path']}" class="readmore">Read more</a></p>
+      <p><a href="{$post['slug_path']}" class="readmore">Read more</a></p>
     </div>
   </div>
 </div>

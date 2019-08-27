@@ -32,7 +32,7 @@
 
     echo
 <<<HTML
-  <a href="{$project['slug-path']}" class="product">
+  <a href="{$project['slug_path']}" class="product">
     <picture>
       <img src="{$props['logo']}" alt="{$props['cover-alt']}">
     </picture>

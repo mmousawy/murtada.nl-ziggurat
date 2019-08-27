@@ -18,7 +18,7 @@
       <div class="picture-wrapper align-left align-left--outside">
         <picture class="lazy">
           <source srcset="assets/images/photo-cc-512px.jpg 512w, assets/images/photo-cc-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/photo-cc-1024px.jpg">
+          <img data-src="assets/images/photo-cc-1024px.jpg" alt="Murtada sitting on a couch with his laptop.">
         </picture>
       </div>
       <div class="content-row__text">
@@ -38,7 +38,7 @@
       <div class="picture-wrapper align-right align-right--outside">
         <picture class="lazy">
           <source data-srcset="assets/images/photo-laptop-512px.jpg 512w, assets/images/photo-laptop-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/photo-laptop-1024px.jpg" alt="">
+          <img data-src="assets/images/photo-laptop-1024px.jpg" alt="Murtada typing on laptop that is sitting on his lap.">
         </picture>
       </div>
       <div class="content-row__text">
@@ -64,7 +64,7 @@
       <div class="picture-wrapper align-left align-left--outside">
         <picture class="lazy">
           <source data-srcset="assets/images/photo-wireframe-512px.jpg 512w, assets/images/photo-wireframe-1024px.jpg 1024w" type="image/jpeg">
-          <img data-src="assets/images/photo-wireframe-1024px.jpg" alt="">
+          <img data-src="assets/images/photo-wireframe-1024px.jpg" alt="Murtada drawing wireframes in a sketchbook.">
         </picture>
       </div>
       <div class="content-row__text">
