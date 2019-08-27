@@ -1,5 +1,6 @@
 <?php
 #zigg:ignore
+#zigg:slug   = `newsletter-signup`
 
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
