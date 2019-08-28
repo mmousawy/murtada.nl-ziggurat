@@ -49,6 +49,15 @@
   <link rel="preload" href="assets/fonts/sailec-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="assets/fonts/sailec-medium.woff2" as="font" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16469031-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-16469031-3');
+  </script>
 </head>
 <body class="<?= isset($props['class']) ? $props['class'] : '' ?>">
   <header class="page-header">

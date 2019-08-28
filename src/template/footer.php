@@ -13,18 +13,11 @@
     </div>
   </footer>
   <div class="page-content-overlay"></div>
-  <script src="script.min.js" defer></script>
-  <script src="script/lib/zoom.min.js" defer></script>
-  <script src="script/lib/flickity.min.js"></script>
   <img class="shape" src="assets/images/_shape-1.svg" hidden>
   <img class="shape" src="assets/images/_shape-2.svg" hidden>
   <img class="shape" src="assets/images/_shape-3.svg" hidden>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-16469031-3');
-  </script>
+  <script src="script.min.js"></script>
+  <script src="script/lib/zoom.min.js"></script>
+  <script src="script/lib/flickity.min.js"></script>
 </body>
 </html>

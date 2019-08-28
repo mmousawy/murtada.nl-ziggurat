@@ -4,7 +4,7 @@
   Site URL:    https://murtada.nl
   Created:     2019-05-01
   Standards:   HTML5, CSS3, ES6
-  Software:    ZIGGURAT
+  Software:    ZIGGURAT (https://github.com/mmousawy/ziggurat)
   Plugins:     Parsedown, Zoom.js
   Web Design:  Murtada al Mousawy
 
@@ -29,4 +29,4 @@
 
 /* META */
 
-  Built with: ZIGGURAT (Node, Gulp, PHP, HTML, CSS, JavaScript)
+  Built with: ZIGGURAT (Node, Gulp, PHP, HTML, CSS, JavaScript) https://github.com/mmousawy/ziggurat
