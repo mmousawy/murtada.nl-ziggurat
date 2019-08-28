@@ -276,6 +276,11 @@
 
   $buttonColor: mix(get('colors.darkBackground'), get('colors.white'), 10%);
 
+  .signup-email-label {
+    opacity: 0;
+    width: 0;
+  }
+
   .signup-button {
     flex-shrink: 0;
     width: 3rem;
@@ -290,6 +295,9 @@
       size: 66%;
     };
     cursor: pointer;
+    color: transparent;
+    text-indent: 100px;
+    overflow: hidden;
 
     @include bp(max-small) {
       width: 2.5rem;

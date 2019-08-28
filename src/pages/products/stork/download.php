@@ -2,6 +2,7 @@
 #zigg:ignore
 #zigg:slug        = `download`
 #zigg:parent      = `products/stork`
+#zigg:priority    = `0`
 
 $id = $_GET['id'];
 

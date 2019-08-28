@@ -2,6 +2,7 @@
 #zigg:ignore
 #zigg:slug        = `checkout`
 #zigg:parent      = `products/stork`
+#zigg:priority    = `0`
 
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');

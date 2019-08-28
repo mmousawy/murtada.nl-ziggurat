@@ -2,6 +2,7 @@
 #zigg:ignore
 #zigg:slug        = `update-payment`
 #zigg:parent      = `products/stork`
+#zigg:priority    = `0`
 
 $db = new SQLite3('../murtada_nl.db');
 

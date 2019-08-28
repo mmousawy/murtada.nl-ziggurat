@@ -142,8 +142,9 @@
     <form>
       <fieldset>
         <div class="fieldset-flex">
-          <input type="email" name="product_signup_email" required>
-          <button type="submit" class="signup-button"></button>
+          <label for="signup-email" class="signup-email-label">Your e-mail</label>
+          <input type="email" id="signup-email" name="product_signup_email" required>
+          <button type="submit" class="signup-button">Sign up</button>
         </div>
       </fieldset>
     </form>

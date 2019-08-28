@@ -13,6 +13,7 @@
 #zigg:class       = `is-inverted`
 #zigg:cta-text    = `More products`
 #zigg:cta-url     = `products`
+#zigg:priority    = `0`
 
 require_once './lib/PHPMailer/SMTP.php';
 require_once './lib/PHPMailer/Exception.php';
