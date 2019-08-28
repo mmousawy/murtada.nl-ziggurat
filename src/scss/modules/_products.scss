@@ -18,7 +18,7 @@
   text-decoration: none;
   background: get('colors.white');
   box-shadow: 0 .25rem .5rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .9),
-              0 1rem 5rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .98);
+              0 1rem 2rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .98);
   animation: slideIn 300ms;
   animation-fill-mode: backwards;
   transition: {
@@ -35,7 +35,7 @@
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 1rem 1rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .85),
-              0 5rem 8rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .95);
+              0 1.5rem 3rem transparentize(mix(get('colors.text.link'), get('colors.text.body'), 50%), .95);
   }
 
   @for $index from 1 to 10 {

@@ -49,13 +49,13 @@ img {
   }
 
   &--home-about {
+    $fill1: #fff;
+    $fill2: darken(#F7F9FD, 5%);
 
+    position: relative;
     background-color: #F7F9FD;
 
     @include bp(min-small) {
-      $fill1: #fff;
-      $fill2: darken(#F7F9FD, 5%);
-
       background: {
         image: url('inline:assets/images/bg-about.svg?fill1=#{$fill1}&fill2=#{$fill2}');
         repeat: no-repeat;
