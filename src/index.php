@@ -22,9 +22,10 @@ $db->query($schema);
 require '../../../lib/Ziggurat.php';
 
 $options = [
-  'base_dir' => '.',
   'pages_dir' => './pages',
   'template' => './template',
+  '404' => '404',
+  'error' => 'error',
   // 'enable_cache' => true,
   // 'minify_html' => true
 ];
