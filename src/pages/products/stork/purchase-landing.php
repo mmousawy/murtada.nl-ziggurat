@@ -18,7 +18,7 @@
 require_once './lib/PHPMailer/SMTP.php';
 require_once './lib/PHPMailer/Exception.php';
 require_once './lib/PHPMailer/PHPMailer.php';
-require_once './lib/License.php';
+require_once './lib/Licenser.php';
 
 $smtpData = json_decode(file_get_contents('../smtp-data.json'), true);
 
@@ -58,11 +58,12 @@ function getDirContents($path) {
 
 if ($row['status'] !== 'paid') {
   header('Location: https://murtada.nl/products/stork#purchase');
-} else if ($row['status'] === 'paid') {
+} else {
   // Generate license for product
-  $license = new MMousawy\License();
+  $licenser = new MMousawy\Licenser();
+  $licenseKeys = $licenser->generateKeys();
 
-  $keys = $license->generate($row['email'], date('Y-m-d', strtotime('+1 year')));
+  $license = $licenser->encrypt($row['email'], date('Y-m-d', strtotime('+1 year')));
 
   // Setup download
   $zip = new ZipArchive;
@@ -83,19 +84,19 @@ if ($row['status'] !== 'paid') {
       $zip->addFile($file, str_replace('../product-files/', '', $file));
     }
 
-    $zip->addFromString('stork/stork.php', str_replace('%__PRIVATE_LICENSE__%', $keys['private'], file_get_contents('../product-files/stork/stork.php')));
+    $zip->addFromString('stork/stork.php', str_replace('%__PRIVATE_LICENSE__%', $licenseKeys['public'], file_get_contents('../product-files/stork/stork.php')));
 
     $zip->close();
   }
 
-  $licenseKey = wordwrap($keys['public'], 65, PHP_EOL);
+  $licenseWrapped = wordwrap($license, 64, "\n", true);
 
   $bodyText = <<<TXT
 Hello,
 
 Thanks for purchasing a copy of Stork! Your license key is:
 
-{$licenseKey}
+{$licenseWrapped}
 
 Download Stork here:
 https://murtada.nl/products/stork/download?id={$fileId}
