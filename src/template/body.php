@@ -1,1 +1,1 @@
-<?= $Ziggurat->resolvedPage['content'];
+<?= $currentPage['content'];

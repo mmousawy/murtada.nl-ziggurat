@@ -1,9 +1,9 @@
 <?php
-  $props = $Ziggurat->resolvedPage['properties'];
+  $props = $currentPage['properties'];
 
   $ctaUrl = isset($props['cta-url'])
               ? $props['cta-url']
-              : $Ziggurat->resolvedPage['slug_path'] . '#contact';
+              : $currentPage['slug_path'] . '#contact';
 
   $ctaText = isset($props['cta-text'])
               ? $props['cta-text']
@@ -42,7 +42,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?= !empty($props['page-title']) ? $props['page-title'] : '' ?>">
   <meta property="og:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
-  <meta property="og:url" content="https://murtada.nl/<?= $Ziggurat->resolvedPage['slug_path'] === 'index' ? '' : $Ziggurat->resolvedPage['slug_path'] ?>">
+  <meta property="og:url" content="https://murtada.nl/<?= $currentPage['slug_path'] === 'index' ? '' : $currentPage['slug_path'] ?>">
   <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
   <meta property="og:site_name" content="Murtada webdesign bureau">
   <link rel="stylesheet" href="style.css">
@@ -77,10 +77,10 @@
       <nav class="page-nav">
         <div class="page-nav__background"></div>
         <ul>
-          <li><a href="about" class="page-nav__item<?= (in_array('about', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">About</a></li>
-          <li><a href="work" class="page-nav__item<?= (in_array('work', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Work</a></li>
-          <li><a href="products" class="page-nav__item<?= (in_array('products', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Products</a></li>
-          <li><a href="blog" class="page-nav__item<?= (in_array('blog', $Ziggurat->resolvedPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Blog</a></li>
+          <li><a href="about" class="page-nav__item<?= (in_array('about', $currentPage['ancestors']) ? ' page-nav__item--active' : '') ?>">About</a></li>
+          <li><a href="work" class="page-nav__item<?= (in_array('work', $currentPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Work</a></li>
+          <li><a href="products" class="page-nav__item<?= (in_array('products', $currentPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Products</a></li>
+          <li><a href="blog" class="page-nav__item<?= (in_array('blog', $currentPage['ancestors']) ? ' page-nav__item--active' : '') ?>">Blog</a></li>
           <li><a href="<?= $ctaUrl ?>" class="page-nav__item page-nav__item--mobile page-nav__item--hire-me"><?= $ctaText ?></a></li>
         </ul>
       </nav>
