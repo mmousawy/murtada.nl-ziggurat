@@ -10,7 +10,7 @@
 #zigg:description = `Automation in the mental health research field has been an ongoing process at GGZ inGeest. With PsyData I was placing the needs of the users first and developed an innovative data storage and management platform for data managers and researchers.`
 #zigg:priority    = `0.5`
 
-$props = $Ziggurat->resolvedPage['properties'];
+$props = $currentPage['properties'];
 ?>
 
 <section class="page-section">
@@ -128,3 +128,4 @@ $props = $Ziggurat->resolvedPage['properties'];
 </section>
 
 <?= file_get_contents('template/cta.php'); ?>
+<script src="script/lib/zoom.min.js" defer></script><script src="script/lib/flickity.min.js"></script>

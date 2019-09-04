@@ -3,7 +3,7 @@
 #zigg:page-title  = `Work`
 #zigg:slug        = `work`
 #zigg:parent      = ``
-#zigg:cover-image = `_cover-work{$size}.png`
+#zigg:cover-image = `assets/images/_cover-work{$size}.png`
 #zigg:date        = ``
 #zigg:description = `Portfolio of featured projects I've worked on. Download my CV and more.`
 #zigg:priority    = `0.6`

@@ -10,7 +10,7 @@
 #zigg:description = `Stress in Action uses innovative technological and scientific methods to approach modern day stress. The project deserved a website that could convey its message and can appeal to a big audience, from investors to scientists.`
 #zigg:priority    = `0.5`
 
-$props = $Ziggurat->resolvedPage['properties'];
+$props = $currentPage['properties'];
 ?>
 
 <section class="page-section">
@@ -126,3 +126,4 @@ $props = $Ziggurat->resolvedPage['properties'];
 </section>
 
 <?= file_get_contents('template/cta.php'); ?>
+<script src="script/lib/zoom.min.js" defer></script><script src="script/lib/flickity.min.js"></script>

@@ -3,7 +3,7 @@
 #zigg:page-title  = `Algemene voorwaarden`
 #zigg:slug        = `algemene-voorwaarden`
 #zigg:parent      = ``
-#zigg:cover-image = `_cover-terms-conditions{$size}.png`
+#zigg:cover-image = `assets/images/_cover-terms-conditions{$size}.png`
 #zigg:date        = ``
 #zigg:description = `Lees onze algemene voorwaarden.`
 #zigg:cta-text    = `English`
