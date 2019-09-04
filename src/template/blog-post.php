@@ -1,10 +1,11 @@
 <?php
 
-$props = $Ziggurat->resolvedPage['properties'];
+$props = $currentPage['properties'];
 
 $prettyDate = date('F jS, Y', strtotime($props['date']));
 
 $coverImage = $props['cover-image'];
+$coverImageString = [];
 
 $rgb = [255, 255, 255];
 
@@ -24,12 +25,10 @@ if ($coverImage) {
 
     $rgb = array_values($rgb);
   }
-}
 
-$coverImageString = [];
-
-foreach($coverImage as $image) {
-  array_push($coverImageString, "{$image['url']} {$image['size']}w");
+  foreach($coverImage as $image) {
+    array_push($coverImageString, "{$image['url']} {$image['size']}w");
+  }
 }
 
 $coverImageString = implode(',', $coverImageString);
@@ -54,7 +53,7 @@ HTML;
 <time datetime="{$props['date']} 12:00"><?= $prettyDate; ?></time>
 </div>
 <div class="wrap wrap--blog">
-<?= $Ziggurat->resolvedPage['content']; ?>
+<?= $currentPage['content']; ?>
 </div>
 </section>
 

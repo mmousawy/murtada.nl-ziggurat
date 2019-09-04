@@ -5,7 +5,7 @@
 #zigg:type        = `markdown`
 #zigg:template    = `./template/blog-post.php`
 #zigg:parent      = `blog`
-#zigg:cover-image = `blog/_promises{$size}.png`
+#zigg:cover-image = `assets/images/blog/_promises{$size}.png`
 #zigg:cover-alt   = `Abstract isometric illustration of three cubes being linked by arrows.`
 #zigg:date        = `2019-08-20`
 #zigg:description = `Promises in JavaScript are used as a representation of an eventual completion of an asynchronous operation. What are the benefits over traditional methods of asynchronous completion handling and how and when do you use promises?`
