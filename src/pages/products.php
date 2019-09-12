@@ -33,13 +33,13 @@
     echo
 <<<HTML
   <a href="{$project['slug_path']}" class="product">
-    <picture>
-      <img src="{$props['logo']}" alt="{$props['cover-alt']}">
-    </picture>
     <div class="product__content">
       <h2>{$props['title']}</h2>
       <p>{$props['description']}</p>
     </div>
+    <picture>
+      <img src="{$props['logo']}" alt="{$props['cover-alt']}">
+    </picture>
   </a>
 HTML;
 
@@ -48,13 +48,13 @@ HTML;
 
   ?>
   <a class="product product--disabled">
-    <picture>
-      <img src="assets/images/products/coming-soon.svg" alt="Coming soon rocket icon">
-    </picture>
     <div class="product__content">
       <h2>Coming soon</h2>
       <p>More software is being worked on right now!</p>
     </div>
+    <picture>
+      <img src="assets/images/products/coming-soon.svg" alt="Coming soon rocket icon">
+    </picture>
   </a>
 </div>
 </section>

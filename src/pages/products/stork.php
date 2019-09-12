@@ -9,6 +9,7 @@
 #zigg:date        = ``
 #zigg:description = `Secure file upload and mana&shy;gement in WordPress, made easy.`
 #zigg:priority    = `0.8`
+#zigg:order       = `2`
 #zigg:class       = `is-inverted`
 #zigg:cta-text    = `Purchase Stork`
 #zigg:cta-url     = `products/stork#purchase`

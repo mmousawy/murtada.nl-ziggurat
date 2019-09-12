@@ -1,4 +1,5 @@
 $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
+$whiteColor: #fff;
 
 .page-footer {
   flex-shrink: 0;
@@ -33,6 +34,18 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
       color: $invertedColor;
     }
   }
+
+  .footer-white & {
+    p {
+      color: $whiteColor;
+      opacity: 1;
+    }
+
+    a:not([class]) {
+      color: $whiteColor;
+      opacity: 1;
+    }
+  }
 }
 
 .social-media {
@@ -44,8 +57,16 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
   pointer-events: none;
   transition: opacity 200ms;
 
+  .footer-white & {
+    opacity: 1;
+  }
+
   &:hover {
     opacity: .5;
+
+    .footer-white & {
+      opacity: 1;
+    }
   }
 }
 
@@ -69,11 +90,19 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
   opacity: .75;
   transition: opacity 200ms;
 
+  .footer-white & {
+    opacity: 1;
+  }
+
   &[data-icon='github'] {
     background-image: url('inline:assets/images/_icon-github.svg?fill=#{$icon-color}');
 
     .is-inverted & {
       background-image: url('inline:assets/images/_icon-github.svg?fill=#{$invertedColor}');
+    }
+
+    .footer-white & {
+      background-image: url('inline:assets/images/_icon-github.svg?fill=#{$whiteColor}');
     }
   }
 
@@ -83,6 +112,10 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
     .is-inverted & {
       background-image: url('inline:assets/images/_icon-linkedin.svg?fill=#{$invertedColor}');
     }
+
+    .footer-white & {
+      background-image: url('inline:assets/images/_icon-linkedin.svg?fill=#{$whiteColor}');
+    }
   }
 
   &[data-icon='twitter'] {
@@ -90,6 +123,10 @@ $invertedColor: mix(get('colors.darkBackground'), get('colors.white'), 30%);
 
     .is-inverted & {
       background-image: url('inline:assets/images/_icon-twitter.svg?fill=#{$invertedColor}');
+    }
+
+    .footer-white & {
+      background-image: url('inline:assets/images/_icon-twitter.svg?fill=#{$whiteColor}');
     }
   }
 

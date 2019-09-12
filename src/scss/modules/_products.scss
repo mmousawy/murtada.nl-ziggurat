@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 0 auto 3rem;
 }
 
@@ -27,7 +27,7 @@
   };
 
   picture {
-    margin-right: 1em;
+    margin-left: 1em;
     max-width: 6rem;
     flex-shrink: 0;
   }
@@ -56,7 +56,7 @@
 
   h2 {
     max-width: 100%;
-    margin: .25em 0 1rem;
+    margin: 0 0 1rem;
     font-size: 1.75rem;
     color: get('colors.text.link');
   }

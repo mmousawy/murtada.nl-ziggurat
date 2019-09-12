@@ -1,0 +1,373 @@
+$primary-color: #D0515C;
+$max-width: get('sizes.page-width') + 10rem;
+$category-gap: 6rem;
+
+body.page-ziggurat {
+  background-color: get('colors.white');
+  background-image: url('assets/images/products/ziggurat/ziggurat-bg.png');
+  background-position: 50% -30rem;
+  background-repeat: repeat-y;
+  background-size: 120rem;
+
+  .page-header:not(.is-stuck) {
+    .page-branding__logomark svg path {
+      fill: get('colors.white');
+    }
+
+    .page-branding__logotype {
+      color: get('colors.white');
+    }
+
+    .page-nav .page-nav__item {
+      color: get('colors.white');
+    }
+
+    .page-nav .page-nav__item--active {
+      border-bottom-color: get('colors.white');
+    }
+
+    .button--hire-me {
+      color: $primary-color;
+
+      &::before {
+        background: get('colors.white');
+      }
+    }
+
+    .page-nav-label span {
+      background-color: get('colors.white');
+    }
+  }
+
+  main .button {
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.ziggurat-section {
+  .wrap {
+    max-width: $max-width;
+    padding: 1.5rem;
+
+    @include bp(max-small) {
+      padding: 1rem;
+    }
+  }
+}
+
+.ziggurat-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: get('sizes.page-width');
+  margin: 0 auto;
+  filter: drop-shadow(0 .125rem .125rem darken($primary-color, 20%));
+
+  @include bp(max-small) {
+    flex-direction: column;
+  }
+}
+
+.ziggurat-header__left,
+.ziggurat-header__right {
+  @include bp(max-small) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.ziggurat-header__left {
+  padding: calc(2vw + 4rem) 0;
+
+  h1 {
+    max-width: 30rem;
+    margin: 0 auto 0 0;
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1.3;
+    color: get('colors.white');
+
+    @include bp(max-small) {
+      font-size: 2.25rem;
+      text-align: center;
+    }
+  }
+
+  @include bp(max-small) {
+    padding: 1rem 0;
+    order: 2;
+  }
+}
+
+.ziggurat-header__right {
+  padding: calc(2vw + 2rem) 0;
+
+  .logo {
+    width: 14.5rem;
+
+    @include bp(max-small) {
+      width: 8rem;
+    }
+  }
+
+  @include bp(max-small) {
+    padding: 1rem 0 0;
+    order: 1;
+  }
+}
+
+.ziggurat-block {
+  width: 100%;
+  padding: 4rem 5rem;
+  border-radius: .25em;
+  background: get('colors.white');
+  box-shadow: 0 .0625em .125em transparentize(get('colors.black'), .7),
+              0 .25em .35em transparentize(get('colors.black'), .9);
+
+  @include bp(max-small) {
+    padding: 2rem 1.5rem;
+  }
+
+  h2 {
+    margin: 0 auto 1em;
+    font-size: 2rem;
+
+    @include bp(max-small) {
+      margin-bottom: .5em;
+    }
+  }
+
+  h3 {
+    margin: 0 0 1em;
+    font-size: 1.25rem;
+  }
+
+  p {
+    color: lighten(get('colors.text.body'), 10%);
+    font-size: 1.125rem;
+  }
+}
+
+.ziggurat-block--intro {
+  display: flex;
+  justify-content: space-between;
+
+  .intro-block {
+    max-width: 30%;
+
+    @include bp(max-small) {
+      max-width: 100%;
+
+      + .intro-block {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  @include bp(max-small) {
+    flex-direction: column;
+  }
+}
+
+.ziggurat-block--features {
+  display: flex;
+  justify-content: space-evenly;
+
+  @include bp(max-small) {
+    flex-direction: column;
+  }
+}
+
+.ziggurat-feature-category {
+  width: 50%;
+
+  @include bp(min-small) {
+    padding-right: $category-gap / 2;
+
+    + .ziggurat-feature-category {
+      padding-left: $category-gap / 2;
+      padding-right: 0;
+    }
+  }
+
+  @include bp(max-small) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    + .ziggurat-feature-category {
+      position: relative;
+      margin-top: 2rem;
+      padding-top: 2rem;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -1.5rem;
+        width: calc(100% + 3rem);
+        border-top: 1px solid lighten(get('colors.text.body'), 60%);
+      }
+    }
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 3rem;
+    margin-left: 3.25rem;
+
+    @include bp(max-small) {
+      margin: 2rem auto 0;
+    }
+  }
+}
+
+.ziggurat-feature {
+  position: relative;
+  color: lighten(get('colors.text.body'), 20%);
+
+  span {
+    display: block;
+    padding-left: 2.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    @include bp(max-small) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding-left: 2.75rem;
+    font-size: 1.125rem;
+    color: lighten(get('colors.text.body'), 30%);
+
+    @include bp(max-small) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  @include bp(min-small) {
+    align-items: center;
+    padding-left: .65rem;
+    font-size: 1.25rem;
+
+    + .ziggurat-feature {
+      margin-top: 2rem;
+    }
+  }
+
+  @include bp(max-small) {
+    width: 100%;
+
+    + .ziggurat-feature {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.ziggurat-feature__icon {
+  position: absolute;
+  top: -.25rem;
+  left: .6rem;
+  width: 1.75rem;
+  margin-right: .5rem;
+  margin-top: 0;
+  flex-shrink: 0;
+
+  @include bp(min-small) {
+    margin-top: .25rem;
+    margin-right: 1rem;
+  }
+
+  @include bp(max-small) {
+    top: 0;
+    left: 0;
+  }
+}
+
+.ziggurat-feature-category__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: $primary-color;
+
+    @include bp(max-small) {
+      padding-right: 1rem;
+    }
+  }
+
+  @include bp(max-small) {
+    justify-content: center;
+  }
+}
+
+.ziggurat-block--outro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    font-size: 1.25rem;
+
+    @include bp(max-small) {
+      font-size: 1.125rem;
+    }
+  }
+
+  code {
+    max-width: 100%;
+    display: inline-block;
+    margin: 1rem 2rem;
+    padding: 2rem;
+    font-size: 1.125rem;
+    overflow-x: auto;
+
+    @include bp(max-small) {
+      margin: 1rem 1.5rem;
+      padding: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .button--repository {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+
+    @include bp(max-small) {
+      display: inline-block;
+      font-size: 1.125rem;
+      margin: 1rem 0 1.5rem;
+    }
+  }
+
+  a {
+    font-size: 1.25rem;
+
+    @include bp(max-small) {
+      font-size: 1.125rem;
+    }
+  }
+}
