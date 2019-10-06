@@ -148,3 +148,6 @@
     </div>
   </div>
 </section>
+
+<img class="ziggurat-background" src="assets/images/products/ziggurat/ziggurat-bg.svg" alt="Ziggurat background">
+<img class="ziggurat-background ziggurat-background--bottom" src="assets/images/products/ziggurat/ziggurat-bg.svg" alt="Ziggurat background">

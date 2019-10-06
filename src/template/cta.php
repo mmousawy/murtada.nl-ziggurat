@@ -8,7 +8,7 @@
         info
       </a>
       <a class="copy-to-clipboard copy-to-clipboard--right copy-to-clipboard--email tooltip-right" tabindex="0">
-        <img src="assets/images/_copy-to-clipboard.svg">
+        <img src="assets/images/_copy-to-clipboard.svg" alt="Copy to clipboard icon">
         Copy
       </a>
     </div>

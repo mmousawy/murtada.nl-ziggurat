@@ -5,13 +5,13 @@
 #zigg:parent      = ``
 #zigg:cover-image = `assets/images/_cover-about{$size}.png`
 #zigg:date        = ``
-#zigg:description = `Read more about me and my personal and professional background.`
+#zigg:description = `Read about my professional background. How I became a full-stack web developer with a passion for UX and interactivity.`
 #zigg:priority    = `0.5`
 ?>
 
 <section class="page-section">
   <div class="wrap">
-    <h1 class="page-title">Murtada al Mousawy, full-stack web developer based around the Rotterdam & Den Haag area.</h1>
+    <h1 class="page-title">Murtada al Mousawy, full-stack web developer working in the Rotterdam & Den Haag area.</h1>
   </div>
   <div class="content-row">
     <div class="wrap">

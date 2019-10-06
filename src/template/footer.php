@@ -13,9 +13,9 @@
     </div>
   </footer>
   <div class="page-content-overlay"></div>
-  <img class="shape" src="assets/images/_shape-1.svg" hidden>
-  <img class="shape" src="assets/images/_shape-2.svg" hidden>
-  <img class="shape" src="assets/images/_shape-3.svg" hidden>
+  <img class="shape" src="assets/images/_shape-1.svg" alt="Geometric shape" hidden>
+  <img class="shape" src="assets/images/_shape-2.svg" alt="Geometric shape" hidden>
+  <img class="shape" src="assets/images/_shape-3.svg" alt="Geometric shape" hidden>
   <script src="script.min.js"></script>
   <script src="script/lib/zoom.min.js"></script>
   <script src="script/lib/flickity.min.js"></script>

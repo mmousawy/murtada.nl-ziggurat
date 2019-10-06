@@ -27,12 +27,13 @@
     margin-top: 0;
     font-size: calc(2rem + 1vw);
     font-weight: bold;
-    animation-delay: 500ms;
+    letter-spacing: -.03em;
     animation: {
       name: slideIn;
       duration: 400ms;
       timing-function: cubic-bezier(.555, .205, .295, .975);
       fill-mode: both;
+      delay: 300ms;
     }
   }
 
@@ -41,20 +42,21 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: calc(1.25rem + 1vw);
+    letter-spacing: -.03em;
     color: get('colors.text.tagline');
     animation: {
       name: slideIn;
       duration: 400ms;
       timing-function: cubic-bezier(.555, .205, .295, .975);
       fill-mode: both;
-      delay: 1000ms;
+      delay: 600ms;
     }
   }
 
   .scroll-icon-holder {
     animation: {
       name: fadeIn;
-      delay: 2400ms;
+      delay: 1200ms;
       duration: 400ms;
       fill-mode: both;
     }

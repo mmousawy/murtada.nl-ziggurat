@@ -14,13 +14,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?= !empty($props['description']) ? $props['description'] : ' Murtada al Mousawy, freelance full-stack web developer and web designer Rotterdam & Den Haag area.' ?>">
+  <meta name="description" content="<?= !empty($props['description']) ? $props['description'] : "I\'m a freelance full-stack web developer & designer in the Rotterdam & Den Haag area" ?>">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><?= !empty($props['page-title']) ? $props['page-title'] . ' | ' : '' ?>Murtada al Mousawy<?= empty($props['page-title']) ? ' | Freelance Full-stack Developer Rotterdam & Den Haag' : '' ?></title>
+  <title><?= !empty($props['page-title']) ? $props['page-title'] . ' | Murtada' : 'Murtada al Mousawy' ?>, freelance full-stack web developer in Rotterdam</title>
   <meta name="geo.region" content="NL-ZH">
   <meta name="geo.placename" content="Rotterdam">
   <meta name="geo.position" content="51.9228958;4.4631727">
-  <base href="/">
+  <base href="<?= $Ziggurat->siteUrl ?>">
   <link rel="sitemap" href="/sitemap.xml" />
   <link rel="shortcut icon" href="favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
@@ -34,17 +34,42 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Murtada.nl website">
   <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="favicons/apple-touch-startup-image-640x1096.png">
+
   <link rel="icon" type="image/png" sizes="228x228" href="favicons/coast-228x228.png">
+  <link rel="yandex-tableau-widget" href="favicons/yandex-browser-manifest.json">
+
   <meta name="msapplication-TileColor" content="#7586e3">
   <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
-  <link rel="yandex-tableau-widget" href="favicons/yandex-browser-manifest.json">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="<?= !empty($props['page-title']) ? $props['page-title'] : '' ?>">
+  <meta property="og:title" content="<?= !empty($props['page-title']) ? $props['page-title'] . ' | Murtada' : 'Murtada al Mousawy' ?> - freelance full-stack web developer in Rotterdam">
   <meta property="og:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
   <meta property="og:url" content="https://murtada.nl/<?= $currentPage['slug_path'] === 'index' ? '' : $currentPage['slug_path'] ?>">
   <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
   <meta property="og:site_name" content="Murtada webdesign bureau">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@mmousawy">
+  <meta name="twitter:title" content="<?= !empty($props['page-title']) ? $props['page-title'] . ' | Murtada' : 'Murtada al Mousawy' ?> - freelance full-stack web developer in Rotterdam">
+  <meta name="twitter:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
+  <meta name="twitter:creator" content="@mmousawy">
+  <meta name="twitter:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "Murtada webdesign bureau",
+    "url" : "https://murtada.nl",
+    "sameAs" : [
+      "https://about.me/mmousawy",
+      "https://linkedin.com/in/mmousawy",
+      "https://twitter.com/mmousawy",
+      "https://www.facebook.com/murtada.nl",
+      "https://www.instagram.com/visualdoubts/"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="preload" href="assets/fonts/sailec-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="assets/fonts/sailec-medium.woff2" as="font" crossorigin="anonymous">
@@ -64,7 +89,7 @@
     <div class="wrap">
       <a href="/" class="page-branding">
         <div class="page-branding__logomark">
-          <img src="assets/images/_logo.svg">
+          <img src="assets/images/_logo.svg" alt="Murtada webdesign bureau logo">
         </div>
         <div class="page-branding__logotype">murtada.</div>
       </a>

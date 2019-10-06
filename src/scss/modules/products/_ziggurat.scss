@@ -4,10 +4,8 @@ $category-gap: 6rem;
 
 body.page-ziggurat {
   background-color: get('colors.white');
-  background-image: url('assets/images/products/ziggurat/ziggurat-bg.png');
-  background-position: 50% -30rem;
-  background-repeat: repeat-y;
-  background-size: 120rem;
+  overflow-x: hidden;
+  position: relative;
 
   .page-header:not(.is-stuck) {
     .page-branding__logomark svg path {
@@ -43,6 +41,23 @@ body.page-ziggurat {
     &::before {
       background-color: $primary-color;
     }
+  }
+}
+
+.ziggurat-background {
+  z-index: -1;
+  position: absolute;
+  top: -30rem;
+  width: 120rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--bottom {
+    top: unset;
+    bottom: 0rem;
+    height: 65rem;
+    object-fit: cover;
+    object-position: 0% 0%;
   }
 }
 

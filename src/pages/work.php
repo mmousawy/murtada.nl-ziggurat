@@ -45,7 +45,7 @@
     <div class="content-row__text">
       <h2><a href="{$project['slug_path']}">{$props['title']}</a></h2>
       <p>{$props['description']}</p>
-      <p><a href="{$project['slug_path']}" class="readmore">Read more</a></p>
+      <p><a href="{$project['slug_path']}" class="readmore">View the {$props['title']} case</a></p>
     </div>
   </div>
 </div>
