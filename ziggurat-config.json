@@ -8,7 +8,7 @@
       "port": 5050
     },
     "pages": [
-      "/**/*.php"
+      "**/*.php"
     ],
     "scss": {
       "source": "scss/style.scss",
@@ -50,7 +50,7 @@
       "source": "favicon.png",
       "destination": "favicons",
       "options": {
-        "path": "/favicons/",
+        "path": "favicons/",
         "appName": "Murtada.nl website",
         "appShortName": "Murtada.nl",
         "appDescription": "Personal portfolio and blog of Murtada al Mousawy"
@@ -64,7 +64,8 @@
         "!assets/**/*.{fla,jpg,png,psd,ai}",
         "!assets/**/_*.svg",
         "assets/**/duotone.jpg",
-        "assets/**/duotone.webp"
+        "assets/**/duotone.webp",
+        "assets/images/products/ziggurat/icons8*.png"
       ]
     }
   }
