@@ -3,9 +3,8 @@ $max-width: get('sizes.page-width') + 10rem;
 $category-gap: 6rem;
 
 body.page-ziggurat {
-  background-color: get('colors.white');
-  overflow-x: hidden;
   position: relative;
+  background-color: get('colors.white');
 
   .page-header:not(.is-stuck) {
     .page-branding__logomark svg path {
@@ -34,6 +33,22 @@ body.page-ziggurat {
 
     .page-nav-label span {
       background-color: get('colors.white');
+    }
+  }
+
+  main {
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 11.75rem;
+
+    @include bp(max-small) {
+      padding-bottom: 12.125rem;
+    }
+
+    + .page-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
   }
 
