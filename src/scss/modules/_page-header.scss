@@ -36,7 +36,7 @@
   }
 
   + main {
-    section:first-child {
+    section:first-of-type {
       padding-top: 5rem;
     }
   }
@@ -45,7 +45,7 @@
     height: 4rem;
 
     + main {
-      section:first-child {
+      section:first-of-type {
         padding-top: 4rem;
       }
     }

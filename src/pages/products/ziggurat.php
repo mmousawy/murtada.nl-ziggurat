@@ -14,6 +14,9 @@
 #zigg:cta-text    = `Get Ziggurat`
 #zigg:cta-url     = `products/ziggurat#get-ziggurat`
 ?>
+<img class="ziggurat-background" src="assets/images/products/ziggurat/ziggurat-bg.svg" alt="Ziggurat background">
+<img class="ziggurat-background ziggurat-background--bottom" src="assets/images/products/ziggurat/ziggurat-bg.svg" alt="Ziggurat background">
+
 <section class="ziggurat-header">
   <div class="ziggurat-header__left">
     <h1>Ziggurat helps you create beautiful websites with ease</h1>
@@ -148,6 +151,3 @@
     </div>
   </div>
 </section>
-
-<img class="ziggurat-background" src="assets/images/products/ziggurat/ziggurat-bg.svg" alt="Ziggurat background">
-<img class="ziggurat-background ziggurat-background--bottom" src="assets/images/products/ziggurat/ziggurat-bg.svg" alt="Ziggurat background">
