@@ -39,6 +39,10 @@
     section:first-of-type {
       padding-top: 5rem;
     }
+
+    .blog-header + section:first-of-type {
+      padding-top: 0;
+    }
   }
 
   @include bp(max-small) {
@@ -47,6 +51,10 @@
     + main {
       section:first-of-type {
         padding-top: 4rem;
+      }
+
+      .blog-header + section:first-of-type {
+        padding-top: 0;
       }
     }
   }
