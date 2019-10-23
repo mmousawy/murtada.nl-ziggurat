@@ -93,6 +93,7 @@
     <div class="wrap">
       <div class="picture-wrapper picture-wrapper--small align-left align-left--outside">
         <picture class="lazy">
+          <source data-srcset="assets/images/products/stork/_stork-screenshot-01-512px.webp 512w, assets/images/products/stork/_stork-screenshot-01-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/products/stork/_stork-screenshot-01-512px.png 512w, assets/images/products/stork/_stork-screenshot-01-1024px.png 1024w" type="image/png">
           <img data-src="assets/images/products/stork/_stork-screenshot-01-1024px.png" alt="Stork screenshot 1">
         </picture>
@@ -108,6 +109,7 @@
     <div class="wrap">
       <div class="picture-wrapper picture-wrapper--small align-right align-right--outside">
         <picture class="lazy lazy--low">
+          <source data-srcset="assets/images/products/stork/_stork-screenshot-02-512px.webp 512w, assets/images/products/stork/_stork-screenshot-02-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/products/stork/_stork-screenshot-02-512px.png 512w, assets/images/products/stork/_stork-screenshot-02-1024px.png 1024w" type="image/png">
           <img data-src="assets/images/products/stork/_stork-screenshot-02-1024px.png" alt="Stork screenshot 1">
         </picture>

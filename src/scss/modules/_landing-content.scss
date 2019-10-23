@@ -3,13 +3,94 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  background: {
-    image: linear-gradient(140deg, get('colors.white'), transparentize(get('colors.white'), 1)), url('assets/images/duotone.jpg');
-    position: 100% 40%;
-    size: cover;
+  background-image: linear-gradient(140deg, #FFDA99, rgb(250, 252, 255));
+
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {
+      image: url('assets/images/landing-bg-02.svg');
+      repeat: no-repeat;
+      position: 0 0;
+      size: 60rem;
+    };
+
+    @include bp(max-medium) {
+      background-size: 40rem;
+    }
+
+    @include bp(max-tiny) {
+      background-size: 25rem;
+    }
+  }
+
+  &::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {
+      image: url('assets/images/landing-bg-01.svg');
+      repeat: no-repeat;
+      position: 100% 100%;
+      size: 60rem;
+    };
+
+    @include bp(max-medium) {
+      background-size: 40rem;
+    }
+
+    @include bp(max-tiny) {
+      background-size: 25rem;
+    }
+  }
+
+  .illustration {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {
+      image: url('assets/images/landing-illustration.svg');
+      repeat: no-repeat;
+      position: 100% 100%;
+      size: 50rem;
+    };
+
+    @include bp(max-medium) {
+      background-size: 33rem;
+    }
+
+    @include bp(max-small) {
+      background-size: 22rem;
+      background: {
+        image: url('assets/images/landing-illustration.svg');
+        repeat: no-repeat;
+        position: 100% 100%;
+        size: 30rem;
+      };
+    }
+
+    @include bp(max-tiny) {
+      background-size: 22rem;
+      background-position: calc(100% + 7rem) 95%;
+    }
   }
 
   .wrap {
+    z-index: 3;
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
@@ -17,7 +98,7 @@
     transform: translateY(-4rem);
 
     @include bp(max-small) {
-      margin-top: 5rem;
+      margin-top: 6rem;
       margin-bottom: 1rem;
     }
   }
@@ -25,7 +106,10 @@
   .landing-content__title {
     text-align: left;
     margin-top: 0;
-    font-size: calc(2rem + 1vw);
+    margin-bottom: .5em;
+    max-width: 70%;
+    font-size: calc(3rem + 1vw);
+    line-height: 1.1;
     font-weight: bold;
     letter-spacing: -.03em;
     animation: {
@@ -33,7 +117,13 @@
       duration: 400ms;
       timing-function: cubic-bezier(.555, .205, .295, .975);
       fill-mode: both;
-      delay: 300ms;
+      delay: 600ms;
+    };
+    color: #3e4b97;
+
+    @include bp(max-small) {
+      max-width: 100%;
+      font-size: calc(2rem + 1vw);
     }
   }
 
@@ -49,16 +139,26 @@
       duration: 400ms;
       timing-function: cubic-bezier(.555, .205, .295, .975);
       fill-mode: both;
-      delay: 600ms;
+      delay: 900ms;
     }
   }
 
   .scroll-icon-holder {
-    animation: {
-      name: fadeIn;
-      delay: 1200ms;
-      duration: 400ms;
-      fill-mode: both;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 20rem;
+    height: 7rem;
+    background-image: url('assets/images/header-blob.svg');
+    background-position: 50% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+
+    @include bp(max-small) {
+      width: 12rem;
+      height: 4rem;
     }
   }
 
@@ -66,7 +166,7 @@
     display: none;
     position: absolute;
     left: 50%;
-    bottom: 2rem;
+    bottom: 1rem;
     width: 4rem;
     height: 4rem;
     margin-left: -2rem;
@@ -74,10 +174,10 @@
     stroke: lighten(get('colors.text.tagline'), 20%);
 
     &--mobile {
-      width: 3rem;
-      height: 3rem;
-      margin-left: -1.5rem;
-      bottom: 1rem;
+      width: 2rem;
+      height: 2rem;
+      bottom: .5rem;
+      margin-left: -1rem;
       animation: {
         name: swipe;
         duration: 5000ms;
@@ -103,14 +203,6 @@
         display: block;
       }
     }
-  }
-
-  @include bp(small-medium) {
-    background-position: 0 30%;
-  }
-
-  @include bp(max-small) {
-    background-position: 70% 30%;
   }
 }
 

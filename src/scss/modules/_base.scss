@@ -210,6 +210,10 @@ img {
   margin: 0 auto;
   padding: 1rem;
 
+  + .content-row > .wrap:first-child {
+    padding-top: 0;
+  }
+
   &--blog {
     max-width: 47.75rem;
     font-size: 1.315rem;

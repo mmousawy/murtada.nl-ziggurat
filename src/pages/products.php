@@ -7,6 +7,8 @@
 #zigg:date        = ``
 #zigg:description = `List of products by Murtada webdesign bureau.`
 #zigg:priority    = `0.6`
+#zigg:cta-text    = `About me`
+#zigg:cta-url     = `about`
 ?>
 
 <section class="page-section page-section--products">

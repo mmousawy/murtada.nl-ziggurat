@@ -80,17 +80,21 @@ h1 {
   margin: {
     left: auto;
     right: auto;
-    top: 1em;
-    bottom: 1em;
+    top: 1.25em;
+    bottom: 1.75em;
   };
   font-size: get('fonts.heading.size-h1');
   text-align: center;
+
+  + h2 {
+    margin: 2rem auto;
+  }
 }
 
 .page-title {
   @include bp(max-small) {
     max-width: 100%;
-    font-size: get('fonts.heading.size-h1') * .675;
+    font-size: get('fonts.heading.size-h1') * .75;
     text-align: center;
   }
 
@@ -104,12 +108,7 @@ h1 {
 h2 {
   max-width: 80%;
   line-height: 1.2;
-  margin: {
-    left: auto;
-    right: auto;
-    top: 1em;
-    bottom: 1.25em;
-  };
+  margin: calc(2vw + 2rem) auto calc(2vw + 2rem);
   font-size: get('fonts.heading.size-h2');
   text-align: center;
 
@@ -136,6 +135,7 @@ h2 {
 
 .page-home h1 {
   max-width: 35rem;
+  margin-bottom: calc(2vw + 2rem);
 }
 
 h3 {

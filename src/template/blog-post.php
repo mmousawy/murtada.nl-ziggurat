@@ -5,7 +5,9 @@ $props = $currentPage['properties'];
 $prettyDate = date('F jS, Y', strtotime($props['date']));
 
 $coverImage = $props['cover-image'];
+$coverImageWebp = $props['cover-image-webp'];
 $coverImageString = [];
+$coverImageStringWebp = [];
 
 $rgb = [255, 255, 255];
 
@@ -26,11 +28,16 @@ if ($coverImage) {
     $rgb = array_values($rgb);
   }
 
+  foreach($coverImageWebp as $imageWebp) {
+    array_push($coverImageStringWebp, "{$imageWebp['url']} {$imageWebp['size']}w");
+  }
+
   foreach($coverImage as $image) {
     array_push($coverImageString, "{$image['url']} {$image['size']}w");
   }
 }
 
+$coverImageStringWebp = implode(',', $coverImageStringWebp);
 $coverImageString = implode(',', $coverImageString);
 
 $coverAlt = isset($props['cover-alt']) ? $props['cover-alt'] : '';
@@ -40,6 +47,7 @@ $coverAlt = isset($props['cover-alt']) ? $props['cover-alt'] : '';
 <div class="blog-header" style="background-color: rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})">
   <div class="picture-wrapper">
     <picture class="lazy">
+      <source data-srcset="{$coverImageStringWebp}" type="image/webp">
       <source data-srcset="{$coverImageString}" type="image/png">
       <img data-src="{$coverImage['medium']['url']}" alt="{$coverAlt}">
     </picture>

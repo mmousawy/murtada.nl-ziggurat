@@ -18,25 +18,52 @@
       "browserList": "last 1 version, chrome > 70, not dead"
     },
     "javascript": {
-      "source": "script/script.js",
+      "source": [ "script/script.js" ],
       "destination": "script.min.js",
-      "libs": "script/lib/*.js"
+      "libs": [ "script/lib/*.js" ]
     },
     "images": {
-      "jpg": [
-        "assets/images/**/*.{jpg,png}",
-        "!assets/images/**/_*.png",
-        "!assets/images/duotone.jpg"
-      ],
-      "png": [
-        "assets/images/**/_*.png"
-      ],
-      "sizes": {
-        "jpg": [
+      "jpg": {
+        "source": [
+          "assets/images/**/*.{jpg,png}",
+          "!assets/images/**/icons8*.png",
+          "!assets/images/**/_*.png",
+          "!assets/images/duotone.jpg"
+        ],
+        "options": {
+          "quality": 75
+        },
+        "sizes": [
           512,
           1024
+        ]
+      },
+      "png": {
+        "source": [
+          "assets/images/**/_*.png",
+          "!assets/images/**/icons8*.png"
         ],
-        "png": [
+        "options": {
+          "speed": 1,
+          "strip": true,
+          "dithering": 1,
+          "quality": [0.5, 1]
+        },
+        "sizes": [
+          512,
+          1024,
+          1920
+        ]
+      },
+      "webp": {
+        "source": [
+          "assets/images/**/*.{jpg,png}",
+          "!assets/images/**/icons8*.png"
+        ],
+        "options": {
+          "quality": 70
+        },
+        "sizes": [
           512,
           1024,
           1920
@@ -50,7 +77,7 @@
       "source": "favicon.png",
       "destination": "favicons",
       "options": {
-        "path": "favicons/",
+        "path": "/favicons/",
         "appName": "Murtada.nl website",
         "appShortName": "Murtada.nl",
         "appDescription": "Personal portfolio and blog of Murtada al Mousawy"
@@ -61,7 +88,7 @@
         "robots.txt",
         "humans.txt",
         "assets/**/*",
-        "!assets/**/*.{fla,jpg,png,psd,ai}",
+        "!assets/**/*.{fla,jpg,png,psd,ai,sketch}",
         "!assets/**/_*.svg",
         "assets/**/duotone.jpg",
         "assets/**/duotone.webp",

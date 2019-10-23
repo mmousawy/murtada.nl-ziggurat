@@ -17,7 +17,8 @@
     <div class="wrap">
       <div class="picture-wrapper align-left align-left--outside">
         <picture class="lazy">
-          <source srcset="assets/images/photo-cc-512px.jpg 512w, assets/images/photo-cc-1024px.jpg 1024w" type="image/jpeg">
+          <source data-srcset="assets/images/photo-cc-512px.webp 512w, assets/images/photo-cc-1024px.webp 1024w" type="image/webp">
+          <source data-srcset="assets/images/photo-cc-512px.jpg 512w, assets/images/photo-cc-1024px.jpg 1024w" type="image/jpeg">
           <img data-src="assets/images/photo-cc-1024px.jpg" alt="Murtada sitting on a couch with his laptop.">
         </picture>
       </div>
@@ -37,6 +38,7 @@
     <div class="wrap">
       <div class="picture-wrapper align-right align-right--outside">
         <picture class="lazy">
+          <source data-srcset="assets/images/photo-laptop-512px.webp 512w, assets/images/photo-laptop-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/photo-laptop-512px.jpg 512w, assets/images/photo-laptop-1024px.jpg 1024w" type="image/jpeg">
           <img data-src="assets/images/photo-laptop-1024px.jpg" alt="Murtada typing on laptop that is sitting on his lap.">
         </picture>
@@ -53,7 +55,7 @@
           With 3+ years combined company experience and a total of 5+ years (freelance) web experience, I've mastered many fields to fully produce custom websites and web applications.
         </p>
         <p>
-          <a href="#" class="button button--link">Download my CV</a>
+          <a href="/cv" class="button button--link">Download my CV</a>
         </p>
       </div>
     </div>
@@ -63,6 +65,7 @@
     <div class="wrap">
       <div class="picture-wrapper align-left align-left--outside">
         <picture class="lazy">
+          <source data-srcset="assets/images/photo-wireframe-512px.webp 512w, assets/images/photo-wireframe-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/photo-wireframe-512px.jpg 512w, assets/images/photo-wireframe-1024px.jpg 1024w" type="image/jpeg">
           <img data-src="assets/images/photo-wireframe-1024px.jpg" alt="Murtada drawing wireframes in a sketchbook.">
         </picture>

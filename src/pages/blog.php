@@ -25,13 +25,20 @@
     $prettyDate = date('F jS, Y', strtotime($props['date']));
 
     $coverImage = $props['cover-image'];
+    $coverImageWebp = $props['cover-image-webp'];
 
     $coverImageString = [];
+    $coverImageStringWebp = [];
+
+    foreach($coverImageWebp as $imageWebp) {
+      array_push($coverImageStringWebp, "{$imageWebp['url']} {$imageWebp['size']}w");
+    }
 
     foreach($coverImage as $image) {
       array_push($coverImageString, "{$image['url']} {$image['size']}w");
     }
 
+    $coverImageStringWebp = implode(',', $coverImageStringWebp);
     $coverImageString = implode(',', $coverImageString);
 
     $coverAlt = isset($props['cover-alt']) ? $props['cover-alt'] : '';
@@ -51,6 +58,7 @@
     <div class="picture-wrapper {$class}">
       <a href="{$post['slug_path']}">
         <picture class="lazy">
+          <source data-srcset="{$coverImageStringWebp}" type="image/webp">
           <source data-srcset="{$coverImageString}" type="image/png">
           <img data-src="{$coverImage['medium']['url']}" alt="{$coverAlt}">
         </picture>

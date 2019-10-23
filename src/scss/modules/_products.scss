@@ -30,6 +30,12 @@
     margin-left: 1em;
     max-width: 6rem;
     flex-shrink: 0;
+    transform: translate(5%, -5%);
+
+    @include bp(max-small) {
+      max-width: 4rem;
+      margin-left: auto;
+    }
   }
 
   &:hover {
@@ -46,7 +52,12 @@
 
   @include bp(max-small) {
     max-width: 100%;
-    margin: 1rem 2rem;
+    margin: 0 1rem;
+    padding: 1.25rem;
+
+    + .product {
+      margin-top: 1rem;
+    }
   }
 }
 

@@ -1,4 +1,16 @@
 @mixin bp($size) {
+  @if ($size == min-tiny) {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($size == max-tiny) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
   @if ($size == max-small) {
     @media (max-width: 800px) {
       @content;

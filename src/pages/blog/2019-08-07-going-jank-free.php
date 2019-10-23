@@ -6,6 +6,7 @@
 #zigg:template    = `./template/blog-post.php`
 #zigg:parent      = `blog`
 #zigg:cover-image = `assets/images/blog/_jank-free{$size}.png`
+#zigg:cover-image-webp = `assets/images/blog/_jank-free{$size}.webp`
 #zigg:cover-alt   = `Abstract isometric illustration of a blocky wave going through a website, resulting in a smooth wave.`
 #zigg:date        = `2019-08-07`
 #zigg:description = `Websites that are silky smooth 60 FPS are like the holy grail for web developers. In this post, I'll go in-depth to explain how to attain this enigmatic feat.`

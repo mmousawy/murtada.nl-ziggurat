@@ -12,9 +12,10 @@
 
 <section class="landing-content">
   <div class="wrap">
-    <p class="landing-content__title">A fusion of<br>creativity & technology.</p>
+    <p class="landing-content__title">A fusion of creativity &&nbsp;technology.</p>
     <p class="landing-content__text">I love mixing modern design with my technical insight to build beautiful web-based software.</p>
   </div>
+  <div class="illustration"></div>
   <div class="scroll-icon-holder">
     <img src="assets/images/_icon-touch.svg" class="scroll-icon scroll-icon--mobile" alt="Swipe to see more">
     <img src="assets/images/_icon-desktop.svg" class="scroll-icon scroll-icon--desktop" alt="Scroll to see more">
@@ -31,6 +32,7 @@
     <div class="wrap">
       <div class="picture-wrapper align-left align-left--outside align-left--small">
         <picture class="lazy">
+          <source data-srcset="assets/images/photo-cc-512px.webp 512w, assets/images/photo-cc-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/photo-cc-512px.jpg 512w, assets/images/photo-cc-1024px.jpg 1024w" type="image/jpeg">
           <img data-src="assets/images/photo-cc-1024px.jpg" alt="Murtada sitting on a couch with his laptop.">
         </picture>
@@ -73,6 +75,7 @@
     <div class="picture-wrapper {$class}">
       <a href="{$project['slug_path']}">
         <picture class="lazy">
+          <source data-srcset="assets/images/work/{$props['slug']}-512px.webp 512w, assets/images/work/{$props['slug']}-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
           <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
         </picture>

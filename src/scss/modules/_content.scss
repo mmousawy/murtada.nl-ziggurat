@@ -10,7 +10,7 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
   display: flex;
 
   @include bp(min-small) {
-    padding: calc(1rem + 2vw) 1rem;
+    padding: 2rem 1rem;
   }
 
   @include bp(max-small) {
@@ -229,13 +229,13 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
   }
 
   &--highlight {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   @include bp(max-small) {
     + .content-row__text {
       padding: 4vw 5vw 5vw;
-      margin-top: -4rem;
+      margin-top: -3.5rem;
       border-radius: .25rem;
       box-shadow: 0 .5rem 2rem -1rem transparentize(mix(get('colors.primary'), get('colors.black'), 75%), .6);
     }
@@ -326,6 +326,7 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
 .highlight-text {
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  margin-top: 0;
 
   @include bp(max-small) {
     font-size: 1.25rem;

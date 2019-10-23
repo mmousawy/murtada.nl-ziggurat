@@ -291,27 +291,19 @@
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             if (entry.target.nodeName === 'PICTURE') {
-              entry.target.querySelectorAll('source[data-srcset], img[data-src]').forEach(lazyElementSource => {
-                const loadImg = new Image();
-
+              entry.target.querySelectorAll('source[data-srcset]').forEach(lazyElementSource => {
                 const isSrcSet = typeof lazyElementSource.dataset.srcset !== 'undefined';
 
-                loadImg.onload = () => {
-                  if (isSrcSet) {
-                    lazyElementSource.srcset = loadImg.srcset;
-                  } else {
-                    lazyElementSource.src = loadImg.src;
-                  }
-
-                  entry.target.classList.remove('lazy');
-                }
-
                 if (isSrcSet) {
-                  loadImg.srcset = lazyElementSource.dataset.srcset;
+                  lazyElementSource.srcset = lazyElementSource.dataset.srcset;
                 } else {
-                  loadImg.src = lazyElementSource.dataset.src;
+                  lazyElementSource.src = lazyElementSource.dataset.src;
                 }
               });
+
+              entry.target.querySelector('img').onload = () => {
+                entry.target.classList.remove('lazy');
+              }
             } else if (entry.target.nodeName === 'IFRAME') {
               entry.target.src = entry.target.dataset.src;
             }
