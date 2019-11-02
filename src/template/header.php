@@ -84,7 +84,16 @@
     gtag('config', 'UA-16469031-3');
   </script>
 </head>
-<body class="<?= isset($props['class']) ? $props['class'] : '' ?>">
+<body class="<?php
+  echo (isset($props['class']))
+    ? $props['class']
+    : 'page-' . (isset($currentPage['properties']['template'])
+      ? $currentPage['properties']['template']
+      : $currentPage['properties']['slug']);
+
+  echo (isset($props['parent']))
+    ? ' parent-' . $props['parent']
+    : '' ?>">
   <header class="page-header">
     <div class="wrap">
       <a href="/" class="page-branding">
