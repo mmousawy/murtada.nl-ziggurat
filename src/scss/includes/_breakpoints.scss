@@ -1,48 +1,54 @@
 @mixin bp($size) {
   @if ($size == min-tiny) {
-    @media (min-width: 600px) {
+    @media (min-width: 37.5em) {
       @content;
     }
   }
 
   @if ($size == max-tiny) {
-    @media (max-width: 600px) {
+    @media (max-width: 37.5em) {
       @content;
     }
   }
 
   @if ($size == max-small) {
-    @media (max-width: 800px) {
+    @media (max-width: 50em) {
       @content;
     }
   }
 
   @if ($size == min-small) {
-    @media (min-width: 800px) {
+    @media (min-width: 50em) {
       @content;
     }
   }
 
   @if ($size == small-medium) {
-    @media (min-width: 800px) and (max-width: 1366px) {
+    @media (min-width: 50em) and (max-width: 85em) {
       @content;
     }
   }
 
   @if ($size == max-medium) {
-    @media (max-width: 1366px) {
+    @media (max-width: 85em) {
       @content;
     }
   }
 
   @if ($size == min-medium) {
-    @media (min-width: 1366px) {
+    @media (min-width: 85em) {
       @content;
     }
   }
 
-  @if ($size == large) {
-    @media (min-width: 1366px) {
+  @if ($size == max-large) {
+    @media (max-width: 85em) {
+      @content;
+    }
+  }
+
+  @if ($size == min-large) {
+    @media (min-width: 85em) {
       @content;
     }
   }

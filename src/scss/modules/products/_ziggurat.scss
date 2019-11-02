@@ -121,6 +121,7 @@ body.page-ziggurat {
     color: get('colors.white');
 
     @include bp(max-small) {
+      padding: 0 1rem;
       font-size: 2.25rem;
       text-align: center;
     }
@@ -332,6 +333,10 @@ body.page-ziggurat {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+
+    @include bp(max-small) {
+      margin-right: .75rem;
+    }
   }
 
   h3 {

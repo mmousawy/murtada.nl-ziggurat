@@ -106,6 +106,21 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
 
   &--title {
     max-width: 30%;
+
+    @at-root .parent-work & {
+      @include bp(min-small) {
+        transition: top 300ms;
+        position: sticky;
+        top: 2rem;
+      }
+    }
+
+    @at-root .parent-work .page-header.is-stuck:not(.is-hidden) + .page-content & {
+      @include bp(min-small) {
+        position: sticky;
+        top: 7rem;
+      }
+    }
   }
 
   @include bp(max-small) {
@@ -195,7 +210,7 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
       .picture-wrapper__caption {
         width: calc(50% - 2vw);
 
-        @include bp(large) {
+        @include bp(min-large) {
           margin: 1vw;
         }
       }
@@ -296,7 +311,7 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
 .align-left {
   @include bp(min-small) {
     + .content-row__text {
-      margin-left: calc(1rem + 2vw);
+      margin-left: calc(3rem);
     }
   }
 }
@@ -306,7 +321,7 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
 
   @include bp(min-small) {
     + .content-row__text {
-      margin-right: calc(1rem + 2vw);
+      margin-right: calc(3rem);
     }
   }
 }

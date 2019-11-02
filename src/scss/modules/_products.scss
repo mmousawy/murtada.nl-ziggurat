@@ -70,6 +70,10 @@
     margin: 0 0 1rem;
     font-size: 1.75rem;
     color: get('colors.text.link');
+
+    @include bp(max-small) {
+      font-size: 1.5rem;
+    }
   }
 
   p {

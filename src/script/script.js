@@ -509,6 +509,22 @@
     return date;
   }
 
+  const podcastPreview = document.querySelector('.podcast-preview__inside');
+
+  if (podcastPreview) {
+    fetch('https://anchor.fm/s/6a811cc/podcast/rss').then(res => {
+      res.text().then(xmlText => {
+        const domParser = new DOMParser();
+        let doc = domParser.parseFromString(xmlText, 'application/xml');
+
+        podcastPreview.style.backgroundImage = `url('${doc.children[0].querySelector('image url').textContent}')`;
+
+        const episodeAmountElement = document.querySelector('.podcast-episodes-amount');
+        episodeAmountElement.textContent = doc.children[0].querySelectorAll('item').length;
+      })
+    }).catch(() => console.error('Error in fetching the website'));
+  }
+
   const newsletterForm = document.querySelector('#newsletter-form');
 
   if (!newsletterForm) {

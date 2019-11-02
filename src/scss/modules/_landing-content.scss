@@ -108,7 +108,7 @@
     margin-top: 0;
     margin-bottom: .5em;
     max-width: 70%;
-    font-size: calc(3rem + 1vw);
+    font-size: calc(2.75rem + 1vw);
     line-height: 1.1;
     font-weight: bold;
     letter-spacing: -.03em;
@@ -121,8 +121,12 @@
     };
     color: #3e4b97;
 
+    @include bp(min-small) {
+      max-width: calc(20rem + 25vw);
+    }
+
     @include bp(max-small) {
-      max-width: 100%;
+      max-width: 30rem;
       font-size: calc(2rem + 1vw);
     }
   }

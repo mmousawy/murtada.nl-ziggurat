@@ -24,7 +24,6 @@
 
 
 <section class="page-section page-section--home-about">
-  <a name="about" class="section-link"></a>
   <div class="wrap">
     <h1>Hi! I'm Murtada al Mousawy, a full-stack web developer working in the Rotterdam & Den Haag area.</h1>
   </div>
@@ -49,7 +48,6 @@
 
 
 <section class="page-section page-section--inverted">
-  <a name="work" class="section-link"></a>
   <div class="wrap">
     <h2>Projects I've worked on</h2>
   </div>
@@ -102,6 +100,24 @@ HTML;
           <img src="assets/images/_arrow-right.svg" alt="Arrow icon">
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section--podcast">
+  <div class="wrap">
+    <div class="col">
+      <h2>Listen to our fancy podcast!</h2>
+      <p>I'm always engaged with my passion: web development. And what better way to share my experiences and knowledge than through a podcast?</p>
+      <p>Together with <a href="https://gideonheilbron.nl">Gideon Heilbron</a> I'm doing a weekly podcast about all things web, tech news, design, and life. With <span class="podcast-episodes-amount">over 40</span> episodes, there are still more things we want to share!</p>
+    </div>
+    <div class="col">
+      <a href="https://anchor.fm/error-code-coffee" class="podcast-link-anchor" title="Listen to Error Code: Coffee on Anchor.fm">
+        <div class="podcast-preview">
+          <div class="podcast-preview__inside"></div>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/channel/UCNGFZ99qJvHESixVIdwmM_g" class="podcast-link-youtube" title="Watch Error Code: Coffee on YouTube">Watch on YouTube</a>
     </div>
   </div>
 </section>

@@ -20,6 +20,10 @@
 
     path {
       fill: get('colors.primary');
+      transition: {
+        property: fill;
+        duration: 300ms;
+      };
 
       .is-inverted & {
         fill: get('colors.white');
@@ -41,6 +45,10 @@
   margin-left: .35em;
   height: 3rem;
   line-height: 3rem;
+  transition: {
+    property: color;
+    duration: 300ms;
+  };
 
   .is-inverted & {
     color: get('colors.white');
