@@ -3,7 +3,7 @@
 #zigg:page-title  = `Dealing with large SVG backgrounds`
 #zigg:slug        = `dealing-with-large-svg-backgrounds`
 #zigg:type        = `markdown`
-#zigg:template    = `./template/blog-post.php`
+#zigg:template    = `blog-post`
 #zigg:parent      = `blog`
 #zigg:cover-image = `assets/images/blog/_large-svg-backgrounds{$size}.png`
 #zigg:cover-image-webp = `assets/images/blog/_large-svg-backgrounds{$size}.webp`

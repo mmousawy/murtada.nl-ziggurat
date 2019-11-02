@@ -3,7 +3,7 @@
 #zigg:page-title  = `Using promises & async/await in JavaScript`
 #zigg:slug        = `using-promises-and-async-await-in-javascript`
 #zigg:type        = `markdown`
-#zigg:template    = `./template/blog-post.php`
+#zigg:template    = `blog-post`
 #zigg:parent      = `blog`
 #zigg:cover-image = `assets/images/blog/_promises{$size}.png`
 #zigg:cover-image-webp = `assets/images/blog/_promises{$size}.webp`

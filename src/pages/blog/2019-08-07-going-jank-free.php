@@ -3,7 +3,7 @@
 #zigg:page-title  = `Going jank free - Achieving 60 FPS smooth websites`
 #zigg:slug        = `going-jank-free-achieving-60-fps-smooth-websites`
 #zigg:type        = `markdown`
-#zigg:template    = `./template/blog-post.php`
+#zigg:template    = `blog-post`
 #zigg:parent      = `blog`
 #zigg:cover-image = `assets/images/blog/_jank-free{$size}.png`
 #zigg:cover-image-webp = `assets/images/blog/_jank-free{$size}.webp`

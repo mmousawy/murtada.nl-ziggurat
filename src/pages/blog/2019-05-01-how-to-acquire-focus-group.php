@@ -3,7 +3,7 @@
 #zigg:page-title  = `Finding your own invested focus group for testing`
 #zigg:slug        = `finding-your-own-invested-focus-group-for-testing`
 #zigg:type        = `markdown`
-#zigg:template    = `./template/blog-post.php`
+#zigg:template    = `blog-post`
 #zigg:parent      = `blog`
 #zigg:cover-image = `assets/images/blog/_usability-testing{$size}.png`
 #zigg:cover-image-webp = `assets/images/blog/_usability-testing{$size}.webp`

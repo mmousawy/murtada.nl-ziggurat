@@ -23,7 +23,7 @@
       "libs": [ "script/lib/*.js" ]
     },
     "images": {
-      "jpg": {
+      "jpeg": {
         "source": [
           "assets/images/**/*.{jpg,png}",
           "!assets/images/**/icons8*.png",
