@@ -114,7 +114,9 @@ HTML;
     <div class="col">
       <a href="https://anchor.fm/error-code-coffee" class="podcast-link-anchor" title="Listen to Error Code: Coffee on Anchor.fm">
         <div class="podcast-preview">
-          <div class="podcast-preview__inside"></div>
+          <div class="podcast-preview__inside">
+            <span>Listen on Anchor.fm</span>
+          </div>
         </div>
       </a>
       <a href="https://www.youtube.com/channel/UCNGFZ99qJvHESixVIdwmM_g" class="podcast-link-youtube" title="Watch Error Code: Coffee on YouTube">Watch on YouTube</a>

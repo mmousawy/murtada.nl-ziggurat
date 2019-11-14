@@ -116,12 +116,11 @@ img {
 
   &--podcast {
     $cl-podcast: #FFDA99;
-    padding: 3rem 0;
     position: relative;
     flex-grow: 1;
     overflow: hidden;
-    color: desaturate(darken($cl-podcast, 55%), 66%);
-    background-color: #e8c68a;
+    color: desaturate(darken($cl-podcast, 50%), 70%);
+    background-color: #fff0d5;
     background: {
       image: url('assets/images/podcast-background.svg');
       repeat: no-repeat;
@@ -129,16 +128,15 @@ img {
       size: cover;
     };
 
-    @include bp(max-large) {
-      padding: 1rem 0;
-    }
-
     @include bp(min-large) {
       background-size: 75rem;
     }
 
     .wrap {
+      padding: 2rem 1rem 2.5rem;
+
       @include bp(min-small) {
+        padding: 3rem 1rem;
         display: flex;
         justify-content: space-between;
       }
@@ -155,7 +153,7 @@ img {
       }
 
       @include bp(max-small) {
-        margin-top: 3rem;
+        margin-top: 2rem;
       }
 
       @include bp(min-small) {
@@ -167,7 +165,7 @@ img {
     h2 {
       max-width: 30rem;
       font-size: calc(2.5rem + 1vw);
-      margin: 0 0 3rem;
+      margin: 0 0 .65em;
       text-align: left;
     }
 
@@ -184,7 +182,7 @@ img {
       height: 20rem;
       padding: .5rem;
       border-radius: 8px;
-      background: lighten(#FFDA99, 10%);
+      background: lighten(#FFDA99, 18%);
       box-shadow: 0px 16px 64px rgba(0,0,0,0.1), 0px 8px 16px rgba(0,0,0,0.05);
       transition: filter 200ms ease-in-out;
 
@@ -222,8 +220,7 @@ img {
         animation: podcastWave 1s linear infinite;
       }
 
-      &::after {
-        content: 'Listen on Anchor.fm';
+      span {
         text-align: center;
         position: absolute;
         left: 0;
@@ -245,7 +242,7 @@ img {
       text-transform: uppercase;
       font-size: .85rem;
       font-weight: 700;
-      background: lighten(#FFDA99, 10%);
+      background: lighten(#FFDA99, 18%);
       background-image: url('assets/images/icon-youtube.svg');
       background-repeat: no-repeat;
       background-position: 1.125rem 50%;

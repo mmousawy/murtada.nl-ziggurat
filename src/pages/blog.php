@@ -13,6 +13,7 @@
   <a name="about" class="section-link"></a>
   <div class="wrap">
     <h1 class="page-title">Things I've written.</h1>
+    <h2>Read about Web Development</h2>
   </div>
 
   <?php
