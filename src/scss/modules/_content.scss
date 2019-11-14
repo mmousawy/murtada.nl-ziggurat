@@ -507,3 +507,7 @@ iframe {
     repeat: no-repeat;
   };
 }
+
+span.tip {
+  border-bottom: 2px dashed get('colors.primary');
+}
