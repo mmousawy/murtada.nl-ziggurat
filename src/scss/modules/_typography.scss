@@ -87,12 +87,15 @@ h1 {
   text-align: center;
 
   .wrap--blog & {
+    font-size: get('fonts.heading.size-h1') * 1.25;
+
     @include bp(min-small) {
       margin-bottom: 2.5rem;
     }
 
     @include bp(max-small) {
       margin-bottom: 1.6875rem;
+      font-size: get('fonts.heading.size-h1') * .875;
     }
   }
 
