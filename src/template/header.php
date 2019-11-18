@@ -48,7 +48,7 @@
   <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
   <meta property="og:site_name" content="Murtada webdesign bureau">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@mmousawy">
   <meta name="twitter:title" content="<?= !empty($props['page-title']) ? $props['page-title'] . ' | Murtada' : 'Murtada al Mousawy' ?> - freelance full-stack web developer in Rotterdam">
   <meta name="twitter:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
@@ -70,7 +70,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=%__VERSION__%">
   <link rel="preload" href="assets/fonts/sailec-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="assets/fonts/sailec-medium.woff2" as="font" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
