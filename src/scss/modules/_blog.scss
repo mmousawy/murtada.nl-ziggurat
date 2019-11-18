@@ -1,0 +1,43 @@
+.blog-meta {
+  display: flex;
+  margin-top: 1.315rem;
+
+  .page-blog & {
+    font-size: 1rem;
+  }
+
+  @include bp('max-small') {
+    display: block;
+  }
+
+  .blog-meta__publish-date {
+    display: flex;
+    align-items: center;
+    display: flex;
+    color: lighten(get('colors.text.body'), 40%);
+  }
+
+  .blog-meta__avg-time {
+    display: flex;
+    align-items: center;
+    color: lighten(get('colors.text.body'), 40%);
+
+    @include bp('min-small') {
+      margin-left: 1.5em;
+    }
+
+    @include bp('max-small') {
+      margin-top: .5em;
+    }
+  }
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .35em;
+
+    path {
+      fill: lighten(get('colors.text.body'), 40%);
+    }
+  }
+}

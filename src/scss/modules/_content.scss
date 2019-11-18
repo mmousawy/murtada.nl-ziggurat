@@ -10,7 +10,7 @@ body:not(.is-inverted) .page-section:not(.page-section--inverted) .content-row {
   display: flex;
 
   @include bp(min-small) {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
 
   @include bp(max-small) {
