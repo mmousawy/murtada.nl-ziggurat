@@ -1,6 +1,7 @@
 <?php
 
 $props = $currentPage['properties'];
+$date = $props['date'];
 
 $prettyDate = date('F jS, Y', strtotime($props['date']));
 
@@ -58,7 +59,10 @@ HTML;
 <section class="page-section">
 <div class="wrap wrap--blog">
 <h1 class="page-title page-title--align-left"><?= $props['page-title']; ?></h1>
-<time datetime="{$props['date']} 12:00"><?= $prettyDate; ?></time>
+<div class="blog-meta">
+  <time class="blog-meta__publish-date" datetime="<?= $date ?> 12:00"><img src="assets/images/_icon-calendar.svg" alt="Calendar icon"><?= $prettyDate ?></time>
+  <span class="blog-meta__avg-time"><img src="assets/images/_icon-time.svg" alt="Time icon"><?= round($currentPage['properties']['avg_time']) ?> min reading time</span>
+</div>
 </div>
 <div class="wrap wrap--blog">
 <?= $currentPage['content']; ?>

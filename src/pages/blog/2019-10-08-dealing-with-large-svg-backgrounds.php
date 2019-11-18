@@ -9,10 +9,10 @@
 #zigg:cover-image-webp = `assets/images/blog/_large-svg-backgrounds{$size}.webp`
 #zigg:cover-alt   = `Isometric illustration of a monitor/computer screen being filled with paint.`
 #zigg:date        = `2019-10-08`
-#zigg:description = `Using SVGs on the web is a great way to have responsive images in your product. Usually SVGs are used for illustrations and icons, but what about using them for backgrounds? Let's dive in!`
+#zigg:description = `Using SVGs on the web is a great way to have responsive images in your product. Usually SVGs are used for illustrations and icons, but what about using them for backgrounds? Let&apos;s dive in!`
 ?>
 
-Using SVGs for icons and illustrations has made things a great deal easier for web developers. SVG graphics are inherently scalable because the image is built up from vectors and coordinate data. A smaller, larger or scaled version of the source image is done by a simple multiplication of all the numbers inside the image data.
+Using SVGs for icons and illustrations has made things a great deal easier for web developers. SVG graphics are inherently scalable because the image is built up from vectors and coordinate data. A smaller, larger or scaled version of the source image is done by a simple multiplication of all the numbers inside the image data.<br>
 But what about using SVGs for backgrounds? What method works well for which situation?
 
 ### External reference

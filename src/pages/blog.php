@@ -5,7 +5,7 @@
 #zigg:parent      = ``
 #zigg:cover-image = `assets/images/_cover-blog{$size}.png`
 #zigg:date        = ``
-#zigg:description = `Read the things I've written: from development tricks to workplace tips.`
+#zigg:description = `Read the things I've written about web development, web design, digital architecture and workplace tips.`
 #zigg:priority    = `0.7`
 ?>
 
@@ -13,7 +13,7 @@
   <a name="about" class="section-link"></a>
   <div class="wrap">
     <h1 class="page-title">Things I've written.</h1>
-    <h2>Read about Web Development</h2>
+    <h2>From development tricks to workplace tips.</h2>
   </div>
 
   <?php
@@ -67,7 +67,13 @@
     </div>
     <div class="content-row__text">
       <h2><a href="{$post['slug_path']}">{$props['title']}</a></h2>
-      <time datetime="{$props['date']} 12:00">{$prettyDate}</time>
+HTML;
+?>
+      <div class="blog-meta">
+        <time class="blog-meta__publish-date" datetime="<?= $props['date'] ?> 12:00"><img src="assets/images/_icon-calendar.svg" alt="Calendar icon"><?= $prettyDate ?></time>
+        <span class="blog-meta__avg-time"><img src="assets/images/_icon-time.svg" alt="Time icon"><?= round($post['properties']['avg_time']) ?> min</span>
+      </div>
+<?php echo <<<HTML
       <p>{$props['description']}</p>
       <p><a href="{$post['slug_path']}" class="readmore">Read more</a></p>
     </div>

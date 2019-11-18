@@ -9,7 +9,7 @@
 #zigg:cover-image-webp = `assets/images/blog/_usability-testing{$size}.webp`
 #zigg:cover-alt   = `Isometric illustration of a man and a woman working on a floating screen.`
 #zigg:date        = `2019-05-01`
-#zigg:description = `Having your own group of personally interested people to test your work, how nice would that be? I'll tell you about how I found those rare unicorns, and how I kept them happy.`
+#zigg:description = `Having your own group of personally interested people to test your work, how nice would that be? I&apos;ll tell you about how I found those rare unicorns, and how I kept them happy.`
 ?>
 
 Code development is a funny thing. On one hand you're working with machines; cold non-emotional interfaces. On the other hand you're interacting with humans: their input will be the main direction for your technical design, interaction design and how you write your code.

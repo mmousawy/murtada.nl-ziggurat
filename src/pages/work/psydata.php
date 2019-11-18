@@ -49,7 +49,7 @@ $props = $currentPage['properties'];
         <h3>Approach</h3>
       </div>
       <div class="content-row__text">
-        <p>Utilising HTML5, CSS3, Node and the WebSocket API I wanted to redesign the platform from the ground up.</p>
+        <p>Utilizing HTML5, CSS3, Node and the WebSocket API I wanted to redesign the platform from the ground up.</p>
         <p>By creating an inventory of the current use cases with the help of the previous developer and the old code base, we designed new flows for data managers and researchers. We focused on making their lives easier by reducing clicks in the interface, creating visual and mental hierarchies of on-screen information and implementing new rules in the system.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">

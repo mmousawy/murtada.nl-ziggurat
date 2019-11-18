@@ -9,7 +9,7 @@
 #zigg:cover-image-webp = `assets/images/blog/_jank-free{$size}.webp`
 #zigg:cover-alt   = `Abstract isometric illustration of a blocky wave going through a website, resulting in a smooth wave.`
 #zigg:date        = `2019-08-07`
-#zigg:description = `Websites that are silky smooth 60 FPS are like the holy grail for web developers. In this post, I'll go in-depth to explain how to attain this enigmatic feat.`
+#zigg:description = `Websites that are silky smooth 60 FPS are like the holy grail for web developers. In this post, I&apos;ll go in-depth to explain how to attain this enigmatic feat.`
 ?>
 
 I love small details in web design. Little geometric shapes, lines and scribbles in the background or layered through the content; it's a nice way to add visual flair without taking up space for content.<br>
