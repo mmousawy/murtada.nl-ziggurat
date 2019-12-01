@@ -211,10 +211,19 @@ blockquote {
 }
 
 
-ol {
+ol,
+ul {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include bp(max-small) {
     padding-left: 1.5em;
   }
+}
+
+li + li {
+  margin-top: .7em;
 }
 
 code {

@@ -36,9 +36,14 @@ $props = $currentPage['properties'];
         <h3>Case</h3>
       </div>
       <div class="content-row__text">
-        <p>At one point our web team had a lot of digital products they needed to keep an eye on. I task</p>
-        <p>The software was based on existing workflows of data managers at GGZ inGeest: data that gets published by the research projects is stored and organised through a system that is supposed to make it easier to browse through. Subsequently, other researchers can request and receive the data after a curatorial process.</p>
-        <p>Data managers are administrators of projects, where they can organise, publish and accept data and requests. Researchers are users who mostly request the data, after which there will be a process where data managers verify the request and the researcher's use case through previously submitted analysis plans.</p>
+        <p>At one point our web team had a lot of digital products they needed to keep an eye on. There was a lot of time and effort spent checking and validating every product's availability. Also, being the first to get notified when a product is unreachable would be a great plus. Getting an email from a frustrated client who lets us know their website is offline is never fun.</p>
+        <p>After a fruitful brainstorm session, our team was tasked to finalize the concepts, and then design and develop a multi-purpose testing platform that does the following:</p>
+        <ol>
+          <li>Create and update assertions for testing.</li>
+          <li>Assertions can have an expected result and can be given protocols on which the tests will be performed.</li>
+          <li>Hierarchical step-based automatic testing and reporting based on assertion and protocol.</li>
+          <li>Web-based accessible interface with an interactive overview of all product with their respective assertions, test results and other relevant info.</li>
+        </ol>
       </div>
     </div>
   </div>
@@ -49,8 +54,7 @@ $props = $currentPage['properties'];
         <h3>Approach</h3>
       </div>
       <div class="content-row__text">
-        <p>Utilizing HTML5, CSS3, Node and the WebSocket API I wanted to redesign the platform from the ground up.</p>
-        <p>By creating an inventory of the current use cases with the help of the previous developer and the old code base, we designed new flows for data managers and researchers. We focused on making their lives easier by reducing clicks in the interface, creating visual and mental hierarchies of on-screen information and implementing new rules in the system.</p>
+        <p>Sketching, brainstorming and forming lots of ideas are all meant to diverge the scope. To create a big overview of all the options we choose and directions we can go. So that's exactly what we did! We created a couple of lists and sketches forming the fundamental concept for our product. We took our most important needs and matched them to features we had in our lists. In a way, we formed our minimum viable product, our MVP!</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
             <source data-srcset="assets/images/work/psydata/_psydata-diagram-512px.png 512w, assets/images/work/psydata/_psydata-diagram-1024px.png 1024w" type="image/png">
@@ -99,28 +103,8 @@ $props = $currentPage['properties'];
       </div>
       <div class="gallery__pane">
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_1-512px.png 512w, assets/images/work/psydata/_psydata_1-1024px.png 1024w, assets/images/work/psydata/_psydata_1-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_1-1024px.png" alt="PsyData screenshot">
-        </picture>
-
-        <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_2-512px.png 512w, assets/images/work/psydata/_psydata_2-1024px.png 1024w, assets/images/work/psydata/_psydata_2-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_2-1024px.png" alt="PsyData screenshot">
-        </picture>
-
-        <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_3-512px.png 512w, assets/images/work/psydata/_psydata_3-1024px.png 1024w, assets/images/work/psydata/_psydata_3-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_3-1024px.png" alt="PsyData screenshot">
-        </picture>
-
-        <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_4-512px.png 512w, assets/images/work/psydata/_psydata_4-1024px.png 1024w, assets/images/work/psydata/_psydata_4-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_4-1024px.png" alt="PsyData screenshot">
-        </picture>
-
-        <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_5-512px.png 512w, assets/images/work/psydata/_psydata_5-1024px.png 1024w, assets/images/work/psydata/_psydata_5-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_5-1024px.png" alt="PsyData screenshot">
+          <source srcset="assets/images/work/service-monitor/_service-monitor-1-512px.png 512w, assets/images/work/service-monitor/_service-monitor-1-1024px.png 1024w, assets/images/work/service-monitor/_service-monitor-1-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/service-monitor/_service-monitor-1-1024px.png" alt="Service Monitor screenshot">
         </picture>
       </div>
     </div>
