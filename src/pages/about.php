@@ -3,7 +3,7 @@
 #zigg:page-title  = `About`
 #zigg:slug        = `about`
 #zigg:parent      = ``
-#zigg:cover-image = `assets/images/_cover-about{$size}.png`
+#zigg:cover-image = `assets/images/og/_cover-about{$size}.png`
 #zigg:date        = ``
 #zigg:description = `Read about my professional background. How I became a full-stack web developer with a passion for UX and interactivity.`
 #zigg:priority    = `0.5`

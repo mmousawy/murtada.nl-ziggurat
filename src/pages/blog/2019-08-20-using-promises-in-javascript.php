@@ -5,8 +5,8 @@
 #zigg:type        = `markdown`
 #zigg:template    = `blog-post`
 #zigg:parent      = `blog`
-#zigg:cover-image = `assets/images/blog/_promises{$size}.png`
-#zigg:cover-image-webp = `assets/images/blog/_promises{$size}.webp`
+#zigg:cover-image = `assets/images/blog/promises{$size}.png`
+#zigg:cover-image-webp = `assets/images/blog/promises{$size}.webp`
 #zigg:cover-alt   = `Abstract isometric illustration of three cubes being linked by arrows.`
 #zigg:date        = `2019-08-20`
 #zigg:description = `Promises in JavaScript are used as a representation of an eventual completion of an asynchronous operation. What are the benefits over traditional methods of asynchronous completion handling and how and when do you use promises?`
@@ -55,9 +55,9 @@ The resolve and reject handlers can be called within the promise by calling the 
 
 <figure class="picture-wrapper picture-wrapper--outside">
   <picture class="lazy">
-    <source data-srcset="assets/images/blog/_promise_cycle-1024px.webp 1024w, assets/images/blog/_promise_cycle-1920px.webp 1920w" type="image/webp">
-    <source data-srcset="assets/images/blog/_promise_cycle-1024px.png 1024w, assets/images/blog/_promise_cycle-1920px.png 1920w" type="image/png">
-    <img data-src="assets/images/blog/_promise_cycle-1920px.png" data-action="zoom" alt="Abstract example of a chained Promise cycle.">
+    <source data-srcset="assets/images/blog/promise_cycle-1024px.webp 1024w, assets/images/blog/promise_cycle-1920px.webp 1920w" type="image/webp">
+    <source data-srcset="assets/images/blog/promise_cycle-1024px.png 1024w, assets/images/blog/promise_cycle-1920px.png 1920w" type="image/png">
+    <img data-src="assets/images/blog/promise_cycle-1920px.png" data-action="zoom" alt="Abstract example of a chained Promise cycle.">
   </picture>
   <figcaption class="picture-wrapper__caption">Abstract example of a chained Promise cycle.</figcaption>
 </figure>

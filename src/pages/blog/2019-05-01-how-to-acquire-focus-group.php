@@ -5,8 +5,8 @@
 #zigg:type        = `markdown`
 #zigg:template    = `blog-post`
 #zigg:parent      = `blog`
-#zigg:cover-image = `assets/images/blog/_usability-testing{$size}.png`
-#zigg:cover-image-webp = `assets/images/blog/_usability-testing{$size}.webp`
+#zigg:cover-image = `assets/images/blog/usability-testing{$size}.png`
+#zigg:cover-image-webp = `assets/images/blog/usability-testing{$size}.webp`
 #zigg:cover-alt   = `Isometric illustration of a man and a woman working on a floating screen.`
 #zigg:date        = `2019-05-01`
 #zigg:description = `Having your own group of personally interested people to test your work, how nice would that be? I&apos;ll tell you about how I found those rare unicorns, and how I kept them happy.`

@@ -45,7 +45,7 @@
   <meta property="og:title" content="<?= !empty($props['page-title']) ? $props['page-title'] . ' | Murtada' : 'Murtada al Mousawy' ?> - freelance full-stack web developer in Rotterdam">
   <meta property="og:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
   <meta property="og:url" content="https://murtada.nl/<?= $currentPage['slug_path'] === 'index' ? '' : $currentPage['slug_path'] ?>">
-  <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
+  <meta property="og:image" content="https://murtada.nl/<?= isset($props['cover-image']['url']) ? $props['cover-image']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['url'] ?>">
   <meta property="og:site_name" content="Murtada webdesign bureau">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -53,7 +53,7 @@
   <meta name="twitter:title" content="<?= !empty($props['page-title']) ? $props['page-title'] . ' | Murtada' : 'Murtada al Mousawy' ?> - freelance full-stack web developer in Rotterdam">
   <meta name="twitter:description" content="<?= !empty($props['description']) ? $props['description'] : 'Personal website and portfolio of Murtada al Mousawy, full-stack web developer based in the Netherlands.' ?>">
   <meta name="twitter:creator" content="@mmousawy">
-  <meta name="twitter:image" content="https://murtada.nl/<?= isset($props['cover-image']['large']['url']) ? $props['cover-image']['large']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['large']['url'] ?>">
+  <meta name="twitter:image" content="https://murtada.nl/<?= isset($props['cover-image']['url']) ? $props['cover-image']['url'] : $Ziggurat->searchPage('index')['properties']['cover-image']['url'] ?>">
 
   <script type="application/ld+json">
   {

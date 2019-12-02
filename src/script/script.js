@@ -330,15 +330,17 @@
   });
 
   if (gallery) {
-    const flkty = new Flickity(gallery.querySelector('.gallery__pane'), {
-      imagesLoaded: true,
-      percentPosition: false,
-      fullscreen: true,
-    });
+    window.addEventListener('load', () => {
+      const flkty = new Flickity(gallery.querySelector('.gallery__pane'), {
+        imagesLoaded: true,
+        percentPosition: false,
+        fullscreen: true,
+      });
 
-    gallery.querySelector('.flickity-viewport').addEventListener('click', (e) => {
-      e.preventDefault();
-    }, true);
+      gallery.querySelector('.flickity-viewport').addEventListener('click', (e) => {
+        e.preventDefault();
+      }, true);
+    })
   }
 
   resizeHandler();

@@ -3,7 +3,7 @@
 #zigg:page-title  = `Terms & Conditions`
 #zigg:slug        = `terms-conditions`
 #zigg:parent      = ``
-#zigg:cover-image = `assets/images/_cover-terms-conditions{$size}.png`
+#zigg:cover-image = `assets/images/og/_cover-terms-conditions{$size}.png`
 #zigg:date        = ``
 #zigg:description = `Read more about our terms and conditions.`
 #zigg:cta-text    = `Nederlands`

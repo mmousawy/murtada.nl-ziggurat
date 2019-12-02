@@ -4,7 +4,7 @@
 #zigg:slug        = `ziggurat`
 #zigg:parent      = `products`
 #zigg:logo        = `assets/images/products/ziggurat/ziggurat-logo.svg`
-#zigg:cover-image = `assets/images/_cover-ziggurat{$size}.png`
+#zigg:cover-image = `assets/images/og/_cover-ziggurat{$size}.png`
 #zigg:cover-alt   = `Ziggurat logo`
 #zigg:date        = ``
 #zigg:description = `Development toolchain with dynamic routing and Markdown support for PHP websites.`

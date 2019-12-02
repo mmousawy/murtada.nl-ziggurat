@@ -23,7 +23,8 @@ $props = $currentPage['properties'];
       <p class="highlight-text">Making data management more fun and engaging by applying modern flows with micro interactions and allowing users to connect with each other.</p>
       <div class="picture-wrapper picture-wrapper--highlight">
         <picture class="lazy">
-          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.webp 512w, assets/images/work/<?= $props['slug']; ?>-1024px.webp 1024w, assets/images/work/<?= $props['slug']; ?>-1920px.webp 1920w" type="image/webp">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-1024px.jpg 1024w, assets/images/work/<?= $props['slug']; ?>-1920px.jpg 1920w" type="image/jpeg">
           <img data-src="assets/images/work/<?= $props['slug']; ?>-1024px.jpg" alt="<?= $props['cover-alt']; ?>">
         </picture>
       </div>
@@ -53,15 +54,17 @@ $props = $currentPage['properties'];
         <p>By creating an inventory of the current use cases with the help of the previous developer and the old code base, we designed new flows for data managers and researchers. We focused on making their lives easier by reducing clicks in the interface, creating visual and mental hierarchies of on-screen information and implementing new rules in the system.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/psydata/_psydata-diagram-512px.png 512w, assets/images/work/psydata/_psydata-diagram-1024px.png 1024w" type="image/png">
-            <img data-src="assets/images/work/psydata/_psydata-diagram-1024px.png" alt="Use case diagram for the PsyData project" data-action="zoom">
+            <source data-srcset="assets/images/work/psydata/psydata-diagram-1024px.webp 1024w, assets/images/work/psydata/psydata-diagram-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/psydata/psydata-diagram-1024px.png 1024w, assets/images/work/psydata/psydata-diagram-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/psydata/psydata-diagram-1920px.png" data-action="zoom" alt="Diagram illustrating the visibility and relationship of bugs vs. technical debt.">
           </picture>
-          <figcaption class="picture-wrapper__caption">Use case diagram for PsyData illustrating the main actors, their associations and their interactions.</figcaption>
+          <figcaption class="picture-wrapper__caption">Diagram illustrating the visibility and relationship of bugs vs. technical debt.</figcaption>
         </figure>
         <p>We separated the limiting data-structures of one-to-one data models like "users-to-projects", "files-to-projects" and so on. By doing that, we essentially made it easier for groups of people to work together whenever they need to, by allowing data managers to include in, or exclude people from projects and groups. This also opened a new door to subscription models and trial-accounts for monetisation.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/psydata/psydata-flow-512px.jpg 512w, assets/images/work/psydata/psydata-flow-1024px.jpg 1024w" type="image/jpeg">
+            <source data-srcset="assets/images/work/psydata/psydata-flow-512px.webp 512w, assets/images/work/psydata/psydata-flow-1024px.webp 1024w, assets/images/work/psydata/psydata-flow-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/psydata/psydata-flow-512px.jpg 512w, assets/images/work/psydata/psydata-flow-1024px.jpg 1024w, assets/images/work/psydata/psydata-flow-1920px.jpg 1920w" type="image/jpeg">
             <img data-src="assets/images/work/psydata/psydata-flow-1024px.jpg" alt="User flow diagram of: login, register, create project, add data, request data, respond to request" data-action="zoom">
           </picture>
           <figcaption class="picture-wrapper__caption">User flow diagram of: login, register, create project, add data, request data, respond to request.</figcaption>
@@ -69,8 +72,9 @@ $props = $currentPage['properties'];
         <p>The UI redesign was built form the ground up with a natural direction of reading in mind. Everything has to flow from top to bottom, with the most relevant information at the top. We also separated interactions and forms by layering those elements on top of the current page. This made it less jarring and very clear whenever a user is prompted for input.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/psydata/_psydata-search-512px.png 512w, assets/images/work/psydata/_psydata-search-1024px.png 1024w" type="image/png">
-            <img data-src="assets/images/work/psydata/_psydata-search-1024px.png" alt="Screenshot of the filter feature in the PsyData app" data-action="zoom">
+            <source data-srcset="assets/images/work/psydata/_psydata-search-512px.webp 512w, assets/images/work/psydata/psydata-search-1024px.webp 1024w, assets/images/work/psydata/psydata-search-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/psydata/_psydata-search-512px.png 512w, assets/images/work/psydata/psydata-search-1024px.png 1024w, assets/images/work/psydata/psydata-search-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/psydata/psydata-search-1024px.png" alt="Screenshot of the filter feature in the PsyData app" data-action="zoom">
           </picture>
           <figcaption class="picture-wrapper__caption">Screenshot of the "filter through column" feature in PsyData.</figcaption>
         </figure>
@@ -99,28 +103,33 @@ $props = $currentPage['properties'];
       </div>
       <div class="gallery__pane">
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_1-512px.png 512w, assets/images/work/psydata/_psydata_1-1024px.png 1024w, assets/images/work/psydata/_psydata_1-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_1-1024px.png" alt="PsyData screenshot">
+          <source srcset="assets/images/work/psydata/psydata1-512px.webp 512w, assets/images/work/psydata/psydata1-1024px.webp 1024w, assets/images/work/psydata/psydata1-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/psydata/psydata1-512px.png 512w, assets/images/work/psydata/psydata1-1024px.png 1024w, assets/images/work/psydata/psydata1-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/psydata/psydata1-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_2-512px.png 512w, assets/images/work/psydata/_psydata_2-1024px.png 1024w, assets/images/work/psydata/_psydata_2-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_2-1024px.png" alt="PsyData screenshot">
+          <source srcset="assets/images/work/psydata/psydata2-512px.webp 512w, assets/images/work/psydata/psydata2-1024px.webp 1024w, assets/images/work/psydata/psydata2-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/psydata/psydata2-512px.png 512w, assets/images/work/psydata/psydata2-1024px.png 1024w, assets/images/work/psydata/psydata2-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/psydata/psydata2-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_3-512px.png 512w, assets/images/work/psydata/_psydata_3-1024px.png 1024w, assets/images/work/psydata/_psydata_3-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_3-1024px.png" alt="PsyData screenshot">
+          <source srcset="assets/images/work/psydata/psydata3-512px.webp 512w, assets/images/work/psydata/psydata3-1024px.webp 1024w, assets/images/work/psydata/psydata3-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/psydata/psydata3-512px.png 512w, assets/images/work/psydata/psydata3-1024px.png 1024w, assets/images/work/psydata/psydata3-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/psydata/psydata3-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_4-512px.png 512w, assets/images/work/psydata/_psydata_4-1024px.png 1024w, assets/images/work/psydata/_psydata_4-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_4-1024px.png" alt="PsyData screenshot">
+          <source srcset="assets/images/work/psydata/psydata4-512px.webp 512w, assets/images/work/psydata/psydata4-1024px.webp 1024w, assets/images/work/psydata/psydata4-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/psydata/psydata4-512px.png 512w, assets/images/work/psydata/psydata4-1024px.png 1024w, assets/images/work/psydata/psydata4-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/psydata/psydata4-1024px.png" alt="PsyData screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/psydata/_psydata_5-512px.png 512w, assets/images/work/psydata/_psydata_5-1024px.png 1024w, assets/images/work/psydata/_psydata_5-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/psydata/_psydata_5-1024px.png" alt="PsyData screenshot">
+          <source srcset="assets/images/work/psydata/psydata5-512px.webp 512w, assets/images/work/psydata/psydata5-1024px.webp 1024w, assets/images/work/psydata/psydata5-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/psydata/psydata5-512px.png 512w, assets/images/work/psydata/psydata5-1024px.png 1024w, assets/images/work/psydata/psydata5-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/psydata/psydata5-1024px.png" alt="PsyData screenshot">
         </picture>
       </div>
     </div>

@@ -3,7 +3,7 @@
 #zigg:page-title  = `Products`
 #zigg:slug        = `products`
 #zigg:parent      = ``
-#zigg:cover-image = `assets/images/_cover-products{$size}.png`
+#zigg:cover-image = `assets/images/og/_cover-products{$size}.png`
 #zigg:date        = ``
 #zigg:description = `List of products by Murtada webdesign bureau.`
 #zigg:priority    = `0.6`

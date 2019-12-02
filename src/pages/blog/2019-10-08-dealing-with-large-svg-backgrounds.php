@@ -5,8 +5,8 @@
 #zigg:type        = `markdown`
 #zigg:template    = `blog-post`
 #zigg:parent      = `blog`
-#zigg:cover-image = `assets/images/blog/_large-svg-backgrounds{$size}.png`
-#zigg:cover-image-webp = `assets/images/blog/_large-svg-backgrounds{$size}.webp`
+#zigg:cover-image = `assets/images/blog/large-svg-backgrounds{$size}.png`
+#zigg:cover-image-webp = `assets/images/blog/large-svg-backgrounds{$size}.webp`
 #zigg:cover-alt   = `Isometric illustration of a monitor/computer screen being filled with paint.`
 #zigg:date        = `2019-10-08`
 #zigg:description = `Using SVGs on the web is a great way to have responsive images in your product. Usually SVGs are used for illustrations and icons, but what about using them for backgrounds? Let&apos;s dive in!`
@@ -44,9 +44,9 @@ The bug comprises of the image appearing pixelated when enlarging the image abov
 <figure class="picture-wrapper picture-wrapper--outside picture-wrapper--left">
   <div class="picture-column">
     <picture class="lazy">
-      <source data-srcset="assets/images/blog/_webkit-visual-bug-svg-background-1024px.webp 1024w, assets/images/blog/_webkit-visual-bug-svg-background-1920px.webp 1920w" type="image/webp">
-      <source data-srcset="assets/images/blog/_webkit-visual-bug-svg-background-1024px.png 1024w, assets/images/blog/_webkit-visual-bug-svg-background-1920px.png 1920w" type="image/png">
-      <img data-src="assets/images/blog/_webkit-visual-bug-svg-background-1920px.png" data-action="zoom" alt="Abstract example of a chained Promise cycle.">
+      <source data-srcset="assets/images/blog/webkit-visual-bug-svg-background-1024px.webp 1024w, assets/images/blog/webkit-visual-bug-svg-background-1920px.webp 1920w" type="image/webp">
+      <source data-srcset="assets/images/blog/webkit-visual-bug-svg-background-1024px.png 1024w, assets/images/blog/webkit-visual-bug-svg-background-1920px.png 1920w" type="image/png">
+      <img data-src="assets/images/blog/webkit-visual-bug-svg-background-1920px.png" data-action="zoom" alt="Abstract example of a chained Promise cycle.">
     </picture>
   </div>
   <figcaption class="picture-wrapper__caption">Example of an SVG background image appearing pixelated after using the <code>background-size</code> property.</figcaption>

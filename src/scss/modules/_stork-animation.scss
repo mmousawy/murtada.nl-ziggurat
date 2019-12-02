@@ -137,19 +137,19 @@ $bodyColor: get('colors.text.body');
   animation: dragDropIcon 3000ms infinite;
 
   &[data-type='dir'] {
-    background-image: url('assets/images/products/stork/_icon-dir-512px.png');
+    background-image: url('assets/images/products/stork/icon-dir-512px.png');
   }
 
   &[data-type='zip'] {
-    background-image: url('assets/images/products/stork/_icon-zip-512px.png');
+    background-image: url('assets/images/products/stork/icon-zip-512px.png');
   }
 
   &[data-type='img'] {
-    background-image: url('assets/images/products/stork/_icon-img-512px.png');
+    background-image: url('assets/images/products/stork/icon-img-512px.png');
   }
 
   &[data-type='doc'] {
-    background-image: url('assets/images/products/stork/_icon-doc-512px.png');
+    background-image: url('assets/images/products/stork/icon-doc-512px.png');
   }
 }
 

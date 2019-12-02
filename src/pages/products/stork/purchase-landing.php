@@ -5,7 +5,7 @@
 #zigg:slug        = `purchase-landing`
 #zigg:parent      = `products/stork`
 #zigg:logo        = `assets/images/products/stork/stork-logo.svg`
-#zigg:cover-image = `assets/images/_cover-stork{$size}.png`
+#zigg:cover-image = `assets/images/og/_cover-stork{$size}.png`
 #zigg:cover-alt   = `Stork logo`
 #zigg:date        = ``
 #zigg:description = `Secure file upload and mana&shy;gement in WordPress, made easy.`

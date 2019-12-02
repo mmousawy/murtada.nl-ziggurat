@@ -17,7 +17,5 @@
   <img class="shape" src="assets/images/_shape-2.svg" alt="Geometric shape" hidden>
   <img class="shape" src="assets/images/_shape-3.svg" alt="Geometric shape" hidden>
   <script src="script.min.js?v=%__VERSION__%"></script>
-  <script src="script/lib/zoom.min.js"></script>
-  <script src="script/lib/flickity.min.js"></script>
 </body>
 </html>

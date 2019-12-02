@@ -5,8 +5,8 @@
 #zigg:type        = `markdown`
 #zigg:template    = `blog-post`
 #zigg:parent      = `blog`
-#zigg:cover-image = `assets/images/blog/_technical-debt{$size}.png`
-#zigg:cover-image-webp = `assets/images/blog/_technical-debt{$size}.webp`
+#zigg:cover-image = `assets/images/blog/technical-debt{$size}.png`
+#zigg:cover-image-webp = `assets/images/blog/technical-debt{$size}.webp`
 #zigg:cover-alt   = `Isometric illustration of a man walking while being chained to a computer screen with software on it.`
 #zigg:date        = `2019-11-15`
 #zigg:description = `Technical debt is a term used loosely in the technology world, but what exactly is it? In this post I&apos;ll provide insight into how to identify and deal with technical debt.`
@@ -32,9 +32,9 @@ Technical debt is completely different in that its presence is almost intangible
 
 <figure class="picture-wrapper picture-wrapper--outside">
   <picture class="lazy">
-    <source data-srcset="assets/images/blog/_technical-debt-diagram-1024px.webp 1024w, assets/images/blog/_technical-debt-diagram-1920px.webp 1920w" type="image/webp">
-    <source data-srcset="assets/images/blog/_technical-debt-diagram-1024px.png 1024w, assets/images/blog/_technical-debt-diagram-1920px.png 1920w" type="image/png">
-    <img data-src="assets/images/blog/_technical-debt-diagram-1920px.png" data-action="zoom" alt="Diagram illustrating the visibility and relationship of bugs vs. technical debt.">
+    <source data-srcset="assets/images/blog/technical-debt-diagram-1024px.webp 1024w, assets/images/blog/technical-debt-diagram-1920px.webp 1920w" type="image/webp">
+    <source data-srcset="assets/images/blog/technical-debt-diagram-1024px.png 1024w, assets/images/blog/technical-debt-diagram-1920px.png 1920w" type="image/png">
+    <img data-src="assets/images/blog/technical-debt-diagram-1920px.png" data-action="zoom" alt="Diagram illustrating the visibility and relationship of bugs vs. technical debt.">
   </picture>
   <figcaption class="picture-wrapper__caption">Diagram illustrating the visibility and relationship of bugs vs. technical debt.</figcaption>
 </figure>
@@ -54,9 +54,9 @@ You can simplify this process by placing your top ten ideas in a two-by-two matr
 
 <figure class="picture-wrapper picture-wrapper--outside">
   <picture class="lazy">
-    <source data-srcset="assets/images/blog/_technical-debt-priority-diagram-1024px.webp 1024w, assets/images/blog/_technical-debt-priority-diagram-1920px.webp 1920w" type="image/webp">
-    <source data-srcset="assets/images/blog/_technical-debt-priority-diagram-1024px.png 1024w, assets/images/blog/_technical-debt-priority-diagram-1920px.png 1920w" type="image/png">
-    <img data-src="assets/images/blog/_technical-debt-priority-diagram-1920px.png" data-action="zoom" alt="Diagram for visualizing the cost to benefit ratio, indicating the priority of technical debt issues.">
+    <source data-srcset="assets/images/blog/technical-debt-priority-diagram-1024px.webp 1024w, assets/images/blog/technical-debt-priority-diagram-1920px.webp 1920w" type="image/webp">
+    <source data-srcset="assets/images/blog/technical-debt-priority-diagram-1024px.png 1024w, assets/images/blog/technical-debt-priority-diagram-1920px.png 1920w" type="image/png">
+    <img data-src="assets/images/blog/technical-debt-priority-diagram-1920px.png" data-action="zoom" alt="Diagram for visualizing the cost to benefit ratio, indicating the priority of technical debt issues.">
   </picture>
   <figcaption class="picture-wrapper__caption">Diagram for visualizing the cost to benefit ratio, indicating the priority of technical debt issues.</figcaption>
 </figure>
@@ -83,9 +83,9 @@ Whenever you're considering reducing your technical debt, you should research al
 
 <figure class="picture-wrapper picture-wrapper--outside">
   <picture class="lazy">
-    <source data-srcset="assets/images/blog/_technical-debt-cost-diagram-1024px.webp 1024w, assets/images/blog/_technical-debt-cost-diagram-1920px.webp 1920w" type="image/webp">
-    <source data-srcset="assets/images/blog/_technical-debt-cost-diagram-1024px.png 1024w, assets/images/blog/_technical-debt-cost-diagram-1920px.png 1920w" type="image/png">
-    <img data-src="assets/images/blog/_technical-debt-cost-diagram-1920px.png" data-action="zoom" alt="Diagram for visualizing the cost to benefit ratio, indicating the cost of technical debt issues.">
+    <source data-srcset="assets/images/blog/technical-debt-cost-diagram-1024px.webp 1024w, assets/images/blog/technical-debt-cost-diagram-1920px.webp 1920w" type="image/webp">
+    <source data-srcset="assets/images/blog/technical-debt-cost-diagram-1024px.png 1024w, assets/images/blog/technical-debt-cost-diagram-1920px.png 1920w" type="image/png">
+    <img data-src="assets/images/blog/technical-debt-cost-diagram-1920px.png" data-action="zoom" alt="Diagram for visualizing the cost to benefit ratio, indicating the cost of technical debt issues.">
   </picture>
   <figcaption class="picture-wrapper__caption">Diagram for visualizing the cost to benefit ratio, indicating the cost of technical debt issues.</figcaption>
 </figure>

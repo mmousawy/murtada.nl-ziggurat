@@ -3,7 +3,7 @@
 #zigg:page-title  = `Page not found`
 #zigg:slug        = `404`
 #zigg:parent      = ``
-#zigg:cover-image = `assets/images/_cover-404{$size}.png`
+#zigg:cover-image = `assets/images/og/_cover-404{$size}.png`
 #zigg:date        = ``
 #zigg:description = `Page not found!`
 #zigg:priority    = `0`

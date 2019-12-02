@@ -4,7 +4,7 @@
 #zigg:slug        = `index`
 #zigg:class       = `page-home`
 #zigg:parent      = ``
-#zigg:cover-image = `assets/images/_cover-index{$size}.png`
+#zigg:cover-image = `assets/images/og/cover-index.png`
 #zigg:date        = ``
 #zigg:description = `I'm a freelance full-stack web developer in Rotterdam. I specialize in creating custom websites, apps and digital products with a focus on UX and interactivity`
 #zigg:priority    = `1.0`

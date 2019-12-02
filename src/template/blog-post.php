@@ -7,6 +7,7 @@ $prettyDate = date('F jS, Y', strtotime($props['date']));
 
 $coverImage = $props['cover-image'];
 $coverImageWebp = $props['cover-image-webp'];
+
 $coverImageString = [];
 $coverImageStringWebp = [];
 
@@ -70,3 +71,5 @@ HTML;
 </section>
 
 <?= file_get_contents('template/cta.php'); ?>
+
+<script src="script/lib/zoom.min.js" defer></script>

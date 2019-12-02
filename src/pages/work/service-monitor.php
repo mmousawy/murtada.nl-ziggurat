@@ -57,8 +57,9 @@ $props = $currentPage['properties'];
         <p>Sketching, brainstorming and forming lots of ideas are all meant to diverge the scope. To create a big overview of all the options we choose and directions we can go. So that's exactly what we did! We created a couple of lists and sketches forming the fundamental concept for our product. We took our most important needs and matched them to features we had in our lists. In a way, we formed our minimum viable product, our MVP!</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/psydata/_psydata-diagram-512px.png 512w, assets/images/work/psydata/_psydata-diagram-1024px.png 1024w" type="image/png">
-            <img data-src="assets/images/work/psydata/_psydata-diagram-1024px.png" alt="Use case diagram for the PsyData project" data-action="zoom">
+            <source data-srcset="assets/images/work/psydata/_psydata-diagram-512px.webp 512w, assets/images/work/psydata/psydata-diagram-1024px.webp 1024w, assets/images/work/psydata/psydata-diagram-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/psydata/_psydata-diagram-512px.png 512w, assets/images/work/psydata/psydata-diagram-1024px.png 1024w, assets/images/work/psydata/psydata-diagram-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/psydata/psydata-diagram-1024px.png" alt="Use case diagram for the PsyData project" data-action="zoom">
           </picture>
           <figcaption class="picture-wrapper__caption">Use case diagram for PsyData illustrating the main actors, their associations and their interactions.</figcaption>
         </figure>
@@ -73,8 +74,8 @@ $props = $currentPage['properties'];
         <p>The UI redesign was built form the ground up with a natural direction of reading in mind. Everything has to flow from top to bottom, with the most relevant information at the top. We also separated interactions and forms by layering those elements on top of the current page. This made it less jarring and very clear whenever a user is prompted for input.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/psydata/_psydata-search-512px.png 512w, assets/images/work/psydata/_psydata-search-1024px.png 1024w" type="image/png">
-            <img data-src="assets/images/work/psydata/_psydata-search-1024px.png" alt="Screenshot of the filter feature in the PsyData app" data-action="zoom">
+            <source data-srcset="assets/images/work/psydata/_psydata-search-512px.png 512w, assets/images/work/psydata/psydata-search-1024px.png 1024w" type="image/png">
+            <img data-src="assets/images/work/psydata/psydata-search-1024px.png" alt="Screenshot of the filter feature in the PsyData app" data-action="zoom">
           </picture>
           <figcaption class="picture-wrapper__caption">Screenshot of the "filter through column" feature in PsyData.</figcaption>
         </figure>
@@ -103,8 +104,8 @@ $props = $currentPage['properties'];
       </div>
       <div class="gallery__pane">
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/service-monitor/_service-monitor-1-512px.png 512w, assets/images/work/service-monitor/_service-monitor-1-1024px.png 1024w, assets/images/work/service-monitor/_service-monitor-1-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/service-monitor/_service-monitor-1-1024px.png" alt="Service Monitor screenshot">
+          <source srcset="assets/images/work/service-monitor/_service-monitor-1-512px.png 512w, assets/images/work/service-monitor/_service-monitor-1-1024px.png 1024w, assets/images/work/service-monitor/service-monitor-1-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/service-monitor/service-monitor-1-1024px.png" alt="Service Monitor screenshot">
         </picture>
       </div>
     </div>

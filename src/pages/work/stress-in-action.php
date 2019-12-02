@@ -22,7 +22,8 @@ $props = $currentPage['properties'];
       <p class="highlight-text">Eye-catching and informative: how I've made an information-dense website fun and interesting to read.</p>
       <div class="picture-wrapper picture-wrapper--highlight">
         <picture class="lazy">
-          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-1024px.jpg 1024w" type="image/jpeg">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.webp 512w, assets/images/work/<?= $props['slug']; ?>-1024px.webp 1024w, assets/images/work/<?= $props['slug']; ?>-1920px.webp 1920w" type="image/webp">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-1024px.jpg 1024w, assets/images/work/<?= $props['slug']; ?>-1920px.jpg 1920w" type="image/jpeg">
           <img data-src="assets/images/work/<?= $props['slug']; ?>-1024px.jpg" alt="<?= $props['cover-alt']; ?>">
         </picture>
       </div>
@@ -50,6 +51,7 @@ $props = $currentPage['properties'];
         <p>For the website structure I quickly sketched up a sitemap with the help of the project owner. We sat down for 20 minutes and placed the content in a hierarchical structure that made sense as far as information separation goes.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
+            <source data-srcset="assets/images/work/stress-in-action/sia_sitemap-512px.webp 512w, assets/images/work/stress-in-action/sia_sitemap-1024px.webp 1024w" type="image/webp">
             <source data-srcset="assets/images/work/stress-in-action/sia_sitemap-512px.jpg 512w, assets/images/work/stress-in-action/sia_sitemap-1024px.jpg 1024w" type="image/jpeg">
             <img data-src="assets/images/work/stress-in-action/sia_sitemap-1024px.jpg" alt="Quick sketch of the Stress in Action website sitemap" data-action="zoom">
           </picture>
@@ -58,8 +60,9 @@ $props = $currentPage['properties'];
         <p>The visual design came forth through the content I had, with the aim to keep the target audience interested in finding out more about the project. I was aware that the pages needed to contain a lot of text, so emphasizing the section you're in (participants, project abstract, scientific advisory board and documentation) was my priority.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/stress-in-action/_sia_visual_1-512px.png 512w, assets/images/work/stress-in-action/_sia_visual_1-1024px.png 1024w" type="image/png">
-            <img data-src="assets/images/work/stress-in-action/_sia_visual_1-1024px.png" alt="Screenshot of the filter feature in the stress-in-action app" data-action="zoom">
+            <source data-srcset="assets/images/work/stress-in-action/sia_visual1-512px.webp 512w, assets/images/work/stress-in-action/sia_visual1-1024px.webp 1024w" type="image/webp">
+            <source data-srcset="assets/images/work/stress-in-action/sia_visual1-512px.png 512w, assets/images/work/stress-in-action/sia_visual1-1024px.png 1024w" type="image/png">
+            <img data-src="assets/images/work/stress-in-action/sia_visual1-1024px.png" alt="Screenshot of the filter feature in the stress-in-action app" data-action="zoom">
           </picture>
           <figcaption class="picture-wrapper__caption">How using colours, subtle backgrounds and non-uniform positioning to make for a more visually appealing look.</figcaption>
         </figure>
@@ -67,8 +70,9 @@ $props = $currentPage['properties'];
         <p>To finish the website, it needed some more graphics. I opted for hand-drawn digital illustrations. They're easy to create and can still portray a strong message on any page you use them. The style I chose is something that's popular right now: "flat illustration". It's a neutral style that can look clinical and grown-up without being too detailed or dull.</p>
         <figure class="picture-wrapper">
           <picture class="lazy">
-            <source data-srcset="assets/images/work/stress-in-action/_sia_illustration-512px.png 512w, assets/images/work/stress-in-action/_sia_illustration-1024px.png 1024w" type="image/png">
-            <img data-src="assets/images/work/stress-in-action/_sia_illustration-1024px.png" alt="Screenshot of the filter feature in the stress-in-action app" data-action="zoom">
+            <source data-srcset="assets/images/work/stress-in-action/sia_illustration-512px.webp 512w, assets/images/work/stress-in-action/sia_illustration-1024px.webp 1024w" type="image/webp">
+            <source data-srcset="assets/images/work/stress-in-action/sia_illustration-512px.png 512w, assets/images/work/stress-in-action/sia_illustration-1024px.png 1024w" type="image/png">
+            <img data-src="assets/images/work/stress-in-action/sia_illustration-1024px.png" alt="Screenshot of the filter feature in the stress-in-action app" data-action="zoom">
           </picture>
           <figcaption class="picture-wrapper__caption">Using scalable vector graphics is an easy way to keep the illustrations modular and responsive.</figcaption>
         </figure>
@@ -97,28 +101,33 @@ $props = $currentPage['properties'];
       </div>
       <div class="gallery__pane">
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/stress-in-action/_sia_1-512px.png 512w, assets/images/work/stress-in-action/_sia_1-1024px.png 1024w, assets/images/work/stress-in-action/_sia_1-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_1-1024px.png" alt="stress-in-action screenshot">
+          <source srcset="assets/images/work/stress-in-action/sia1-512px.webp 512w, assets/images/work/stress-in-action/sia1-1024px.webp 1024w, assets/images/work/stress-in-action/sia1-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/stress-in-action/sia1-512px.png 512w, assets/images/work/stress-in-action/sia1-1024px.png 1024w, assets/images/work/stress-in-action/sia1-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/stress-in-action/sia1-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/stress-in-action/_sia_2-512px.png 512w, assets/images/work/stress-in-action/_sia_2-1024px.png 1024w, assets/images/work/stress-in-action/_sia_2-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_2-1024px.png" alt="stress-in-action screenshot">
+          <source srcset="assets/images/work/stress-in-action/sia2-512px.webp 512w, assets/images/work/stress-in-action/sia2-1024px.webp 1024w, assets/images/work/stress-in-action/sia2-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/stress-in-action/sia2-512px.png 512w, assets/images/work/stress-in-action/sia2-1024px.png 1024w, assets/images/work/stress-in-action/sia2-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/stress-in-action/sia2-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/stress-in-action/_sia_3-512px.png 512w, assets/images/work/stress-in-action/_sia_3-1024px.png 1024w, assets/images/work/stress-in-action/_sia_3-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_3-1024px.png" alt="stress-in-action screenshot">
+          <source srcset="assets/images/work/stress-in-action/sia3-512px.webp 512w, assets/images/work/stress-in-action/sia3-1024px.webp 1024w, assets/images/work/stress-in-action/sia3-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/stress-in-action/sia3-512px.png 512w, assets/images/work/stress-in-action/sia3-1024px.png 1024w, assets/images/work/stress-in-action/sia3-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/stress-in-action/sia3-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/stress-in-action/_sia_4-512px.png 512w, assets/images/work/stress-in-action/_sia_4-1024px.png 1024w, assets/images/work/stress-in-action/_sia_4-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_4-1024px.png" alt="stress-in-action screenshot">
+          <source srcset="assets/images/work/stress-in-action/sia4-512px.webp 512w, assets/images/work/stress-in-action/sia4-1024px.webp 1024w, assets/images/work/stress-in-action/sia4-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/stress-in-action/sia4-512px.png 512w, assets/images/work/stress-in-action/sia4-1024px.png 1024w, assets/images/work/stress-in-action/sia4-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/stress-in-action/sia4-1024px.png" alt="stress-in-action screenshot">
         </picture>
 
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/stress-in-action/_sia_5-512px.png 512w, assets/images/work/stress-in-action/_sia_5-1024px.png 1024w, assets/images/work/stress-in-action/_sia_5-1920px.png 1920w" type="image/png">
-          <img src="assets/images/work/stress-in-action/_sia_5-1024px.png" alt="stress-in-action screenshot">
+          <source srcset="assets/images/work/stress-in-action/sia5-512px.webp 512w, assets/images/work/stress-in-action/sia5-1024px.webp 1024w, assets/images/work/stress-in-action/sia5-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/stress-in-action/sia5-512px.png 512w, assets/images/work/stress-in-action/sia5-1024px.png 1024w, assets/images/work/stress-in-action/sia5-1920px.png 1920w" type="image/png">
+          <img src="assets/images/work/stress-in-action/sia5-1024px.png" alt="stress-in-action screenshot">
         </picture>
       </div>
     </div>
