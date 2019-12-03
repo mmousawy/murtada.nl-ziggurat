@@ -519,7 +519,7 @@
         const domParser = new DOMParser();
         let doc = domParser.parseFromString(xmlText, 'application/xml');
 
-        podcastPreview.style.backgroundImage = `url('${doc.children[0].querySelector('image url').textContent}')`;
+        podcastPreview.style.backgroundImage = `url('${doc.children[0].querySelector('item').children[10].attributes.href.value}')`;
 
         const episodeAmountElement = document.querySelector('.podcast-episodes-amount');
         episodeAmountElement.textContent = doc.children[0].querySelectorAll('item').length;
