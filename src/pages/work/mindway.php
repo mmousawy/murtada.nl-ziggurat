@@ -3,7 +3,8 @@
 #zigg:page-title  = `Mindway`
 #zigg:slug        = `mindway`
 #zigg:parent      = `work`
-#zigg:cover-image = `work/mindway{$size}.jpg`
+#zigg:cover-image = `assets/images/work/mindway{$size}.jpg`
+#zigg:cover-image-webp = `assets/images/work/mindway{$size}.webp`
 #zigg:cover-class = ``
 #zigg:cover-alt   = `Mindway logo with a backdrop of a blue coloured landscape.`
 #zigg:date        = `2018-06-01`

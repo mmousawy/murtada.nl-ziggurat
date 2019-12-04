@@ -3,7 +3,8 @@
 #zigg:page-title  = `PsyData`
 #zigg:slug        = `psydata`
 #zigg:parent      = `work`
-#zigg:cover-image = `work/psydata{$size}.jpg`
+#zigg:cover-image = `assets/images/work/psydata{$size}.jpg`
+#zigg:cover-image-webp = `assets/images/work/psydata{$size}.webp`
 #zigg:cover-class = ``
 #zigg:cover-alt   = `Man sitting at desk looking at screen with the PsyData app open in the browser.`
 #zigg:date        = `2019-02-01`

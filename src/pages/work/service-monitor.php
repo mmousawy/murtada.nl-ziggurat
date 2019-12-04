@@ -3,7 +3,8 @@
 #zigg:page-title  = `Service Monitor`
 #zigg:slug        = `service-monitor`
 #zigg:parent      = `work`
-#zigg:cover-image = `work/service-monitor{$size}.jpg`
+#zigg:cover-image = `assets/images/work/service-monitor{$size}.jpg`
+#zigg:cover-image-webp = `assets/images/work/service-monitor{$size}.webp`
 #zigg:cover-class = ``
 #zigg:cover-alt   = `Hand holding a phone with the Service Monitor app visible on screen.`
 #zigg:date        = `2018-08-01`
@@ -23,7 +24,8 @@ $props = $currentPage['properties'];
       <p class="highlight-text">Get critical availability insights and early alerts for web products.</p>
       <div class="picture-wrapper picture-wrapper--highlight">
         <picture class="lazy">
-          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-hero-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-hero-1024px.jpg 1024w" type="image/jpeg">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-hero-512px.webp 512w, assets/images/work/<?= $props['slug']; ?>-hero-1024px.webp 1024w, assets/images/work/<?= $props['slug']; ?>-hero-1920px.webp 1920w" type="image/webp">
+          <source data-srcset="assets/images/work/<?= $props['slug']; ?>-hero-512px.jpg 512w, assets/images/work/<?= $props['slug']; ?>-hero-1024px.jpg 1024w, assets/images/work/<?= $props['slug']; ?>-hero-1920px.jpg 1920w" type="image/jpeg">
           <img data-src="assets/images/work/<?= $props['slug']; ?>-hero-1024px.jpg" alt="<?= $props['cover-alt']; ?>">
         </picture>
       </div>
@@ -98,13 +100,13 @@ $props = $currentPage['properties'];
       </div>
       <div class="gallery__pane">
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/service-monitor/_service-monitor-1-512px.webp 512w, assets/images/work/service-monitor/_service-monitor-1-1024px.webp 1024w, assets/images/work/service-monitor/service-monitor-1-1920px.webp 1920w" type="image/webp">
-          <source srcset="assets/images/work/service-monitor/_service-monitor-1-512px.png 512w, assets/images/work/service-monitor/_service-monitor-1-1024px.png 1024w, assets/images/work/service-monitor/service-monitor-1-1920px.png 1920w" type="image/png">
+          <source srcset="assets/images/work/service-monitor/service-monitor-1-512px.webp 512w, assets/images/work/service-monitor/service-monitor-1-1024px.webp 1024w, assets/images/work/service-monitor/service-monitor-1-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/service-monitor/service-monitor-1-512px.png 512w, assets/images/work/service-monitor/service-monitor-1-1024px.png 1024w, assets/images/work/service-monitor/service-monitor-1-1920px.png 1920w" type="image/png">
           <img src="assets/images/work/service-monitor/service-monitor-1-1024px.png" alt="Service Monitor screenshot">
         </picture>
         <picture class="gallery__picture">
-          <source srcset="assets/images/work/service-monitor/_service-monitor-2-512px.webp 512w, assets/images/work/service-monitor/_service-monitor-2-1024px.webp 1024w, assets/images/work/service-monitor/service-monitor-2-1920px.webp 1920w" type="image/webp">
-          <source srcset="assets/images/work/service-monitor/_service-monitor-2-512px.png 512w, assets/images/work/service-monitor/_service-monitor-2-1024px.png 1024w, assets/images/work/service-monitor/service-monitor-2-1920px.png 1920w" type="image/png">
+          <source srcset="assets/images/work/service-monitor/service-monitor-2-512px.webp 512w, assets/images/work/service-monitor/service-monitor-2-1024px.webp 1024w, assets/images/work/service-monitor/service-monitor-2-1920px.webp 1920w" type="image/webp">
+          <source srcset="assets/images/work/service-monitor/service-monitor-2-512px.png 512w, assets/images/work/service-monitor/service-monitor-2-1024px.png 1024w, assets/images/work/service-monitor/service-monitor-2-1920px.png 1920w" type="image/png">
           <img src="assets/images/work/service-monitor/service-monitor-2-1024px.png" alt="Service Monitor screenshot">
         </picture>
       </div>

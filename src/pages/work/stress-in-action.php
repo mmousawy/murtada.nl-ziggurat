@@ -3,7 +3,8 @@
 #zigg:page-title  = `Stress in Action`
 #zigg:slug        = `stress-in-action`
 #zigg:parent      = `work`
-#zigg:cover-image = `work/stress-in-action{$size}.jpg`
+#zigg:cover-image = `assets/images/work/stress-in-action{$size}.jpg`
+#zigg:cover-image-webp = `assets/images/work/stress-in-action{$size}.webp`
 #zigg:cover-class = ``
 #zigg:cover-alt   = `Stress in Action logo on a glowing yellow background.`
 #zigg:date        = `2018-12-01`
