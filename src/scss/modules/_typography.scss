@@ -99,6 +99,16 @@ h1 {
     }
   }
 
+  .wrap--work & {
+    font-size: get('fonts.heading.size-h1') * 1.25;
+    margin: 1.5em 2em;
+
+    @include bp(max-small) {
+      font-size: get('fonts.heading.size-h1') * .875;
+      margin: 1em 1.33em;
+    }
+  }
+
   + h2 {
     margin: -2rem auto 3rem;
   }
@@ -235,7 +245,7 @@ code {
   font-size: .875em;
 }
 
-.arrow {
+span.arrow {
   font-weight: 200;
   color: darken(get('colors.primary'), 25%);
   margin: 0 .25em;

@@ -15,7 +15,7 @@ $props = $currentPage['properties'];
 ?>
 
 <section class="page-section">
-  <div class="wrap">
+  <div class="wrap wrap--work">
     <h1 class="page-title">SUPRANET GGZ</h1>
   </div>
 
