@@ -21,7 +21,7 @@ $props = $currentPage['properties'];
 
   <div class="content-row">
     <div class="wrap wrap--vertical">
-      <p class="highlight-text">A complete identity rebranding and website overhaul for an eHealth organization.</p>
+      <p class="highlight-text">Complete identity rebranding and a website overhaul for an eHealth organization.</p>
       <div class="picture-wrapper picture-wrapper--highlight">
         <picture class="lazy">
           <source data-srcset="assets/images/work/<?= $props['slug']; ?>-hero-512px.webp 512w, assets/images/work/<?= $props['slug']; ?>-hero-1024px.webp 1024w, assets/images/work/<?= $props['slug']; ?>-hero-1920px.webp 1920w" type="image/webp">
@@ -52,7 +52,48 @@ $props = $currentPage['properties'];
         <h3>Approach</h3>
       </div>
       <div class="content-row__text">
-        <p>By spending time with the marketing team to actually research the market, the competitors and the target audience, our team got insights into what market position eHealth@Mind was in. The goal of eHealth@Mind was to gain clients by the  a certain</p>
+        <p>By spending time with the marketing team to actually research the market, the competitors and the target audience, our team got insights into what market position eHealth@Mind was in. The goal of eHealth@Mind was to gain a certain amount of clients by the end of the year. The specifics of this goal were sorted out by our collective efforts to make the goal SMART: Specific, Measurable, Achievable, Relevant and Time-oriented.</p>
+        <figure class="picture-wrapper picture-wrapper--has-shadow">
+          <picture class="lazy">
+            <source data-srcset="assets/images/work/mindway/mindway-infographics-1024px.webp 1024w, assets/images/work/mindway/mindway-infographics-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/mindway/mindway-infographics-1024px.png 1024w, assets/images/work/mindway/mindway-infographics-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/mindway/mindway-infographics-1920px.png" data-action="zoom" alt="Infographics with some interesting results of the target audience surveys we've taken for Mindway.">
+          </picture>
+          <figcaption class="picture-wrapper__caption">Infographics with some interesting results of the target audience surveys we've taken for Mindway.</figcaption>
+        </figure>
+        <p>Our next step was to pinpoint our target audience and ask relevant and specific questions in order to be able to settle on many appearance and attitude aspects of the organization. This was done because we wanted to be sure the target audience trusts the company, since they're going to have to entrust their personal information (during therapy sessions) to utilize their services. So creating an image that is trustworthy was of high priority.<br>
+        Of course we could have filled in a lot of questions that we had ourselves, but we wanted to be sure to have the target audience stand behind our choices as well.</p>
+        <figure class="picture-wrapper">
+          <picture class="lazy">
+            <source data-srcset="assets/images/work/mindway/mindway-teaser-1024px.webp 1024w, assets/images/work/mindway/mindway-teaser-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/mindway/mindway-teaser-1024px.png 1024w, assets/images/work/mindway/mindway-teaser-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/mindway/mindway-teaser-1920px.png" data-action="zoom" alt="Screenshot of an interactive teaser website where the user has to figure out a rebus to enter the website.">
+          </picture>
+          <figcaption class="picture-wrapper__caption">Screenshot of an interactive teaser website we launched during the early phases of the project. On this screen the user has to figure out a rebus (picture puzzle) to enter the website.</figcaption>
+        </figure>
+        <p>Before the design page, we started out by first inventorying all the relevant information and create clear sections and pages for them respectively. Our idea was to work content-first: produce a qualitative website by actually creating user journeys and user flows in order to create an overview of all the interactions and steps we might've missed. This resulted in a few extensive flow diagrams and a bunch of sketches and wireframes. From these steps we developed UX journey maps to delve into the particularly difficult journey steps.</p>
+        <figure class="picture-wrapper">
+          <picture class="lazy">
+            <source data-srcset="assets/images/work/mindway/mindway-steps-1024px.webp 1024w, assets/images/work/mindway/mindway-steps-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/mindway/mindway-steps-1024px.png 1024w, assets/images/work/mindway/mindway-steps-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/mindway/mindway-steps-1920px.png" data-action="zoom" alt="Figure of the organization's promise: &quot;Get started in 3 steps&quot;.">
+          </picture>
+          <figcaption class="picture-wrapper__caption">Figure of the organization's promise: &quot;Get started in 3 steps&quot;.</figcaption>
+        </figure>
+        <p>Our design needed to reflect our previous findings. This meant that for every design decision we referred to our marketing goals, flows and personas to make sure the design would be helping towards achieving the established goals.</p>
+        <p>Development consisted mainly of wrestling with a CMS (WordPress) to hold and present the content of the pages. The translation of the visual design to an actual functional website was straight-forward. We worked with SCSS variables and partials to make it easy to change modules in the website. We created modules with PHP templates and adhered to a strict BEM (Block, Element, Modifier) approach for naming modules in the website.</p>
+        <figure class="picture-wrapper picture-wrapper--has-shadow">
+          <picture class="lazy">
+            <source data-srcset="assets/images/work/mindway/mindway-custom-search-1024px.webp 1024w, assets/images/work/mindway/mindway-custom-search-1920px.webp 1920w" type="image/webp">
+            <source data-srcset="assets/images/work/mindway/mindway-custom-search-1024px.png 1024w, assets/images/work/mindway/mindway-custom-search-1920px.png 1920w" type="image/png">
+            <img data-src="assets/images/work/mindway/mindway-custom-search-1920px.png" data-action="zoom" alt="Screenshot of the custom search module and search results page with search term highlighting.">
+          </picture>
+          <figcaption class="picture-wrapper__caption">Screenshot of the custom search module and search results page with search term highlighting.</figcaption>
+        </figure>
+        <h4>Iterability in sprints</h4>
+        <p>As a last note, I wanted to highlight the project management methodology we applied for Mindway. Since our project scope and end-results were being assessed during the first part of the project, we didn't want to be held back by other parts of the project. To work more efficiently we chose to work in sprints of a single week, where we planned new features and evaluated work that was done.<br>
+        Along with the weekly stand-up we had a weekly marketing meeting to check if our development was on track with the marketing standpoints and the end-goals are still being achieved.</p>
+        <p>All the features were developed in such a way that big decisions could be reverted and the risk of the project failing would be practically non-existent.</p>
       </div>
     </div>
   </div>
@@ -63,8 +104,9 @@ $props = $currentPage['properties'];
         <h3>Results</h3>
       </div>
       <div class="content-row__text">
-        <p>Projects with multiple challenges create opportunities for professional growth and require out-of-the-box thinking.</p>
-        <p>The web app was successfully deployed and multiple surveys has been filled out by over 176.000 respondents.</p>
+        <p>Deploying the last iteration of the project and making the announcement was a special moment. A project with a continuous process that almost took a year culminated in a beautiful website.</p>
+        <p>eHealth@Mind's practitioners and management team worked alongside us to create something they could be proud of. A new face and a new name meant new opportunities.</p>
+        <p>Mindway is now the face of a team of psychologists and therapists who are excited to show off what their company can deliver on: being together on the road to recovery.</p>
       </div>
     </div>
   </div>

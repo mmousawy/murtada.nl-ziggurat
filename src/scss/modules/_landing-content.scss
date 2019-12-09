@@ -176,6 +176,7 @@
     margin-left: -2rem;
     fill: transparent;
     stroke: lighten(get('colors.text.tagline'), 20%);
+    overflow: visible;
 
     &--mobile {
       width: 2rem;

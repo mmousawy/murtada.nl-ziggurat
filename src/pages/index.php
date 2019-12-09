@@ -73,8 +73,8 @@
     <div class="picture-wrapper {$class}">
       <a href="{$project['slug_path']}">
         <picture class="lazy">
-          <source data-srcset="assets/images/work/{$props['slug']}-512px.webp 512w, assets/images/work/{$props['slug']}-1024px.webp 1024w" type="image/webp">
           <source data-srcset="assets/images/work/{$props['slug']}-512px.jpg 512w, assets/images/work/{$props['slug']}-1024px.jpg 1024w" type="image/jpeg">
+          <source data-srcset="assets/images/work/{$props['slug']}-512px.webp 512w, assets/images/work/{$props['slug']}-1024px.webp 1024w" type="image/webp">
           <img data-src="assets/images/work/{$props['slug']}-1024px.jpg" alt="{$props['cover-alt']}">
         </picture>
       </a>
