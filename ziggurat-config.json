@@ -19,6 +19,7 @@
     },
     "javascript": {
       "source": [ "script/script.js" ],
+      "watch": "script/**/*.js",
       "destination": "script.min.js",
       "libs": [ "script/lib/*.js" ]
     },
