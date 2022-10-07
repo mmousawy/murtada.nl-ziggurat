@@ -61,7 +61,7 @@
             "quality": 80
           },
           "png": {
-            "quality": [50, 100],
+            "quality": 75,
             "speed": 1
           }
         }
