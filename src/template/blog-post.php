@@ -61,8 +61,8 @@ HTML;
 <div class="wrap wrap--blog">
 <h1 class="page-title page-title--align-left"><?= $props['page-title']; ?></h1>
 <div class="blog-meta">
-  <time class="blog-meta__publish-date" datetime="<?= $date ?> 12:00"><img src="assets/images/_icon-calendar.svg" alt="Calendar icon"><?= $prettyDate ?></time>
-  <span class="blog-meta__avg-time"><img src="assets/images/_icon-time.svg" alt="Time icon"><?= round($currentPage['properties']['avg_time']) ?> min reading time</span>
+  <time class="blog-meta__publish-date" datetime="<?= $date ?> 12:00"><img src="inline:assets/images/_icon-calendar.svg" alt="Calendar icon"><?= $prettyDate ?></time>
+  <span class="blog-meta__avg-time"><img src="inline:assets/images/_icon-time.svg" alt="Time icon"><?= round($currentPage['properties']['avg_time']) ?> min reading time</span>
 </div>
 </div>
 <div class="wrap wrap--blog">

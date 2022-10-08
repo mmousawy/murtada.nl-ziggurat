@@ -17,8 +17,8 @@
   </div>
   <div class="illustration"></div>
   <div class="scroll-icon-holder">
-    <img src="assets/images/_icon-touch.svg" class="scroll-icon scroll-icon--mobile" alt="Swipe to see more">
-    <img src="assets/images/_icon-desktop.svg" class="scroll-icon scroll-icon--desktop" alt="Scroll to see more">
+    <img src="inline:assets/images/_icon-touch.svg" class="scroll-icon scroll-icon--mobile" alt="Swipe to see more">
+    <img src="inline:assets/images/_icon-desktop.svg" class="scroll-icon scroll-icon--desktop" alt="Scroll to see more">
   </div>
 </section>
 
@@ -97,7 +97,7 @@ HTML;
       <div class="content-row__transparent content-row__transparent--centered">
         <a href="work" class="button button--link button--more">
           See more of my work
-          <img src="assets/images/_arrow-right.svg" alt="Arrow icon">
+          <img src="inline:assets/images/_arrow-right.svg" alt="Arrow icon">
         </a>
       </div>
     </div>

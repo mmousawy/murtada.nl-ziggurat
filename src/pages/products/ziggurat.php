@@ -22,7 +22,7 @@
     <h1>Ziggurat helps you create beautiful websites with ease</h1>
   </div>
   <div class="ziggurat-header__right">
-    <img class="logo" src="assets/images/products/ziggurat/_ziggurat-logo.svg" alt="Ziggurat logo">
+    <img class="logo" src="inline:assets/images/products/ziggurat/_ziggurat-logo.svg" alt="Ziggurat logo">
   </div>
 </section>
 

@@ -106,7 +106,7 @@
     <div class="wrap">
       <a href="/" class="page-branding">
         <div class="page-branding__logomark">
-          <img src="assets/images/_logo.svg" alt="Murtada webdesign bureau logo">
+          <img src="inline:assets/images/_logo.svg" alt="Murtada webdesign bureau logo">
         </div>
         <div class="page-branding__logotype">murtada.</div>
       </a>

@@ -53,7 +53,7 @@
     </div>
   </div>
   <div class="product-header__right">
-    <h1 class="page-title"><img src="assets/images/products/stork/_stork-logo-outline-thick.svg"> Stork</h1>
+    <h1 class="page-title"><img src="inline:assets/images/products/stork/_stork-logo-outline-thick.svg"> Stork</h1>
     <h2>Secure file uploads and management in WordPress, made easy.</h2>
   </div>
 </section>
@@ -62,7 +62,7 @@
     <div class="feature">
       <h3 class="feature__title">
         <div class="feature__icon">
-          <img src="assets/images/products/_icon-upload.svg" alt="Upload cloud icon">
+          <img src="inline:assets/images/products/_icon-upload.svg" alt="Upload cloud icon">
         </div>
         <span>Drag &amp; drop everything</span>
       </h3>
@@ -71,7 +71,7 @@
     <div class="feature">
       <h3 class="feature__title">
         <div class="feature__icon">
-          <img src="assets/images/products/_icon-security.svg" alt="Security shield icon">
+          <img src="inline:assets/images/products/_icon-security.svg" alt="Security shield icon">
         </div>
         <span>Built-in security</span>
       </h3>
@@ -80,7 +80,7 @@
     <div class="feature">
       <h3 class="feature__title">
         <div class="feature__icon">
-          <img src="assets/images/products/_icon-extension.svg" alt="Extension puzzle icon">
+          <img src="inline:assets/images/products/_icon-extension.svg" alt="Extension puzzle icon">
         </div>
         <span>Extensibility</span>
       </h3>

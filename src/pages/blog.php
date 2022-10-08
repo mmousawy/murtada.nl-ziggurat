@@ -70,8 +70,8 @@
 HTML;
 ?>
       <div class="blog-meta">
-        <time class="blog-meta__publish-date" datetime="<?= $props['date'] ?> 12:00"><img src="assets/images/_icon-calendar.svg" alt="Calendar icon"><?= $prettyDate ?></time>
-        <span class="blog-meta__avg-time"><img src="assets/images/_icon-time.svg" alt="Time icon"><?= round($post['properties']['avg_time']) ?> min</span>
+        <time class="blog-meta__publish-date" datetime="<?= $props['date'] ?> 12:00"><img src="inline:assets/images/_icon-calendar.svg" alt="Calendar icon"><?= $prettyDate ?></time>
+        <span class="blog-meta__avg-time"><img src="inline:assets/images/_icon-time.svg" alt="Time icon"><?= round($post['properties']['avg_time']) ?> min</span>
       </div>
 <?php echo <<<HTML
       <p>{$props['description']}</p>
